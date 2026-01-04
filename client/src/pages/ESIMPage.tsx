@@ -6,9 +6,11 @@
  * - 绿色强调色 (Tech Green: #10B981)
  * - 玻璃拟态效果 (Glassmorphism)
  * - 现代科技感的布局和交互
+ * 
+ * 数据来源：Supabase 数据库
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Select,
   SelectContent,
@@ -18,44 +20,110 @@ import {
 } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, AlertCircle, Smartphone, Globe } from "lucide-react";
+import { CheckCircle2, AlertCircle, Smartphone, Globe, Loader2 } from "lucide-react";
 import {
-  esimPackages,
-  supportedDevices,
+  getPackagesByCountry,
   getCountries,
+  getSupportedDevices,
   isDeviceSupported,
   type ESIMPackage,
-} from "@/data/esim-data";
+  type SupportedDevice,
+} from "@/lib/supabase";
 
 export default function ESIMPage() {
   const [selectedDevice, setSelectedDevice] = useState<string>("");
-  const [selectedCountry, setSelectedCountry] = useState<string>("Japan");
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [deviceSupported, setDeviceSupported] = useState<boolean | null>(null);
+  
+  // 数据状态
+  const [countries, setCountries] = useState<string[]>([]);
+  const [devices, setDevices] = useState<SupportedDevice[]>([]);
+  const [countryPackages, setCountryPackages] = useState<ESIMPackage[]>([]);
+  
+  // 加载状态
+  const [loading, setLoading] = useState(true);
+  const [packagesLoading, setPackagesLoading] = useState(false);
+
+  // 初始化：获取国家和设备列表
+  useEffect(() => {
+    const initData = async () => {
+      try {
+        setLoading(true);
+        
+        // 获取国家列表
+        const countriesList = await getCountries();
+        setCountries(countriesList);
+        
+        // 获取设备列表
+        const devicesList = await getSupportedDevices();
+        setDevices(devicesList);
+        
+        // 设置默认国家
+        if (countriesList.length > 0) {
+          setSelectedCountry(countriesList[0]);
+        }
+      } catch (err) {
+        console.error("初始化数据失败:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    initData();
+  }, []);
+
+  // 当国家改变时，获取该国家的套餐
+  useEffect(() => {
+    const loadPackages = async () => {
+      if (!selectedCountry) return;
+      
+      try {
+        setPackagesLoading(true);
+        const packages = await getPackagesByCountry(selectedCountry);
+        setCountryPackages(packages);
+      } catch (err) {
+        console.error("获取套餐失败:", err);
+        setCountryPackages([]);
+      } finally {
+        setPackagesLoading(false);
+      }
+    };
+    
+    loadPackages();
+  }, [selectedCountry]);
 
   // 处理设备选择
-  const handleDeviceChange = (value: string) => {
+  const handleDeviceChange = async (value: string) => {
     setSelectedDevice(value);
     if (value) {
-      const device = supportedDevices.find((d) => d.id === value);
+      const device = devices.find((d) => d.id.toString() === value);
       if (device) {
-        const supported = isDeviceSupported(device.brand, device.model);
-        setDeviceSupported(supported);
+        try {
+          const supported = await isDeviceSupported(device.brand, device.model);
+          setDeviceSupported(supported);
+        } catch (err) {
+          console.error("检查设备支持状态失败:", err);
+          setDeviceSupported(false);
+        }
       }
     }
   };
 
-  // 获取选中国家的套餐
-  const countryPackages = esimPackages.filter(
-    (pkg) => pkg.country === selectedCountry
-  );
-
-  // 获取所有国家
-  const countries = getCountries();
-
   // 获取选中设备信息
-  const selectedDeviceInfo = supportedDevices.find(
-    (d) => d.id === selectedDevice
+  const selectedDeviceInfo = devices.find(
+    (d) => d.id.toString() === selectedDevice
   );
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">
+        <div className="text-center">
+          <Loader2 className="w-12 h-12 animate-spin text-emerald-500 mx-auto mb-4" />
+          <p className="text-lg text-slate-300">加载中...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -98,10 +166,10 @@ export default function ESIMPage() {
                     <SelectValue placeholder="请选择您的手机型号..." />
                   </SelectTrigger>
                   <SelectContent className="bg-slate-900 border-white/10">
-                    {supportedDevices.map((device) => (
+                    {devices.map((device) => (
                       <SelectItem
                         key={device.id}
-                        value={device.id}
+                        value={device.id.toString()}
                         className="text-white hover:bg-emerald-500/20"
                       >
                         {device.brand} {device.model}
@@ -180,11 +248,22 @@ export default function ESIMPage() {
           </div>
 
           {/* 套餐卡片网格 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {countryPackages.map((pkg) => (
-              <PackageCard key={pkg.id} package={pkg} />
-            ))}
-          </div>
+          {packagesLoading ? (
+            <div className="text-center py-12">
+              <Loader2 className="w-8 h-8 animate-spin text-emerald-500 mx-auto mb-4" />
+              <p className="text-slate-300">加载套餐中...</p>
+            </div>
+          ) : countryPackages.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {countryPackages.map((pkg) => (
+                <PackageCard key={pkg.id} package={pkg} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12 text-slate-400">
+              <p>暂无该国家的套餐数据</p>
+            </div>
+          )}
         </div>
 
         {/* 底部信息 */}
@@ -224,7 +303,7 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
         {/* 数据量 */}
         <div className="mb-6">
           <p className="text-sm text-slate-400 mb-2">数据量</p>
-          <p className="text-3xl font-bold text-emerald-400">{pkg.dataAmount}</p>
+          <p className="text-3xl font-bold text-emerald-400">{pkg.data_amount}</p>
         </div>
 
         {/* 价格 */}
@@ -238,7 +317,7 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
 
         {/* 购买按钮 */}
         <a
-          href={pkg.affiliateLink}
+          href={pkg.affiliate_link}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full py-3 px-4 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 text-center block shadow-lg hover:shadow-emerald-500/50"
