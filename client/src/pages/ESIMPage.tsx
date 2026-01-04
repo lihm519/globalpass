@@ -372,6 +372,14 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
           <p className="text-3xl font-bold text-emerald-400">{pkg.data_amount}</p>
         </div>
 
+        {/* 有效期 */}
+        {pkg.validity && (
+          <div className="mb-4">
+            <p className="text-sm text-slate-400 mb-2">有效期</p>
+            <p className="text-sm font-semibold text-emerald-300">{pkg.validity}</p>
+          </div>
+        )}
+
         {/* 价格 */}
         <div className="mb-6 pb-6 border-b border-white/10">
           <p className="text-sm text-slate-400 mb-2">价格</p>

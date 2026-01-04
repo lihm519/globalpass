@@ -20,6 +20,7 @@ export interface ESIMPackage {
   price: number;
   provider: string;
   affiliate_link: string;
+  validity?: string; // 有效期，例如 "7 Days"
   created_at: string;
   updated_at: string;
 }
