@@ -14,7 +14,7 @@ import sys
 
 # Supabase 配置
 SUPABASE_URL = "https://mzodnvjtlujvvwfnpcyb.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2Rudmp0bHVqdnZ3Zm5wY3liIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczMjcwMjg5MCwiZXhwIjoyMDQ4Mjc4ODkwfQ.U-AEUWfKJqLxqZdCW6aUoYCPVfvOz8pDFwsKEZZZQdQ"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2Rudmp0bHVqdnZ3Zm5wY3liIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzU0MDk4NiwiZXhwIjoyMDgzMTE2OTg2fQ.gr-5J22EhV08PLghNcoS8o5lUFjaEyby21MwE-35ENs"
 
 # Airalo 数据映射（基于搜索结果和页面信息）
 AIRALO_PRICES = {
@@ -121,7 +121,6 @@ def main():
                 "price": price,
                 "provider": "Airalo",
                 "affiliate_link": "https://www.airalo.com",
-                "updated_at": datetime.now().isoformat(),
             }
             packages.append(package)
     
