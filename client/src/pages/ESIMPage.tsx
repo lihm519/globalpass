@@ -1,5 +1,5 @@
 /**
- * GlobalPass E-SIM 比价与兼容性检测页面
+ * GlobalPass E-SIM 比价与兼容性检测页面 (v1.1)
  * 
  * 设计理念：
  * - 深色主题背景 (Dark Mode)
@@ -7,7 +7,10 @@
  * - 玻璃拟态效果 (Glassmorphism)
  * - 现代科技感的布局和交互
  * 
- * 数据来源：Supabase 数据库
+ * v1.1 更新：
+ * - 支持设备地区选择（全球版 vs 国行/港澳版）
+ * - 真实 Airalo 价格数据
+ * - 改进的设备兼容性检测
  */
 
 import { useState, useEffect } from "react";
@@ -26,12 +29,14 @@ import {
   getCountries,
   getSupportedDevices,
   isDeviceSupported,
+  getDeviceRegions,
   type ESIMPackage,
   type SupportedDevice,
 } from "@/lib/supabase";
 
 export default function ESIMPage() {
   const [selectedDevice, setSelectedDevice] = useState<string>("");
+  const [selectedRegion, setSelectedRegion] = useState<string>("Global");
   const [selectedCountry, setSelectedCountry] = useState<string>("");
   const [deviceSupported, setDeviceSupported] = useState<boolean | null>(null);
   
@@ -39,6 +44,7 @@ export default function ESIMPage() {
   const [countries, setCountries] = useState<string[]>([]);
   const [devices, setDevices] = useState<SupportedDevice[]>([]);
   const [countryPackages, setCountryPackages] = useState<ESIMPackage[]>([]);
+  const [availableRegions, setAvailableRegions] = useState<string[]>(["Global"]);
   
   // 加载状态
   const [loading, setLoading] = useState(true);
@@ -95,11 +101,35 @@ export default function ESIMPage() {
   // 处理设备选择
   const handleDeviceChange = async (value: string) => {
     setSelectedDevice(value);
+    setSelectedRegion("Global"); // 重置地区选择
+    setDeviceSupported(null);
+    
     if (value) {
       const device = devices.find((d) => d.id.toString() === value);
       if (device) {
         try {
-          const supported = await isDeviceSupported(device.brand, device.model);
+          // 获取该设备的所有地区版本
+          const regions = await getDeviceRegions(device.brand, device.model);
+          setAvailableRegions(regions);
+          setSelectedRegion(regions[0] || "Global");
+        } catch (err) {
+          console.error("获取设备地区版本失败:", err);
+          setAvailableRegions(["Global"]);
+          setSelectedRegion("Global");
+        }
+      }
+    }
+  };
+
+  // 处理地区选择
+  const handleRegionChange = async (region: string) => {
+    setSelectedRegion(region);
+    
+    if (selectedDevice) {
+      const device = devices.find((d) => d.id.toString() === selectedDevice);
+      if (device) {
+        try {
+          const supported = await isDeviceSupported(device.brand, device.model, region);
           setDeviceSupported(supported);
         } catch (err) {
           console.error("检查设备支持状态失败:", err);
@@ -113,6 +143,12 @@ export default function ESIMPage() {
   const selectedDeviceInfo = devices.find(
     (d) => d.id.toString() === selectedDevice
   );
+
+  // 地区标签映射
+  const regionLabels: Record<string, string> = {
+    "Global": "🌍 国际版 (Global)",
+    "China/HK/Macau": "🇨🇳 国行/港澳版",
+  };
 
   if (loading) {
     return (
@@ -153,10 +189,11 @@ export default function ESIMPage() {
             </div>
 
             <p className="text-slate-300 mb-6">
-              选择您的手机型号，检查是否支持 E-SIM
+              选择您的手机型号和版本，检查是否支持 E-SIM
             </p>
 
             <div className="space-y-4">
+              {/* 设备选择 */}
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-3">
                   选择手机型号
@@ -179,6 +216,31 @@ export default function ESIMPage() {
                 </Select>
               </div>
 
+              {/* 地区版本选择 */}
+              {selectedDevice && availableRegions.length > 1 && (
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-3">
+                    选择版本
+                  </label>
+                  <Select value={selectedRegion} onValueChange={handleRegionChange}>
+                    <SelectTrigger className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
+                      <SelectValue placeholder="请选择版本..." />
+                    </SelectTrigger>
+                    <SelectContent className="bg-slate-900 border-white/10">
+                      {availableRegions.map((region) => (
+                        <SelectItem
+                          key={region}
+                          value={region}
+                          className="text-white hover:bg-emerald-500/20"
+                        >
+                          {regionLabels[region] || region}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+
               {/* 兼容性结果 */}
               {selectedDevice && deviceSupported !== null && (
                 <div
@@ -197,7 +259,7 @@ export default function ESIMPage() {
                         </p>
                         <p className="text-sm text-slate-300">
                           {selectedDeviceInfo?.brand} {selectedDeviceInfo?.model}{" "}
-                          完全支持 E-SIM 功能
+                          ({regionLabels[selectedRegion] || selectedRegion}) 完全支持 E-SIM 功能
                         </p>
                       </div>
                     </>
@@ -210,7 +272,8 @@ export default function ESIMPage() {
                         </p>
                         <p className="text-sm text-slate-300">
                           {selectedDeviceInfo?.brand} {selectedDeviceInfo?.model}{" "}
-                          暂不支持 E-SIM 功能
+                          ({regionLabels[selectedRegion] || selectedRegion}) 暂不支持 E-SIM 功能
+                          {selectedRegion === "China/HK/Macau" && "（物理双卡限制）"}
                         </p>
                       </div>
                     </>
@@ -226,7 +289,7 @@ export default function ESIMPage() {
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-3">🌍 热门套餐</h2>
             <p className="text-slate-400">
-              浏览全球主要国家的 E-SIM 套餐价格
+              浏览全球主要国家的 E-SIM 套餐价格（数据来自 Airalo）
             </p>
           </div>
 
@@ -269,8 +332,11 @@ export default function ESIMPage() {
         {/* 底部信息 */}
         <div className="mt-16 p-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl">
           <h3 className="text-lg font-semibold mb-4">💡 关于 GlobalPass</h3>
-          <p className="text-slate-300 leading-relaxed">
+          <p className="text-slate-300 leading-relaxed mb-4">
             GlobalPass 是一个全球 E-SIM 比价平台，帮助您快速找到最优惠的国际数据套餐。我们汇集了全球主要运营商的实时价格，并提供设备兼容性检测，确保您的手机支持 E-SIM 功能。
+          </p>
+          <p className="text-slate-400 text-sm">
+            ⚠️ 注意：中国大陆、香港、澳门版本的 iPhone 14 及更早机型由于物理双卡限制，不支持 E-SIM。请使用国际版本以获得完整支持。
           </p>
         </div>
       </div>

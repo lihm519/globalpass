@@ -29,6 +29,7 @@ export interface SupportedDevice {
   brand: string;
   model: string;
   is_supported: boolean;
+  region: string; // "Global" | "China/HK/Macau"
   created_at: string;
   updated_at: string;
 }
@@ -120,10 +121,11 @@ export async function getSupportedDevices() {
   }
 }
 
-// 检查设备是否支持 E-SIM
+// 检查设备是否支持 E-SIM（支持地区参数）
 export async function isDeviceSupported(
   brand: string,
-  model: string
+  model: string,
+  region: string = "Global"
 ): Promise<boolean> {
   try {
     const { data, error } = await supabase
@@ -131,6 +133,7 @@ export async function isDeviceSupported(
       .select("is_supported")
       .eq("brand", brand)
       .eq("model", model)
+      .eq("region", region)
       .single();
 
     if (error) {
@@ -142,5 +145,34 @@ export async function isDeviceSupported(
   } catch (err) {
     console.error("检查设备支持状态异常:", err);
     return false;
+  }
+}
+
+// 获取设备的所有地区版本
+export async function getDeviceRegions(
+  brand: string,
+  model: string
+): Promise<string[]> {
+  try {
+    const { data, error } = await supabase
+      .from("supported_devices")
+      .select("region")
+      .eq("brand", brand)
+      .eq("model", model)
+      .order("region", { ascending: true });
+
+    if (error) {
+      console.error("获取设备地区版本失败:", error);
+      return ["Global"];
+    }
+
+    // 去重
+    const regions = Array.from(
+      new Set((data || []).map((item: any) => item.region))
+    );
+    return regions.length > 0 ? regions : ["Global"];
+  } catch (err) {
+    console.error("获取设备地区版本异常:", err);
+    return ["Global"];
   }
 }
