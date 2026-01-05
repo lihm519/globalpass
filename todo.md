@@ -248,3 +248,22 @@
 - [ ] 添加语言切换按钮到导航栏
 - [ ] 测试所有语言切换
 - [ ] 保存 Checkpoint
+
+
+## Feature: Vercel 部署配置（纯前端）
+
+### 需求背景
+- [ ] 用户要求部署到 Vercel 免费托管
+- [ ] 自定义域名：globalpass.tech
+- [ ] 保持 Vite 架构（不迁移到 Next.js）
+
+### 实施步骤
+- [x] 简化 package.json 构建命令为纯前端（vite build）
+- [x] 配置正确的输出目录（dist）
+- [ ] 验证 Supabase 客户端连接正常
+- [ ] 配置客户端 AI 功能（Gemini API）
+- [ ] 推送到 GitHub 触发 Vercel 部署
+- [ ] 在 Vercel 配置自定义域名
+- [ ] 修改 GoDaddy DNS 记录指向 Vercel
+- [ ] 验证网站在 globalpass.tech 正常访问
+- [ ] 保存 Checkpoint
