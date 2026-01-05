@@ -105,3 +105,11 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
