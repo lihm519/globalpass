@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-01-05T19:24:20.074205",
-  "total_packages": 312,
+  "timestamp": "2026-01-05T19:34:07.583267",
+  "total_packages": 307,
   "countries": [
     "Australia",
     "Brazil",
@@ -604,20 +604,6 @@
         "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 34.97, \"usd_price\": 40.91, \"currency\": \"USD\", \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
-        "id": 202,
-        "country": "Canada",
-        "provider": "Nomad",
-        "plan_name": "Canada 50 GB 30 Days",
-        "data_type": "Data",
-        "data_amount": "50GB",
-        "validity": "30 Days",
-        "price": 48.91,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-05T19:12:58.31393",
-        "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 41.8, \"usd_price\": 48.91, \"currency\": \"USD\", \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
-      },
-      {
         "id": 206,
         "country": "Canada",
         "provider": "Nomad",
@@ -630,6 +616,20 @@
         "link": "https://www.getnomad.app/canada-esim",
         "last_checked": "2026-01-05T19:12:58.314036",
         "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 41.8, \"usd_price\": 48.91, \"currency\": \"USD\", \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+      },
+      {
+        "id": 202,
+        "country": "Canada",
+        "provider": "Nomad",
+        "plan_name": "Canada 50 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "50GB",
+        "validity": "30 Days",
+        "price": 48.91,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/canada-esim",
+        "last_checked": "2026-01-05T19:12:58.31393",
+        "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 41.8, \"usd_price\": 48.91, \"currency\": \"USD\", \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 196,
@@ -1240,20 +1240,6 @@
         "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 13.65, \"usd_price\": 15.97, \"currency\": \"USD\", \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
-        "id": 162,
-        "country": "Germany",
-        "provider": "Airalo",
-        "plan_name": "Germany 10GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "10GB",
-        "validity": "7 Days",
-        "price": 16.96,
-        "network": "Local Operators",
-        "link": "https://www.airalo.com/germany-esim",
-        "last_checked": "2026-01-05T19:12:47.325461",
-        "raw_data": "{\"original_price\": 14.5, \"original_currency\": \"EUR\", \"usd_price\": 16.96, \"currency\": \"USD\", \"data\": \"10GB\", \"validity\": \"7 Days\"}"
-      },
-      {
         "id": 172,
         "country": "Germany",
         "provider": "Nomad",
@@ -1266,6 +1252,20 @@
         "link": "https://www.getnomad.app/germany-esim",
         "last_checked": "2026-01-05T19:12:49.080678",
         "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 14.5, \"usd_price\": 16.96, \"currency\": \"USD\", \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
+      },
+      {
+        "id": 162,
+        "country": "Germany",
+        "provider": "Airalo",
+        "plan_name": "Germany 10GB 7 Days",
+        "data_type": "Data",
+        "data_amount": "10GB",
+        "validity": "7 Days",
+        "price": 16.96,
+        "network": "Local Operators",
+        "link": "https://www.airalo.com/germany-esim",
+        "last_checked": "2026-01-05T19:12:47.325461",
+        "raw_data": "{\"original_price\": 14.5, \"original_currency\": \"EUR\", \"usd_price\": 16.96, \"currency\": \"USD\", \"data\": \"10GB\", \"validity\": \"7 Days\"}"
       },
       {
         "id": 169,
@@ -1820,20 +1820,6 @@
         "raw_data": "{\"original_price\": 4.0, \"currency\": \"USD\", \"data\": \"1GB\", \"validity\": \"3 Days\"}"
       },
       {
-        "id": 316,
-        "country": "Japan",
-        "provider": "Airalo",
-        "plan_name": "Japan 1GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "1GB",
-        "validity": "7 Days",
-        "price": 4.68,
-        "network": "Local Operators",
-        "link": "https://www.airalo.com/japan-esim",
-        "last_checked": "2026-01-05T19:12:00.900461",
-        "raw_data": "{\"original_price\": 4.0, \"original_currency\": \"EUR\", \"usd_price\": 4.68, \"currency\": \"USD\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
-      },
-      {
         "id": 306,
         "country": "Japan",
         "provider": "Airalo",
@@ -1860,20 +1846,6 @@
         "link": "https://www.getnomad.app/japan-esim",
         "last_checked": "2026-01-05T19:12:04.746122",
         "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 6.82, \"usd_price\": 7.98, \"currency\": \"USD\", \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
-      },
-      {
-        "id": 307,
-        "country": "Japan",
-        "provider": "Airalo",
-        "plan_name": "Japan 3GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "3GB",
-        "validity": "7 Days",
-        "price": 8.77,
-        "network": "Local Operators",
-        "link": "https://www.airalo.com/japan-esim",
-        "last_checked": "2026-01-05T19:12:00.900681",
-        "raw_data": "{\"original_price\": 7.5, \"original_currency\": \"EUR\", \"usd_price\": 8.77, \"currency\": \"USD\", \"data\": \"3GB\", \"validity\": \"7 Days\"}"
       },
       {
         "id": 50,
@@ -1932,20 +1904,6 @@
         "raw_data": "{\"original_price\": 11.0, \"currency\": \"USD\", \"data\": \"5GB\", \"validity\": \"30 Days\"}"
       },
       {
-        "id": 308,
-        "country": "Japan",
-        "provider": "Airalo",
-        "plan_name": "Japan 5GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "5GB",
-        "validity": "7 Days",
-        "price": 11.7,
-        "network": "Local Operators",
-        "link": "https://www.airalo.com/japan-esim",
-        "last_checked": "2026-01-05T19:12:00.900954",
-        "raw_data": "{\"original_price\": 10.0, \"original_currency\": \"EUR\", \"usd_price\": 11.7, \"currency\": \"USD\", \"data\": \"5GB\", \"validity\": \"7 Days\"}"
-      },
-      {
         "id": 51,
         "country": "Japan",
         "provider": "Nomad",
@@ -2002,20 +1960,6 @@
         "raw_data": "{\"original_price\": 18.0, \"currency\": \"USD\", \"data\": \"10GB\", \"validity\": \"30 Days\"}"
       },
       {
-        "id": 309,
-        "country": "Japan",
-        "provider": "Airalo",
-        "plan_name": "Japan 10GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "10GB",
-        "validity": "7 Days",
-        "price": 18.72,
-        "network": "Local Operators",
-        "link": "https://www.airalo.com/japan-esim",
-        "last_checked": "2026-01-05T19:12:00.901257",
-        "raw_data": "{\"original_price\": 16.0, \"original_currency\": \"EUR\", \"usd_price\": 18.72, \"currency\": \"USD\", \"data\": \"10GB\", \"validity\": \"7 Days\"}"
-      },
-      {
         "id": 56,
         "country": "Japan",
         "provider": "Nomad",
@@ -2070,20 +2014,6 @@
         "link": "https://www.airalo.com/japan-esim",
         "last_checked": "2026-01-05T18:25:08.293667",
         "raw_data": "{\"original_price\": 25.0, \"currency\": \"USD\", \"data\": \"20GB\", \"validity\": \"30 Days\"}"
-      },
-      {
-        "id": 317,
-        "country": "Japan",
-        "provider": "Airalo",
-        "plan_name": "Japan 20GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "20GB",
-        "validity": "7 Days",
-        "price": 25.74,
-        "network": "Local Operators",
-        "link": "https://www.airalo.com/japan-esim",
-        "last_checked": "2026-01-05T19:12:00.901309",
-        "raw_data": "{\"original_price\": 22.0, \"original_currency\": \"EUR\", \"usd_price\": 25.74, \"currency\": \"USD\", \"data\": \"20GB\", \"validity\": \"7 Days\"}"
       },
       {
         "id": 57,
@@ -2214,20 +2144,6 @@
         "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 11.09, \"usd_price\": 12.98, \"currency\": \"USD\", \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
-        "id": 261,
-        "country": "Malaysia",
-        "provider": "Nomad",
-        "plan_name": "Malaysia Unlimited 5 Days",
-        "data_type": "Unlimited",
-        "data_amount": "Unlimited",
-        "validity": "5 Days",
-        "price": 17.96,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-05T19:13:16.040296",
-        "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 15.35, \"usd_price\": 17.96, \"currency\": \"USD\", \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
-      },
-      {
         "id": 259,
         "country": "Malaysia",
         "provider": "Nomad",
@@ -2240,6 +2156,20 @@
         "link": "https://www.getnomad.app/malaysia-esim",
         "last_checked": "2026-01-05T19:13:16.040216",
         "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 15.35, \"usd_price\": 17.96, \"currency\": \"USD\", \"data\": \"15 GB\", \"validity\": \"30 Days\"}"
+      },
+      {
+        "id": 261,
+        "country": "Malaysia",
+        "provider": "Nomad",
+        "plan_name": "Malaysia Unlimited 5 Days",
+        "data_type": "Unlimited",
+        "data_amount": "Unlimited",
+        "validity": "5 Days",
+        "price": 17.96,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/malaysia-esim",
+        "last_checked": "2026-01-05T19:13:16.040296",
+        "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 15.35, \"usd_price\": 17.96, \"currency\": \"USD\", \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
         "id": 252,
@@ -5091,22 +5021,6 @@
       "updated_at": "2026-01-05T11:04:28.633616"
     },
     {
-      "id": 202,
-      "provider": "Nomad",
-      "country": "Canada",
-      "plan_name": "Canada 50 GB 30 Days",
-      "data_type": "Data",
-      "data_amount": "50GB",
-      "validity": "30 Days",
-      "price": 48.91,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/canada-esim",
-      "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 41.8, \"usd_price\": 48.91, \"currency\": \"USD\", \"data\": \"50 GB\", \"validity\": \"30 Days\"}",
-      "last_checked": "2026-01-05T19:12:58.31393",
-      "created_at": "2026-01-05T11:04:27.436686",
-      "updated_at": "2026-01-05T11:04:27.436686"
-    },
-    {
       "id": 206,
       "provider": "Nomad",
       "country": "Canada",
@@ -5121,6 +5035,22 @@
       "last_checked": "2026-01-05T19:12:58.314036",
       "created_at": "2026-01-05T11:04:29.028956",
       "updated_at": "2026-01-05T11:04:29.028956"
+    },
+    {
+      "id": 202,
+      "provider": "Nomad",
+      "country": "Canada",
+      "plan_name": "Canada 50 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "50GB",
+      "validity": "30 Days",
+      "price": 48.91,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/canada-esim",
+      "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 41.8, \"usd_price\": 48.91, \"currency\": \"USD\", \"data\": \"50 GB\", \"validity\": \"30 Days\"}",
+      "last_checked": "2026-01-05T19:12:58.31393",
+      "created_at": "2026-01-05T11:04:27.436686",
+      "updated_at": "2026-01-05T11:04:27.436686"
     },
     {
       "id": 196,
@@ -5811,22 +5741,6 @@
       "updated_at": "2026-01-05T11:03:45.166275"
     },
     {
-      "id": 162,
-      "provider": "Airalo",
-      "country": "Germany",
-      "plan_name": "Germany 10GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "10GB",
-      "validity": "7 Days",
-      "price": 16.96,
-      "network": "Local Operators",
-      "link": "https://www.airalo.com/germany-esim",
-      "raw_data": "{\"original_price\": 14.5, \"original_currency\": \"EUR\", \"usd_price\": 16.96, \"currency\": \"USD\", \"data\": \"10GB\", \"validity\": \"7 Days\"}",
-      "last_checked": "2026-01-05T19:12:47.325461",
-      "created_at": "2026-01-05T11:03:38.356469",
-      "updated_at": "2026-01-05T11:03:38.356469"
-    },
-    {
       "id": 172,
       "provider": "Nomad",
       "country": "Germany",
@@ -5841,6 +5755,22 @@
       "last_checked": "2026-01-05T19:12:49.080678",
       "created_at": "2026-01-05T11:03:46.795249",
       "updated_at": "2026-01-05T11:03:46.795249"
+    },
+    {
+      "id": 162,
+      "provider": "Airalo",
+      "country": "Germany",
+      "plan_name": "Germany 10GB 7 Days",
+      "data_type": "Data",
+      "data_amount": "10GB",
+      "validity": "7 Days",
+      "price": 16.96,
+      "network": "Local Operators",
+      "link": "https://www.airalo.com/germany-esim",
+      "raw_data": "{\"original_price\": 14.5, \"original_currency\": \"EUR\", \"usd_price\": 16.96, \"currency\": \"USD\", \"data\": \"10GB\", \"validity\": \"7 Days\"}",
+      "last_checked": "2026-01-05T19:12:47.325461",
+      "created_at": "2026-01-05T11:03:38.356469",
+      "updated_at": "2026-01-05T11:03:38.356469"
     },
     {
       "id": 169,
@@ -6467,22 +6397,6 @@
       "updated_at": "2026-01-05T18:25:05.10247"
     },
     {
-      "id": 316,
-      "provider": "Airalo",
-      "country": "Japan",
-      "plan_name": "Japan 1GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "1GB",
-      "validity": "7 Days",
-      "price": 4.68,
-      "network": "Local Operators",
-      "link": "https://www.airalo.com/japan-esim",
-      "raw_data": "{\"original_price\": 4.0, \"original_currency\": \"EUR\", \"usd_price\": 4.68, \"currency\": \"USD\", \"data\": \"1GB\", \"validity\": \"7 Days\"}",
-      "last_checked": "2026-01-05T19:12:00.900461",
-      "created_at": "2026-01-05T19:13:29.029498",
-      "updated_at": "2026-01-05T19:13:29.029498"
-    },
-    {
       "id": 306,
       "provider": "Airalo",
       "country": "Japan",
@@ -6513,22 +6427,6 @@
       "last_checked": "2026-01-05T19:12:04.746122",
       "created_at": "2026-01-05T09:48:55.115728",
       "updated_at": "2026-01-05T09:48:55.115728"
-    },
-    {
-      "id": 307,
-      "provider": "Airalo",
-      "country": "Japan",
-      "plan_name": "Japan 3GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "3GB",
-      "validity": "7 Days",
-      "price": 8.77,
-      "network": "Local Operators",
-      "link": "https://www.airalo.com/japan-esim",
-      "raw_data": "{\"original_price\": 7.5, \"original_currency\": \"EUR\", \"usd_price\": 8.77, \"currency\": \"USD\", \"data\": \"3GB\", \"validity\": \"7 Days\"}",
-      "last_checked": "2026-01-05T19:12:00.900681",
-      "created_at": "2026-01-05T18:25:05.702791",
-      "updated_at": "2026-01-05T18:25:05.702791"
     },
     {
       "id": 50,
@@ -6595,22 +6493,6 @@
       "updated_at": "2026-01-05T18:25:07.833491"
     },
     {
-      "id": 308,
-      "provider": "Airalo",
-      "country": "Japan",
-      "plan_name": "Japan 5GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "5GB",
-      "validity": "7 Days",
-      "price": 11.7,
-      "network": "Local Operators",
-      "link": "https://www.airalo.com/japan-esim",
-      "raw_data": "{\"original_price\": 10.0, \"original_currency\": \"EUR\", \"usd_price\": 11.7, \"currency\": \"USD\", \"data\": \"5GB\", \"validity\": \"7 Days\"}",
-      "last_checked": "2026-01-05T19:12:00.900954",
-      "created_at": "2026-01-05T18:25:06.112107",
-      "updated_at": "2026-01-05T18:25:06.112107"
-    },
-    {
       "id": 51,
       "provider": "Nomad",
       "country": "Japan",
@@ -6675,22 +6557,6 @@
       "updated_at": "2026-01-05T18:25:08.224156"
     },
     {
-      "id": 309,
-      "provider": "Airalo",
-      "country": "Japan",
-      "plan_name": "Japan 10GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "10GB",
-      "validity": "7 Days",
-      "price": 18.72,
-      "network": "Local Operators",
-      "link": "https://www.airalo.com/japan-esim",
-      "raw_data": "{\"original_price\": 16.0, \"original_currency\": \"EUR\", \"usd_price\": 18.72, \"currency\": \"USD\", \"data\": \"10GB\", \"validity\": \"7 Days\"}",
-      "last_checked": "2026-01-05T19:12:00.901257",
-      "created_at": "2026-01-05T18:25:06.498173",
-      "updated_at": "2026-01-05T18:25:06.498173"
-    },
-    {
       "id": 56,
       "provider": "Nomad",
       "country": "Japan",
@@ -6753,22 +6619,6 @@
       "last_checked": "2026-01-05T18:25:08.293667",
       "created_at": "2026-01-05T18:25:08.414495",
       "updated_at": "2026-01-05T18:25:08.414495"
-    },
-    {
-      "id": 317,
-      "provider": "Airalo",
-      "country": "Japan",
-      "plan_name": "Japan 20GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "20GB",
-      "validity": "7 Days",
-      "price": 25.74,
-      "network": "Local Operators",
-      "link": "https://www.airalo.com/japan-esim",
-      "raw_data": "{\"original_price\": 22.0, \"original_currency\": \"EUR\", \"usd_price\": 25.74, \"currency\": \"USD\", \"data\": \"20GB\", \"validity\": \"7 Days\"}",
-      "last_checked": "2026-01-05T19:12:00.901309",
-      "created_at": "2026-01-05T19:13:33.059078",
-      "updated_at": "2026-01-05T19:13:33.059078"
     },
     {
       "id": 57,
@@ -6915,22 +6765,6 @@
       "updated_at": "2026-01-05T11:05:42.945094"
     },
     {
-      "id": 261,
-      "provider": "Nomad",
-      "country": "Malaysia",
-      "plan_name": "Malaysia Unlimited 5 Days",
-      "data_type": "Unlimited",
-      "data_amount": "Unlimited",
-      "validity": "5 Days",
-      "price": 17.96,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/malaysia-esim",
-      "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 15.35, \"usd_price\": 17.96, \"currency\": \"USD\", \"data\": \"Unlimited\", \"validity\": \"5 Days\"}",
-      "last_checked": "2026-01-05T19:13:16.040296",
-      "created_at": "2026-01-05T11:05:44.218617",
-      "updated_at": "2026-01-05T11:05:44.218617"
-    },
-    {
       "id": 259,
       "provider": "Nomad",
       "country": "Malaysia",
@@ -6945,6 +6779,22 @@
       "last_checked": "2026-01-05T19:13:16.040216",
       "created_at": "2026-01-05T11:05:43.342461",
       "updated_at": "2026-01-05T11:05:43.342461"
+    },
+    {
+      "id": 261,
+      "provider": "Nomad",
+      "country": "Malaysia",
+      "plan_name": "Malaysia Unlimited 5 Days",
+      "data_type": "Unlimited",
+      "data_amount": "Unlimited",
+      "validity": "5 Days",
+      "price": 17.96,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/malaysia-esim",
+      "raw_data": "{\"original_currency\": \"EUR\", \"original_price\": 15.35, \"usd_price\": 17.96, \"currency\": \"USD\", \"data\": \"Unlimited\", \"validity\": \"5 Days\"}",
+      "last_checked": "2026-01-05T19:13:16.040296",
+      "created_at": "2026-01-05T11:05:44.218617",
+      "updated_at": "2026-01-05T11:05:44.218617"
     },
     {
       "id": 252,
