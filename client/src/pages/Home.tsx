@@ -10,8 +10,13 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Smartphone, TrendingDown, ArrowRight } from "lucide-react";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       {/* 导航栏 */}
