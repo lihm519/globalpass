@@ -26,8 +26,11 @@ logger = logging.getLogger(__name__)
 SUPABASE_URL = "https://mzodnvjtlujvvwfnpcyb.supabase.co"
 SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2Rudmp0bHVqdnZ3Zm5wY3liIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzU0MDk4NiwiZXhwIjoyMDgzMTE2OTg2fQ.gr-5J22EhV08PLghNcoS8o5lUFjaEyby21MwE-35ENs"
 
-# 汇率配置（2026年1月5日）
-EXCHANGE_RATES = {
+# 汇率 API 配置
+EXCHANGE_RATE_API_URL = "https://open.er-api.com/v6/latest/USD"
+
+# 备用固定汇率（当 API 失败时使用）
+FALLBACK_EXCHANGE_RATES = {
     "EUR": 1.17,  # 1 EUR = 1.17 USD
     "SGD": 0.78,  # 1 SGD = 0.78 USD
     "USD": 1.00,  # 1 USD = 1.00 USD
@@ -54,10 +57,46 @@ class UniversalScraper:
             "upsert_success": 0,
             "upsert_error": 0,
         }
+        # 获取实时汇率
+        self.exchange_rates = self.fetch_exchange_rates()
+    
+    def fetch_exchange_rates(self) -> Dict[str, float]:
+        """从 API 获取实时汇率"""
+        try:
+            logger.info("📊 获取实时汇率...")
+            response = requests.get(EXCHANGE_RATE_API_URL, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                rates = data['rates']
+                
+                # 计算反向汇率（EUR/SGD → USD）
+                exchange_rates = {
+                    "EUR": 1 / rates['EUR'],
+                    "SGD": 1 / rates['SGD'],
+                    "USD": 1.00,
+                    "CNY": 1 / rates['CNY'],
+                    "GBP": 1 / rates['GBP'],
+                }
+                
+                logger.info(f"✅ 实时汇率获取成功")
+                logger.info(f"   1 EUR = ${exchange_rates['EUR']:.4f} USD")
+                logger.info(f"   1 SGD = ${exchange_rates['SGD']:.4f} USD")
+                logger.info(f"   更新时间: {data['time_last_update_utc']}")
+                
+                return exchange_rates
+            else:
+                logger.warning(f"⚠️ 汇率 API 返回错误: {response.status_code}")
+                logger.warning(f"   使用备用固定汇率")
+                return FALLBACK_EXCHANGE_RATES
+        except Exception as e:
+            logger.error(f"❌ 获取实时汇率失败: {e}")
+            logger.warning(f"   使用备用固定汇率")
+            return FALLBACK_EXCHANGE_RATES
     
     def convert_to_usd(self, price: float, currency: str) -> float:
         """将价格转换为美元"""
-        rate = EXCHANGE_RATES.get(currency, 1.0)
+        rate = self.exchange_rates.get(currency, 1.0)
         return round(price * rate, 2)
     
     def load_countries(self) -> List[Dict]:
@@ -325,7 +364,7 @@ class UniversalScraper:
         """运行爬虫"""
         logger.info("🚀 GlobalPass 通用爬虫启动...")
         logger.info(f"📅 汇率更新时间: 2026-01-05")
-        logger.info(f"💱 EUR→USD: {EXCHANGE_RATES['EUR']}, SGD→USD: {EXCHANGE_RATES['SGD']}\n")
+        logger.info(f"💱 EUR→USD: {self.exchange_rates['EUR']:.4f}, SGD→USD: {self.exchange_rates['SGD']:.4f}\n")
         
         countries = self.load_countries()
         logger.info(f"📍 目标国家: {len(countries)} 个\n")

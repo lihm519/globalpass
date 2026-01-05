@@ -172,4 +172,19 @@
 - [x] 修复爬虫逻辑（由于 Airalo 反爬虫机制，建议手动维护）
 - [x] 重新导出数据到前端（307 个套餐）
 - [x] 验证前端不再显示错误套餐（只显示 3/15/30 Days）
+- [x] 保存 Checkpoint (version: 8ace0182)
+
+## Feature: 集成实时汇率 API
+
+### 背景
+- [ ] 当前使用固定汇率（EUR×1.17, SGD×0.78）
+- [ ] 汇率每天波动，固定汇率导致价格不准确
+- [ ] 用户要求使用实时汇率
+
+### 任务
+- [x] 选择免费汇率 API（open.er-api.com）
+- [x] 测试 API 获取 EUR/USD 和 SGD/USD 汇率（成功）
+- [x] 修改 universal_scraper_v2.py 集成实时汇率
+- [x] 测试爬虫验证汇率准确性（EUR 1.1715, SGD 0.7773）
+- [x] 更新 GitHub Actions 确保定时任务正常（已配置）
 - [ ] 保存 Checkpoint
