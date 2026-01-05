@@ -28,3 +28,21 @@
 - [ ] 推送到 GitHub
 - [ ] 验证 GitHub Actions 工作流
 - [ ] 创建最终 Checkpoint
+
+## Phase 4: 扩展到热门 20 个国家
+
+### 国家列表研究
+- [x] 研究 Airalo 和 Nomad 支持的国家
+- [x] 选择热门 20 个国家（基于旅游热度）
+
+### 配置更新
+- [x] 更新 config/countries.json
+- [ ] 验证国家 slug 正确性
+
+### 测试与部署
+- [x] 本地测试部分国家爬取
+- [x] 修复 Nomad 爬虫 (SGD 货币支持)
+- [ ] 推送到 GitHub 触发全量爬取
+- [ ] 验证数据库数据完整性
+- [ ] 验证前端显示效果
+- [ ] 创建 Checkpoint

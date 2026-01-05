@@ -188,12 +188,12 @@ class UniversalScraper:
             for item in plan_items:
                 text = item.get_text(strip=True)
                 
-                # 跳过不包含 EUR 的项目
-                if 'EUR' not in text:
+                # 跳过不包含 SGD 或 EUR 的项目
+                if 'SGD' not in text and 'EUR' not in text:
                     continue
                 
                 # 提取数据量、有效期和价格
-                # 格式: "Plan Details1 GBFor 7 DAYSEUR3.41" 或 "Plan DetailsUnlimitedFor 3 DAYSEUR9.38"
+                # 格式: "Plan Details1 GBFor 7 DAYSSGD5.14" 或 "Plan DetailsUnlimitedFor 3 DAYSSGD14.15"
                 
                 # 移除 "Plan Details" 前缀
                 text_clean = text.replace('Plan Details', '').strip()
@@ -213,13 +213,19 @@ class UniversalScraper:
                 validity_days = validity_match.group(1)
                 validity = f"{validity_days} Days"
                 
-                # 匹配价格
-                price_match = re.search(r'EUR([\d.]+)', text_clean)
+                # 匹配价格 (SGD 或 EUR)
+                price_match = re.search(r'(SGD|EUR)([\d.]+)', text_clean)
                 if not price_match:
                     continue
                 
-                eur_price = float(price_match.group(1))
-                usd_price = self.eur_to_usd(eur_price)
+                currency = price_match.group(1)
+                price_value = float(price_match.group(2))
+                
+                # 转换为 USD
+                if currency == 'SGD':
+                    usd_price = price_value * 0.74  # SGD to USD 汇率约 0.74
+                else:  # EUR
+                    usd_price = self.eur_to_usd(price_value)
                 
                 # 判断是否是无限流量
                 is_unlimited = 'Unlimited' in data_str
@@ -242,7 +248,8 @@ class UniversalScraper:
                     "network": "Local Operators",
                     "link": f"https://www.getnomad.app/{nomad_slug}-esim",
                     "raw_data": json.dumps({
-                        "eur_price": eur_price,
+                        "currency": currency,
+                        "original_price": price_value,
                         "usd_price": usd_price,
                         "data": data_str.strip(),
                         "validity": validity,
@@ -250,7 +257,7 @@ class UniversalScraper:
                     "last_checked": datetime.utcnow().isoformat(),
                 }
                 packages.append(package)
-                logger.debug(f"   ✅ 套餐: {data_str.strip()} {validity} €{eur_price} (${usd_price})")
+                logger.debug(f"   ✅ 套餐: {data_str.strip()} {validity} {currency}{price_value} (${usd_price})")
             
             logger.info(f"✅ Nomad {country['name']}: 获取 {len(packages)} 个套餐")
             self.stats["nomad_scraped"] += len(packages)
