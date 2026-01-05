@@ -14,6 +14,7 @@ from datetime import datetime
 sys.path.insert(0, '/home/ubuntu/globalpass/scripts')
 
 from airalo_final import scrape_airalo_country
+from nomad_scraper import scrape_nomad_country
 import pymysql
 import os
 from urllib.parse import urlparse
@@ -41,27 +42,28 @@ db_config = {
 }
 
 # 20 个热门国家列表（按旅游热度排序）
+# 格式: (国家名, Airalo slug, Nomad slug)
 POPULAR_COUNTRIES = [
-    ("USA", "united-states"),
-    ("Japan", "japan"),
-    ("Thailand", "thailand"),
-    ("UK", "united-kingdom"),
-    ("France", "france"),
-    ("Germany", "germany"),
-    ("Italy", "italy"),
-    ("Spain", "spain"),
-    ("South Korea", "south-korea"),
-    ("Singapore", "singapore"),
-    ("Australia", "australia"),
-    ("Canada", "canada"),
-    ("China", "china"),
-    ("Hong Kong", "hong-kong"),
-    ("Taiwan", "taiwan"),
-    ("Malaysia", "malaysia"),
-    ("Vietnam", "vietnam"),
-    ("Indonesia", "indonesia"),
-    ("Philippines", "philippines"),
-    ("India", "india"),
+    ("USA", "united-states", "united-states"),
+    ("Japan", "japan", "japan"),
+    ("Thailand", "thailand", "thailand"),
+    ("UK", "united-kingdom", "united-kingdom"),
+    ("France", "france", "france"),
+    ("Germany", "germany", "germany"),
+    ("Italy", "italy", "italy"),
+    ("Spain", "spain", "spain"),
+    ("South Korea", "south-korea", "south-korea"),
+    ("Singapore", "singapore", "singapore"),
+    ("Australia", "australia", "australia"),
+    ("Canada", "canada", "canada"),
+    ("China", "china", "china"),
+    ("Hong Kong", "hong-kong", "hong-kong"),
+    ("Taiwan", "taiwan", "taiwan"),
+    ("Malaysia", "malaysia", "malaysia"),
+    ("Vietnam", "vietnam", "vietnam"),
+    ("Indonesia", "indonesia", "indonesia"),
+    ("Philippines", "philippines", "philippines"),
+    ("India", "india", "india"),
 ]
 
 def send_alert_email(subject, body):
@@ -103,16 +105,23 @@ def scrape_and_import():
         cur = conn.cursor()
         
         # 清空现有数据
-        logger.info("清空现有 Airalo 数据...")
-        cur.execute("DELETE FROM esim_packages WHERE provider = 'Airalo'")
+        logger.info("清空现有数据...")
+        cur.execute("DELETE FROM esim_packages WHERE provider IN ('Airalo', 'Nomad')")
         conn.commit()
         
         total_packages = 0
         failed_countries = []
         
-        for country_name, airalo_slug in POPULAR_COUNTRIES:
+        for country_name, airalo_slug, nomad_slug in POPULAR_COUNTRIES:
             try:
-                packages = scrape_airalo_country(country_name, airalo_slug)
+                # 抓取 Airalo
+                airalo_packages = scrape_airalo_country(country_name, airalo_slug)
+                
+                # 抓取 Nomad
+                nomad_packages = scrape_nomad_country(country_name, nomad_slug)
+                
+                # 合并套餐
+                packages = airalo_packages + nomad_packages
                 
                 if not packages:
                     logger.warning(f"⚠️  {country_name}: 未获取到数据")
