@@ -1,14 +1,25 @@
 {
-  "timestamp": "2026-01-05T10:00:29.764152",
+  "timestamp": "2026-01-05T11:06:22.003768",
   "countries": [
+    "Australia",
+    "Canada",
     "China",
     "France",
+    "Germany",
+    "Indonesia",
+    "Italy",
     "Japan",
+    "Malaysia",
+    "Mexico",
     "Singapore",
     "South Korea",
+    "Spain",
     "Thailand",
+    "Turkey",
+    "UAE",
     "USA",
-    "United Kingdom"
+    "United Kingdom",
+    "Vietnam"
   ],
-  "count": 8
+  "count": 19
 }
