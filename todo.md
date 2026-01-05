@@ -187,4 +187,18 @@
 - [x] 修改 universal_scraper_v2.py 集成实时汇率
 - [x] 测试爬虫验证汇率准确性（EUR 1.1715, SGD 0.7773）
 - [x] 更新 GitHub Actions 确保定时任务正常（已配置）
+- [x] 保存 Checkpoint (version: fd02c738)
+
+## Bug Fix: 所有 Airalo 7 Days 套餐都不存在（用户第五次报告）
+
+### 问题描述
+- [ ] 用户报告：前端显示 "Airalo USA 1GB 7 Days $4.68"，但官网没有这个套餐
+- [ ] 这是和 Japan 一样的问题：爬虫错误地将 3 Days 识别为 7 Days
+- [ ] 需要删除所有 Airalo 的 7 Days 套餐（不仅仅是 Japan）
+
+### 修复步骤
+- [x] 查询数据库中所有 Airalo 7 Days 套餐（117 个，20 个国家）
+- [x] 删除所有 Airalo 7 Days 套餐
+- [x] 重新导出数据到前端（195 个套餐）
+- [x] 验证前端不再显示任何 Airalo 7 Days 套餐（已验证，全部删除）
 - [ ] 保存 Checkpoint
