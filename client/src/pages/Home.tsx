@@ -1,157 +1,157 @@
 /**
- * GlobalPass 首页
+ * GlobalPass Homepage
  * 
- * 设计理念：
- * - 深色主题背景
- * - 绿色强调色
- * - 现代科技感的布局
+ * Design concept:
+ * - Dark theme background
+ * - Green accent color
+ * - Modern tech-inspired layout
  */
 
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Smartphone, TrendingDown, ArrowRight } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function Home() {
+  const { t } = useTranslation();
   // The userAuth hooks provides authentication state
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      {/* 导航栏 */}
+      {/* Navigation */}
       <nav className="border-b border-white/10 backdrop-blur-md bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Globe className="w-8 h-8 text-emerald-500" />
               <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
-                GlobalPass
+                {t('common.appName')}
               </h1>
             </div>
-            <Link href="/esim">
-              <Button className="bg-emerald-500 hover:bg-emerald-600">
-                进入应用 →
-              </Button>
-            </Link>
+            <div className="flex items-center gap-4">
+              <LanguageSwitcher />
+              <Link href="/esim">
+                <Button className="bg-emerald-500 hover:bg-emerald-600">
+                  {t('home.hero.cta')} →
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero 部分 */}
+      {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* 左侧文本 */}
+          {/* Left Text */}
           <div>
             <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              全球 E-SIM
+              {t('home.hero.title')}
               <br />
               <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
-                一站式解决方案
+                {t('home.hero.subtitle')}
               </span>
             </h2>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              GlobalPass 帮助您快速找到最优惠的国际数据套餐，支持全球主要国家，并提供设备兼容性检测，确保您的手机支持 E-SIM 功能。
+            <p className="text-xl text-gray-300 mb-8">
+              {t('home.hero.description')}
             </p>
-
-            {/* 功能列表 */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <TrendingDown className="w-6 h-6 text-emerald-500 flex-shrink-0" />
-                <span className="text-lg">实时价格对比 - 找到最便宜的套餐</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Smartphone className="w-6 h-6 text-emerald-500 flex-shrink-0" />
-                <span className="text-lg">兼容性检测 - 确认您的手机支持</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Globe className="w-6 h-6 text-emerald-500 flex-shrink-0" />
-                <span className="text-lg">全球覆盖 - 支持 180+ 个国家</span>
-              </div>
-            </div>
-
-            {/* CTA 按钮 */}
             <Link href="/esim">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold">
-                立即开始 <ArrowRight className="ml-2 w-5 h-5" />
+              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-lg px-8 py-6">
+                {t('home.hero.cta')} <ArrowRight className="ml-2" />
               </Button>
             </Link>
           </div>
 
-          {/* 右侧卡片 */}
-          <div className="space-y-6">
-            {/* 卡片 1 */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-emerald-400" />
-                </div>
-                <h3 className="text-xl font-bold">全球最低价</h3>
-              </div>
-              <p className="text-slate-300">
-                实时聚合全球运营商价格，帮您找到最优惠的 E-SIM 套餐
-              </p>
-            </div>
-
-            {/* 卡片 2 */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                  <Smartphone className="w-6 h-6 text-emerald-400" />
-                </div>
-                <h3 className="text-xl font-bold">智能兼容性</h3>
-              </div>
-              <p className="text-slate-300">
-                一键检测您的手机是否支持 E-SIM，避免购买后的麻烦
-              </p>
-            </div>
-
-            {/* 卡片 3 */}
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                  <TrendingDown className="w-6 h-6 text-emerald-400" />
-                </div>
-                <h3 className="text-xl font-bold">节省成本</h3>
-              </div>
-              <p className="text-slate-300">
-                对比传统漫游费用，使用 E-SIM 可节省高达 80% 的费用
-              </p>
+          {/* Right Visual */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-emerald-500/20 blur-3xl rounded-full"></div>
+            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-white/10">
+              <Globe className="w-full h-64 text-emerald-500 opacity-20" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* 底部信息 */}
-      <div className="border-t border-white/10 bg-white/5 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="font-semibold mb-3 text-emerald-400">关于我们</h4>
-              <p className="text-slate-400 text-sm">
-                GlobalPass 致力于为全球旅行者提供最便捷、最经济的国际数据解决方案
-              </p>
+      {/* Features Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Feature 1 */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 transition-all">
+            <div className="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
+              <Globe className="w-8 h-8 text-emerald-500" />
             </div>
-            <div>
-              <h4 className="font-semibold mb-3 text-emerald-400">支持国家</h4>
-              <p className="text-slate-400 text-sm">
-                日本、美国、泰国、新加坡、香港、台湾、韩国、澳大利亚等 180+ 个国家和地区
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3 text-emerald-400">联系方式</h4>
-              <p className="text-slate-400 text-sm">
-                Email: support@globalpass.com
-                <br />
-                WeChat: GlobalPass_Support
-              </p>
-            </div>
+            <h3 className="text-2xl font-bold mb-4">{t('home.features.priceComparison.title')}</h3>
+            <p className="text-gray-400">
+              {t('home.features.priceComparison.description')}
+            </p>
           </div>
-          <div className="border-t border-white/10 mt-8 pt-8 text-center text-slate-400 text-sm">
-            <p>&copy; 2024 GlobalPass. All rights reserved.</p>
+
+          {/* Feature 2 */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 transition-all">
+            <div className="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
+              <Smartphone className="w-8 h-8 text-emerald-500" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4">{t('home.features.compatibility.title')}</h3>
+            <p className="text-gray-400">
+              {t('home.features.compatibility.description')}
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 transition-all">
+            <div className="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
+              <TrendingDown className="w-8 h-8 text-emerald-500" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4">{t('home.features.savings.title')}</h3>
+            <p className="text-gray-400">
+              {t('home.features.savings.description')}
+            </p>
           </div>
         </div>
       </div>
+
+      {/* About Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-12 border border-white/10">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+            {t('home.about.title')}
+          </h2>
+          <p className="text-xl text-gray-300 mb-6">
+            {t('home.about.description')}
+          </p>
+          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-6 mb-8">
+            <p className="text-yellow-200">
+              {t('home.about.warning')}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-emerald-400">{t('home.support.title')}</h3>
+              <p className="text-gray-400">
+                {t('home.support.description')}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-emerald-400">{t('home.contact.title')}</h3>
+              <p className="text-gray-400 mb-2">{t('home.contact.email')}</p>
+              <p className="text-gray-400">{t('home.contact.wechat')}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-gray-400">
+            {t('home.footer.copyright')}
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

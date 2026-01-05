@@ -34,8 +34,11 @@ import {
   type SupportedDevice,
 } from "@/lib/supabase";
 import { AIChatDialog } from "@/components/AIChatDialog";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function ESIMPage() {
+  const { t } = useTranslation();
   const [selectedDevice, setSelectedDevice] = useState<string>("");
   const [selectedRegion, setSelectedRegion] = useState<string>("Global");
   const [selectedCountry, setSelectedCountry] = useState<string>("");
@@ -214,21 +217,24 @@ export default function ESIMPage() {
               <Globe className="w-8 h-8 text-emerald-500" />
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
-                  GlobalPass
+                  {t('common.appName')}
                 </h1>
-                <p className="text-xs text-slate-400">全球 E-SIM 比价与手机兼容性检测</p>
+                <p className="text-xs text-slate-400">{t('common.tagline')}</p>
               </div>
             </div>
             
-            {/* AI 导购按钮 */}
-            <Button 
-              variant="default"
-              onClick={() => setAiChatOpen(true)}
-              className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"
-            >
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI 导购
-            </Button>
+            <div className="flex items-center gap-3">
+              <LanguageSwitcher />
+              {/* AI 导购按钮 */}
+              <Button 
+                variant="default"
+                onClick={() => setAiChatOpen(true)}
+                className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700"
+              >
+                <Sparkles className="w-4 h-4 mr-2" />
+                {t('esim.aiChat.title')}
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
@@ -240,14 +246,14 @@ export default function ESIMPage() {
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
               <Search className="w-6 h-6 text-emerald-500" />
-              <h2 className="text-2xl font-bold">🔍 即时搜索</h2>
+              <h2 className="text-2xl font-bold">🔍 {t('esim.search.title')}</h2>
             </div>
             <p className="text-slate-300 mb-6">
-              输入国家名称快速查找套餐（如 "Japan"、"USA"）
+              {t('esim.search.hint')}
             </p>
             <Input
               type="text"
-              placeholder="搜索国家..."
+              placeholder={t('esim.search.placeholder')}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="bg-white/5 border-white/10 text-white placeholder:text-slate-400 text-lg py-6"
@@ -257,7 +263,7 @@ export default function ESIMPage() {
 
         {/* 热门推荐 */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">🔥 热门推荐 (Popular Destinations)</h2>
+          <h2 className="text-2xl font-bold mb-6">🔥 {t('esim.popular.title')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {popularCountries.map((country) => (
               <button
@@ -289,22 +295,22 @@ export default function ESIMPage() {
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl hover:bg-white/10 transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <Smartphone className="w-6 h-6 text-emerald-500" />
-              <h2 className="text-2xl font-bold">📱 手机兼容性检测</h2>
+              <h2 className="text-2xl font-bold">📱 {t('esim.compatibility.title')}</h2>
             </div>
 
             <p className="text-slate-300 mb-6">
-              选择您的手机型号和版本，检查是否支持 E-SIM
+              {t('esim.compatibility.description')}
             </p>
 
             <div className="space-y-4">
               {/* 设备选择 */}
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-3">
-                  选择手机型号
+                  {t('esim.compatibility.selectModel')}
                 </label>
                 <Select value={selectedDevice} onValueChange={handleDeviceChange}>
                   <SelectTrigger className="bg-white/5 border-white/10 text-white hover:bg-white/10 transition-colors">
-                    <SelectValue placeholder="请选择您的手机型号..." />
+                    <SelectValue placeholder={t('esim.compatibility.selectModelPlaceholder')} />
                   </SelectTrigger>
                   <SelectContent className="bg-slate-900 border-white/10">
                     {devices.map((device) => (
@@ -392,9 +398,9 @@ export default function ESIMPage() {
         <div>
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-bold mb-3">💰 套餐比价</h2>
+              <h2 className="text-3xl font-bold mb-3">💰 {t('esim.comparison.title')}</h2>
               <p className="text-slate-400">
-                {selectedCountry} 的 E-SIM 套餐价格（按价格从低到高排序）
+                {selectedCountry} - {t('esim.comparison.subtitle')}
               </p>
             </div>
             
@@ -406,9 +412,9 @@ export default function ESIMPage() {
                   <SelectValue placeholder="流量类型" />
                 </SelectTrigger>
                 <SelectContent className="bg-slate-900 border-white/10">
-                  <SelectItem value="all" className="text-white">全部流量</SelectItem>
-                  <SelectItem value="unlimited" className="text-white">无限流量</SelectItem>
-                  <SelectItem value="limited" className="text-white">限量流量</SelectItem>
+                  <SelectItem value="all" className="text-white">{t('esim.comparison.filters.allData')}</SelectItem>
+                  <SelectItem value="unlimited" className="text-white">{t('esim.card.unlimited')}</SelectItem>
+                  <SelectItem value="limited" className="text-white">Limited Data</SelectItem>
                 </SelectContent>
               </Select>
               
@@ -417,7 +423,7 @@ export default function ESIMPage() {
                   <SelectValue placeholder="有效期" />
                 </SelectTrigger>
                 <SelectContent className="bg-slate-900 border-white/10">
-                  <SelectItem value="all" className="text-white">全部有效期</SelectItem>
+                  <SelectItem value="all" className="text-white">{t('esim.comparison.filters.allValidity')}</SelectItem>
                   <SelectItem value="3 Days" className="text-white">3 天</SelectItem>
                   <SelectItem value="7 Days" className="text-white">7 天</SelectItem>
                   <SelectItem value="15 Days" className="text-white">15 天</SelectItem>
@@ -491,6 +497,7 @@ export default function ESIMPage() {
  * - 无限流量套餐高亮（金色/紫色边框）
  */
 function PackageCard({ package: pkg }: { package: ESIMPackage }) {
+  const { t } = useTranslation();
   const isUnlimited = pkg.data_type === "Unlimited";
   const isAiralo = pkg.provider === "Airalo";
   const isNomad = pkg.provider === "Nomad";
@@ -506,7 +513,7 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
       {/* 无限流量标签 */}
       {isUnlimited && (
         <div className="absolute top-0 right-0 bg-gradient-to-r from-purple-500 to-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-          ⚡ UNLIMITED
+          ⚡ {t('esim.card.unlimited')}
         </div>
       )}
 
@@ -539,13 +546,13 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
 
         {/* 套餐名称 */}
         <div className="mb-4">
-          <p className="text-sm text-slate-400 mb-1">套餐名称</p>
+          <p className="text-sm text-slate-400 mb-1">{t('esim.card.planName')}</p>
           <p className="text-lg font-semibold text-white">{pkg.plan_name}</p>
         </div>
 
         {/* 数据量 */}
         <div className="mb-6">
-          <p className="text-sm text-slate-400 mb-2">数据量</p>
+          <p className="text-sm text-slate-400 mb-2">{t('esim.card.data')}</p>
           <p className={`text-3xl font-bold ${
             isUnlimited ? "text-transparent bg-gradient-to-r from-purple-400 to-yellow-400 bg-clip-text" : "text-emerald-400"
           }`}>
@@ -556,14 +563,14 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
         {/* 有效期 */}
         {pkg.validity && (
           <div className="mb-4">
-            <p className="text-sm text-slate-400 mb-2">有效期</p>
+            <p className="text-sm text-slate-400 mb-2">{t('esim.card.validity')}</p>
             <p className="text-sm font-semibold text-emerald-300">{pkg.validity}</p>
           </div>
         )}
 
         {/* 价格 */}
         <div className="mb-6 pb-6 border-b border-white/10">
-          <p className="text-sm text-slate-400 mb-2">价格</p>
+          <p className="text-sm text-slate-400 mb-2">{t('esim.card.price')}</p>
           <div className="flex items-baseline gap-1 mb-2">
             {(() => {
               // 解析 raw_data 获取币种信息
@@ -577,7 +584,7 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
             })()}
           </div>
           <p className="text-xs text-slate-500 italic">
-            *价格因汇率波动可能有所差异，实际价格请以官方为准
+            {t('esim.card.priceDisclaimer')}
           </p>
         </div>
 
@@ -596,7 +603,7 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
               : "bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white hover:shadow-emerald-500/50"
           }`}
         >
-          立即购买 →
+          {t('esim.card.buyNow')}
         </a>
       </div>
     </Card>

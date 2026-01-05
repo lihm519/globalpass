@@ -1,0 +1,93 @@
+{
+  "common": {
+    "appName": "GlobalPass",
+    "tagline": "全球 E-SIM 比價與手機兼容性檢測"
+  },
+  "nav": {
+    "home": "首頁",
+    "esim": "E-SIM 套餐",
+    "about": "關於我們",
+    "language": "語言"
+  },
+  "home": {
+    "hero": {
+      "title": "全球 E-SIM",
+      "subtitle": "一站式解決方案",
+      "description": "GlobalPass 幫助您快速找到最優惠的國際數據套餐，支持全球主要國家，並提供設備兼容性檢測，確保您的手機支持 E-SIM 功能。",
+      "cta": "立即開始"
+    },
+    "features": {
+      "priceComparison": {
+        "title": "全球最低價",
+        "description": "實時聚合全球運營商價格，幫您找到最優惠的 E-SIM 套餐"
+      },
+      "compatibility": {
+        "title": "智能兼容性",
+        "description": "一鍵檢測您的手機是否支持 E-SIM，避免購買失誤"
+      },
+      "savings": {
+        "title": "節省成本",
+        "description": "對比傳統漫遊費用，使用 E-SIM 可節省高達 80% 的費用"
+      }
+    },
+    "about": {
+      "title": "關於我們",
+      "description": "GlobalPass 致力於為全球旅客提供最優惠的國際數據套餐，我們的經濟實惠的國際數據解決方案，讓您的旅行更加便捷。",
+      "warning": "⚠️ 注意：中國大陸、香港、澳門版本的 iPhone 14 及更早機型由於物理雙卡限制，不支持 E-SIM。請使用國際版本以獲得完整支持。"
+    },
+    "support": {
+      "title": "支持國家",
+      "description": "日本、美國、英國、法國、德國、意大利、西班牙、韓國、泰國、新加坡等 180+ 個國家和地區。"
+    },
+    "contact": {
+      "title": "聯繫方式",
+      "email": "Email: support@globalpass.com",
+      "wechat": "WeChat: GlobalPass_Support"
+    },
+    "footer": {
+      "copyright": "© 2024 GlobalPass. All rights reserved."
+    }
+  },
+  "esim": {
+    "title": "E-SIM 套餐",
+    "search": {
+      "title": "即時搜索",
+      "placeholder": "搜索國家...",
+      "hint": "輸入國家名稱快速查找套餐（如 \"Japan\"、\"USA\"）"
+    },
+    "popular": {
+      "title": "熱門推薦"
+    },
+    "compatibility": {
+      "title": "手機兼容性檢測",
+      "description": "選擇您的手機型號和版本，檢查是否支持 E-SIM",
+      "selectModel": "選擇手機型號",
+      "selectModelPlaceholder": "請選擇您的手機型號..."
+    },
+    "comparison": {
+      "title": "套餐比價",
+      "subtitle": "E-SIM 套餐價格（按價格從低到高排序）",
+      "filters": {
+        "allData": "全部流量",
+        "allValidity": "全部有效期"
+      }
+    },
+    "card": {
+      "provider": "供應商",
+      "planName": "套餐名稱",
+      "data": "數據量",
+      "validity": "有效期",
+      "price": "價格",
+      "unlimited": "無限流量",
+      "buyNow": "立即購買 →",
+      "priceDisclaimer": "*價格因匯率波動可能有所差異，實際價格請以官方為準"
+    },
+    "aiChat": {
+      "title": "AI 導購",
+      "placeholder": "問我任何關於 E-SIM 套餐的問題...",
+      "send": "發送",
+      "thinking": "思考中...",
+      "error": "獲取回復失敗，請重試"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "common": {
+    "appName": "GlobalPass",
+    "tagline": "Comparación de precios de E-SIM global y verificación de compatibilidad de teléfonos"
+  },
+  "nav": {
+    "home": "Inicio",
+    "esim": "Planes E-SIM",
+    "about": "Acerca de",
+    "language": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "E-SIM Global",
+      "subtitle": "Solución integral",
+      "description": "GlobalPass te ayuda a encontrar rápidamente los mejores planes de datos internacionales, admite los principales países del mundo y proporciona verificación de compatibilidad de dispositivos para garantizar que tu teléfono admita la funcionalidad E-SIM.",
+      "cta": "Comenzar"
+    },
+    "features": {
+      "priceComparison": {
+        "title": "Mejores precios globales",
+        "description": "Agregación en tiempo real de precios de operadores globales para ayudarte a encontrar los planes E-SIM más rentables"
+      },
+      "compatibility": {
+        "title": "Compatibilidad inteligente",
+        "description": "Verifica con un clic si tu teléfono admite E-SIM, evitando errores de compra"
+      },
+      "savings": {
+        "title": "Ahorra dinero",
+        "description": "En comparación con las tarifas de roaming tradicionales, usar E-SIM puede ahorrar hasta un 80% de los costos"
+      }
+    },
+    "about": {
+      "title": "Acerca de nosotros",
+      "description": "GlobalPass se dedica a proporcionar a los viajeros globales los mejores planes de datos internacionales. Nuestras soluciones de datos internacionales económicas hacen que tu viaje sea más conveniente.",
+      "warning": "⚠️ Nota: Los modelos iPhone 14 y anteriores de China continental, Hong Kong y Macao no admiten E-SIM debido a limitaciones de doble SIM física. Utiliza versiones internacionales para obtener soporte completo."
+    },
+    "support": {
+      "title": "Países compatibles",
+      "description": "Japón, EE. UU., Reino Unido, Francia, Alemania, Italia, España, Corea del Sur, Tailandia, Singapur y más de 180 países y regiones."
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "email": "Email: support@globalpass.com",
+      "wechat": "WeChat: GlobalPass_Support"
+    },
+    "footer": {
+      "copyright": "© 2024 GlobalPass. Todos los derechos reservados."
+    }
+  },
+  "esim": {
+    "title": "Planes E-SIM",
+    "search": {
+      "title": "Búsqueda instantánea",
+      "placeholder": "Buscar país...",
+      "hint": "Ingresa el nombre del país para encontrar planes rápidamente (por ejemplo, \"Japan\", \"USA\")"
+    },
+    "popular": {
+      "title": "Destinos populares"
+    },
+    "compatibility": {
+      "title": "Verificación de compatibilidad de teléfono",
+      "description": "Selecciona el modelo y la versión de tu teléfono para verificar el soporte de E-SIM",
+      "selectModel": "Seleccionar modelo de teléfono",
+      "selectModelPlaceholder": "Por favor selecciona tu modelo de teléfono..."
+    },
+    "comparison": {
+      "title": "Comparación de planes",
+      "subtitle": "Precios de planes E-SIM (ordenados de menor a mayor precio)",
+      "filters": {
+        "allData": "Todos los datos",
+        "allValidity": "Toda la validez"
+      }
+    },
+    "card": {
+      "provider": "Proveedor",
+      "planName": "Nombre del plan",
+      "data": "Datos",
+      "validity": "Validez",
+      "price": "Precio",
+      "unlimited": "ILIMITADO",
+      "buyNow": "Comprar ahora →",
+      "priceDisclaimer": "*Los precios pueden variar debido a fluctuaciones del tipo de cambio, consulta el sitio web oficial para conocer los precios reales"
+    },
+    "aiChat": {
+      "title": "Asistente de compras AI",
+      "placeholder": "Pregúntame cualquier cosa sobre planes E-SIM...",
+      "send": "Enviar",
+      "thinking": "Pensando...",
+      "error": "Error al obtener respuesta, inténtalo de nuevo"
+    }
+  }
+}
