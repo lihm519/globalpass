@@ -25,4 +25,25 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * E-SIM 套餐表
+ */
+export const esimPackages = mysqlTable("esim_packages", {
+  id: int("id").autoincrement().primaryKey(),
+  provider: varchar("provider", { length: 64 }).notNull(), // 供应商: Airalo, Nomad
+  country: varchar("country", { length: 128 }).notNull(), // 国家名称
+  planName: varchar("planName", { length: 256 }).notNull(), // 套餐名称
+  dataType: varchar("dataType", { length: 32 }).notNull(), // 数据类型: Data, Unlimited
+  dataAmount: varchar("dataAmount", { length: 64 }).notNull(), // 数据量: 1GB, 3GB, Unlimited
+  validity: varchar("validity", { length: 64 }).notNull(), // 有效期: 3 Days, 7 Days, 30 Days
+  price: varchar("price", { length: 32 }).notNull(), // 价格 (USD)
+  network: varchar("network", { length: 256 }), // 网络运营商
+  link: text("link"), // 购买链接
+  rawData: text("rawData"), // 原始 JSON 数据
+  lastChecked: timestamp("lastChecked").defaultNow().notNull(), // 最后检查时间
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type EsimPackage = typeof esimPackages.$inferSelect;
+export type InsertEsimPackage = typeof esimPackages.$inferInsert;

@@ -201,4 +201,22 @@
 - [x] 删除所有 Airalo 7 Days 套餐
 - [x] 重新导出数据到前端（195 个套餐）
 - [x] 验证前端不再显示任何 Airalo 7 Days 套餐（已验证，全部删除）
+- [x] 保存 Checkpoint (version: 21aa2a7f)
+
+## Feature: 修复爬虫并添加数据验证
+
+### 任务1：修复爬虫默认有效期问题
+- [ ] 修改 universal_scraper_v2.py 移除 `current_validity = "7 Days"` 默认值
+- [ ] 改为从套餐名称中提取有效期（如 "Japan 1GB 3 Days" → "3 Days"）
+- [ ] 如果无法识别有效期，跳过该套餐并记录日志
+- [ ] 测试修复后的爬虫（只抓取日本）
+- [ ] 验证不再出现错误的 7 Days 套餐
+
+### 任务2：添加数据验证脚本
+- [ ] 开发自动化验证脚本 `scripts/validate_data.py`
+- [ ] 检查数据库中是否有不存在的套餐（如 Airalo 7 Days）
+- [ ] 检查套餐数量是否异常（如突然减少 50%）
+- [ ] 检查价格是否异常（如价格为 0 或负数）
+- [ ] 发现问题时输出详细日志
+- [ ] 配置 GitHub Actions 每天运行验证脚本
 - [ ] 保存 Checkpoint

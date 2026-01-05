@@ -129,14 +129,16 @@ class UniversalScraper:
             # 查找所有套餐链接
             package_links = soup.find_all('a')
             
-            current_validity = "7 Days"  # 默认有效期
+            current_validity = None
             
             for link in package_links:
                 text = link.get_text(strip=True)
                 
-                # 检查是否是有效期标签
-                if re.match(r'^\d+\s*days?$', text, re.IGNORECASE):
-                    current_validity = text.replace('days', 'Days').replace('day', 'Day')
+                # 检查是否是有效期标签（优先从标题中提取）
+                validity_match = re.match(r'^(\d+)\s*days?$', text, re.IGNORECASE)
+                if validity_match:
+                    days = validity_match.group(1)
+                    current_validity = f"{days} Day" if days == "1" else f"{days} Days"
                     continue
                 
                 # 解析标准套餐: "1GB4.00 €"
@@ -146,6 +148,11 @@ class UniversalScraper:
                     data_amount = standard_match.group(1)
                     price_eur = float(standard_match.group(2))
                     price_usd = self.convert_to_usd(price_eur, "EUR")
+                    
+                    # 如果没有识别到有效期，跳过这个套餐
+                    if not current_validity:
+                        logger.debug(f"   ⚠️ 跳过套餐（无法识别有效期）: {data_amount}GB €{price_eur}")
+                        continue
                     
                     package = {
                         "provider": "Airalo",
@@ -176,6 +183,11 @@ class UniversalScraper:
                 if unlimited_match:
                     price_eur = float(unlimited_match.group(1))
                     price_usd = self.convert_to_usd(price_eur, "EUR")
+                    
+                    # 如果没有识别到有效期，跳过这个套餐
+                    if not current_validity:
+                        logger.debug(f"   ⚠️ 跳过套餐（无法识别有效期）: Unlimited €{price_eur}")
+                        continue
                     
                     package = {
                         "provider": "Airalo",

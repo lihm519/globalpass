@@ -1,0 +1,40 @@
+{
+  "query": "SELECT planName, dataAmount, validity, price FROM esim_packages WHERE country = 'Japan' LIMIT 5",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2g2p6H28NVvUjDq.54dc21c44447 --database W6srbd3yoMv63MQEo9nDkM --execute SELECT planName, dataAmount, validity, price FROM esim_packages WHERE country = 'Japan' LIMIT 5",
+  "rows": [
+    {
+      "planName": "Japan 5GB 30 Days",
+      "dataAmount": "5GB",
+      "validity": "30 Days",
+      "price": "10.54"
+    },
+    {
+      "planName": "Japan 10GB 30 Days",
+      "dataAmount": "10GB",
+      "validity": "30 Days",
+      "price": "17.57"
+    },
+    {
+      "planName": "Japan 20GB 30 Days",
+      "dataAmount": "20GB",
+      "validity": "30 Days",
+      "price": "25.19"
+    },
+    {
+      "planName": "Japan 1GB 3 Days",
+      "dataAmount": "1GB",
+      "validity": "3 Days",
+      "price": "4.69"
+    },
+    {
+      "planName": "Japan 3GB 3 Days",
+      "dataAmount": "3GB",
+      "validity": "3 Days",
+      "price": "8.2"
+    }
+  ],
+  "messages": [],
+  "stdout": "planName\tdataAmount\tvalidity\tprice\nJapan 5GB 30 Days\t5GB\t30 Days\t10.54\nJapan 10GB 30 Days\t10GB\t30 Days\t17.57\nJapan 20GB 30 Days\t20GB\t30 Days\t25.19\nJapan 1GB 3 Days\t1GB\t3 Days\t4.69\nJapan 3GB 3 Days\t3GB\t3 Days\t8.2\n",
+  "stderr": "",
+  "execution_time_ms": 1621
+}
