@@ -1,0 +1,11 @@
+{
+  "last_updated": "2026-01-05",
+  "source": "ECB & Yahoo Finance",
+  "rates": {
+    "EUR_TO_USD": 1.17,
+    "SGD_TO_USD": 0.78,
+    "CNY_TO_USD": 0.14,
+    "GBP_TO_USD": 1.27
+  },
+  "note": "这些汇率基于 2026 年 1 月的实时数据"
+}

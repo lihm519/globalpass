@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
 """
-GlobalPass - 通用爬虫核心系统（网页抓取版）
-阶段二：自动化供货系统
+GlobalPass - 通用爬虫核心系统（网页抓取版 v2）
 功能：
-- 从 Airalo 官网网页抓取真实数据
-- 从 Nomad 官网网页抓取真实数据
-- 货币转换（EUR → USD）
-- 无限流量识别
-- 有效期清洗
-- Upsert 入库
+- 从 Airalo 官网抓取欧元价格并转换为美元
+- 从 Nomad 官网抓取新加坡元价格并转换为美元
+- 统一前端显示美元价格
 """
 import json
 import requests
 import logging
 from datetime import datetime
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import List, Dict
 import re
 from bs4 import BeautifulSoup
 
@@ -30,7 +26,14 @@ logger = logging.getLogger(__name__)
 SUPABASE_URL = "https://mzodnvjtlujvvwfnpcyb.supabase.co"
 SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2Rudmp0bHVqdnZ3Zm5wY3liIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzU0MDk4NiwiZXhwIjoyMDgzMTE2OTg2fQ.gr-5J22EhV08PLghNcoS8o5lUFjaEyby21MwE-35ENs"
 
-# 注意：不再使用汇率转换，直接使用提供商的原始价格
+# 汇率配置（2026年1月5日）
+EXCHANGE_RATES = {
+    "EUR": 1.17,  # 1 EUR = 1.17 USD
+    "SGD": 0.78,  # 1 SGD = 0.78 USD
+    "USD": 1.00,  # 1 USD = 1.00 USD
+    "CNY": 0.14,  # 1 CNY = 0.14 USD
+    "GBP": 1.27,  # 1 GBP = 1.27 USD
+}
 
 class UniversalScraper:
     """通用爬虫类 - 支持 Airalo 和 Nomad"""
@@ -52,6 +55,11 @@ class UniversalScraper:
             "upsert_error": 0,
         }
     
+    def convert_to_usd(self, price: float, currency: str) -> float:
+        """将价格转换为美元"""
+        rate = EXCHANGE_RATES.get(currency, 1.0)
+        return round(price * rate, 2)
+    
     def load_countries(self) -> List[Dict]:
         """加载国家配置"""
         config_file = Path(__file__).parent.parent / "config" / "countries.json"
@@ -63,12 +71,10 @@ class UniversalScraper:
         with open(config_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     
-    # 已移除汇率转换函数，使用提供商原始价格
-    
     def scrape_airalo_country(self, country: Dict) -> List[Dict]:
         """从 Airalo 官网抓取单个国家的数据"""
         try:
-            url = f"https://www.airalo.com/{country['airalo_slug']}-esim?currency=USD"
+            url = f"https://www.airalo.com/{country['airalo_slug']}-esim"
             
             logger.info(f"🌐 正在抓取 Airalo - {country['name']}...")
             
@@ -84,24 +90,23 @@ class UniversalScraper:
             # 查找所有套餐链接
             package_links = soup.find_all('a')
             
-            validity_map = {}
             current_validity = "7 Days"  # 默认有效期
             
             for link in package_links:
                 text = link.get_text(strip=True)
                 
-                # 检查是否是有效期标签（如 "3 days", "7 days" 等）
+                # 检查是否是有效期标签
                 if re.match(r'^\d+\s*days?$', text, re.IGNORECASE):
                     current_validity = text.replace('days', 'Days').replace('day', 'Day')
-                    logger.debug(f"   📅 检测到有效期: {current_validity}")
                     continue
                 
-                # 解析标准套餐: "1GB$4.00 USD" 或 "1GB4.00 USD" 格式
-                standard_match = re.match(r'^(\d+)\s*GB\$?([\d.]+)\s*USD$', text)
+                # 解析标准套餐: "1GB4.00 €"
+                standard_match = re.match(r'^(\d+)\s*GB([\d.]+)\s*€$', text)
                 
                 if standard_match:
                     data_amount = standard_match.group(1)
-                    price = float(standard_match.group(2))
+                    price_eur = float(standard_match.group(2))
+                    price_usd = self.convert_to_usd(price_eur, "EUR")
                     
                     package = {
                         "provider": "Airalo",
@@ -110,11 +115,13 @@ class UniversalScraper:
                         "data_type": "Data",
                         "data_amount": f"{data_amount}GB",
                         "validity": current_validity,
-                        "price": price,
+                        "price": price_usd,
                         "network": "Local Operators",
                         "link": f"https://www.airalo.com/{country['airalo_slug']}-esim",
                         "raw_data": json.dumps({
-                            "original_price": price,
+                            "original_price": price_eur,
+                            "original_currency": "EUR",
+                            "usd_price": price_usd,
                             "currency": "USD",
                             "data": f"{data_amount}GB",
                             "validity": current_validity,
@@ -122,13 +129,14 @@ class UniversalScraper:
                         "last_checked": datetime.utcnow().isoformat(),
                     }
                     packages.append(package)
-                    logger.debug(f"   ✅ 标准套餐: {data_amount}GB ${price}")
+                    logger.debug(f"   ✅ 标准套餐: {data_amount}GB €{price_eur} → ${price_usd}")
                 
-                # 解析无限流量套餐: "Unlimited$7.50 USD" 或 "UnlimitedData7.50 USD"
-                unlimited_match = re.match(r'^Unlimited(?:Data)?\$?([\d.]+)\s*USD$', text)
+                # 解析无限流量套餐: "Unlimited7.50 €"
+                unlimited_match = re.match(r'^Unlimited(?:Data)?([\d.]+)\s*€$', text)
                 
                 if unlimited_match:
-                    price = float(unlimited_match.group(1))
+                    price_eur = float(unlimited_match.group(1))
+                    price_usd = self.convert_to_usd(price_eur, "EUR")
                     
                     package = {
                         "provider": "Airalo",
@@ -137,11 +145,13 @@ class UniversalScraper:
                         "data_type": "Unlimited",
                         "data_amount": "Unlimited",
                         "validity": current_validity,
-                        "price": price,
+                        "price": price_usd,
                         "network": "Local Operators",
                         "link": f"https://www.airalo.com/{country['airalo_slug']}-esim",
                         "raw_data": json.dumps({
-                            "original_price": price,
+                            "original_price": price_eur,
+                            "original_currency": "EUR",
+                            "usd_price": price_usd,
                             "currency": "USD",
                             "data": "Unlimited",
                             "validity": current_validity,
@@ -149,7 +159,7 @@ class UniversalScraper:
                         "last_checked": datetime.utcnow().isoformat(),
                     }
                     packages.append(package)
-                    logger.debug(f"   ✅ 无限套餐: Unlimited ${price}")
+                    logger.debug(f"   ✅ 无限套餐: Unlimited €{price_eur} → ${price_usd}")
             
             logger.info(f"✅ Airalo {country['name']}: 获取 {len(packages)} 个套餐")
             self.stats["airalo_scraped"] += len(packages)
@@ -162,7 +172,6 @@ class UniversalScraper:
     def scrape_nomad_country(self, country: Dict) -> List[Dict]:
         """从 Nomad 官网抓取单个国家的数据"""
         try:
-            # 构建 Nomad URL
             nomad_slug = country['nomad_slug'].replace('_', '-')
             url = f"https://www.getnomad.app/{nomad_slug}-esim"
             
@@ -183,12 +192,9 @@ class UniversalScraper:
             for item in plan_items:
                 text = item.get_text(strip=True)
                 
-                # 跳过不包含 USD/SGD/EUR 的项目
+                # 跳过不包含币种的项目
                 if 'USD' not in text and 'SGD' not in text and 'EUR' not in text:
                     continue
-                
-                # 提取数据量、有效期和价格
-                # 格式: "Plan Details1 GBFor 7 DAYSSGD5.14" 或 "Plan DetailsUnlimitedFor 3 DAYSSGD14.15"
                 
                 # 移除 "Plan Details" 前缀
                 text_clean = text.replace('Plan Details', '').strip()
@@ -198,7 +204,7 @@ class UniversalScraper:
                 if not data_match:
                     continue
                 
-                data_str = data_match.group(0)  # "1 GB" 或 "Unlimited"
+                data_str = data_match.group(0)
                 
                 # 匹配有效期
                 validity_match = re.search(r'For\s+(\d+)\s*DAYS', text_clean, re.IGNORECASE)
@@ -208,16 +214,16 @@ class UniversalScraper:
                 validity_days = validity_match.group(1)
                 validity = f"{validity_days} Days"
                 
-                # 匹配价格 (只抓取 USD)
-                price_match = re.search(r'USD\s*([\d.]+)', text_clean)
+                # 匹配价格 (USD/SGD/EUR)
+                price_match = re.search(r'(USD|SGD|EUR)\s*([\d.]+)', text_clean)
                 if not price_match:
                     continue
                 
-                currency = "USD"
-                price_value = float(price_match.group(1))
+                currency = price_match.group(1)
+                price_value = float(price_match.group(2))
                 
-                # 使用原始价格
-                original_price = price_value
+                # 转换为美元
+                price_usd = self.convert_to_usd(price_value, currency)
                 
                 # 判断是否是无限流量
                 is_unlimited = 'Unlimited' in data_str
@@ -236,19 +242,21 @@ class UniversalScraper:
                     "data_type": data_type,
                     "data_amount": data_amount,
                     "validity": validity,
-                    "price": original_price,
+                    "price": price_usd,
                     "network": "Local Operators",
                     "link": f"https://www.getnomad.app/{nomad_slug}-esim",
                     "raw_data": json.dumps({
-                        "currency": currency,
+                        "original_currency": currency,
                         "original_price": price_value,
+                        "usd_price": price_usd,
+                        "currency": "USD",
                         "data": data_str.strip(),
                         "validity": validity,
                     }),
                     "last_checked": datetime.utcnow().isoformat(),
                 }
                 packages.append(package)
-                logger.debug(f"   ✅ 套餐: {data_str.strip()} {validity} {currency}{price_value}")
+                logger.debug(f"   ✅ 套餐: {data_str.strip()} {validity} {currency}{price_value} → ${price_usd}")
             
             logger.info(f"✅ Nomad {country['name']}: 获取 {len(packages)} 个套餐")
             self.stats["nomad_scraped"] += len(packages)
@@ -278,10 +286,12 @@ class UniversalScraper:
                     timeout=10
                 )
                 
-                if check_response.status_code == 200 and check_response.json():
-                    # 已存在，执行更新
-                    existing_id = check_response.json()[0]['id']
-                    update_url = f"{url}?id=eq.{existing_id}"
+                existing = check_response.json()
+                
+                if existing:
+                    # 更新
+                    record_id = existing[0]['id']
+                    update_url = f"{url}?id=eq.{record_id}"
                     
                     response = requests.patch(
                         update_url,
@@ -290,7 +300,7 @@ class UniversalScraper:
                         timeout=10
                     )
                 else:
-                    # 不存在，执行插入
+                    # 插入
                     response = requests.post(
                         url,
                         headers=self.supabase_headers,
@@ -298,67 +308,60 @@ class UniversalScraper:
                         timeout=10
                     )
                 
-                if response.status_code in [200, 201, 204]:
+                if response.status_code in [200, 201]:
                     success_count += 1
-                    logger.info(f"✅ {pkg['provider']} - {pkg['country']} - {pkg['plan_name']}: 入库成功 (${pkg['price']})")
+                    self.stats["upsert_success"] += 1
                 else:
-                    logger.warning(f"⚠️  {pkg['country']}: HTTP {response.status_code}")
-                    logger.debug(f"   响应: {response.text[:100]}")
+                    logger.warning(f"⚠️  Upsert 失败: {pkg['plan_name']} - {response.status_code}")
                     self.stats["upsert_error"] += 1
                     
             except Exception as e:
-                logger.error(f"❌ Upsert 错误: {str(e)[:100]}")
+                logger.error(f"❌ Upsert 错误: {pkg['plan_name']} - {str(e)[:50]}")
                 self.stats["upsert_error"] += 1
         
-        self.stats["upsert_success"] += success_count
         return success_count
     
     def run(self):
-        """执行爬虫"""
-        print("\n" + "=" * 70)
-        print("🚀 GlobalPass - 通用爬虫系统启动 (Airalo + Nomad)")
-        print("=" * 70)
+        """运行爬虫"""
+        logger.info("🚀 GlobalPass 通用爬虫启动...")
+        logger.info(f"📅 汇率更新时间: 2026-01-05")
+        logger.info(f"💱 EUR→USD: {EXCHANGE_RATES['EUR']}, SGD→USD: {EXCHANGE_RATES['SGD']}\n")
         
         countries = self.load_countries()
+        logger.info(f"📍 目标国家: {len(countries)} 个\n")
         
-        if not countries:
-            logger.error("❌ 无可用国家配置")
-            return 1
+        all_packages = []
         
-        logger.info(f"📍 目标国家: {len(countries)} 个")
-        
-        # 遍历所有国家
         for country in countries:
-            logger.info(f"\n{'='*60}")
+            logger.info("=" * 60)
             logger.info(f"🌍 处理国家: {country['name']}")
-            logger.info(f"{'='*60}")
+            logger.info("=" * 60)
             
-            # 抓取 Airalo 数据
+            # 抓取 Airalo
             airalo_packages = self.scrape_airalo_country(country)
-            if airalo_packages:
-                self.upsert_to_supabase(airalo_packages)
+            all_packages.extend(airalo_packages)
             
-            # 抓取 Nomad 数据
+            # 抓取 Nomad
             nomad_packages = self.scrape_nomad_country(country)
-            if nomad_packages:
-                self.upsert_to_supabase(nomad_packages)
+            all_packages.extend(nomad_packages)
         
-        # 输出统计
-        print("\n" + "=" * 70)
-        print("📊 爬虫执行统计")
-        print("=" * 70)
-        print(f"Airalo 套餐: {self.stats['airalo_scraped']}")
-        print(f"Nomad 套餐: {self.stats['nomad_scraped']}")
-        print(f"总计: {self.stats['airalo_scraped'] + self.stats['nomad_scraped']} 个套餐")
-        print(f"Upsert 成功: {self.stats['upsert_success']}, 失败: {self.stats['upsert_error']}")
-        print("=" * 70)
+        # Upsert 到数据库
+        logger.info("\n" + "=" * 60)
+        logger.info("📤 正在更新数据库...")
+        logger.info("=" * 60)
         
-        return 0
-
-def main():
-    scraper = UniversalScraper()
-    return scraper.run()
+        success_count = self.upsert_to_supabase(all_packages)
+        
+        # 统计报告
+        logger.info("\n" + "=" * 60)
+        logger.info("📊 爬虫统计报告")
+        logger.info("=" * 60)
+        logger.info(f"✅ Airalo 抓取: {self.stats['airalo_scraped']} 个套餐")
+        logger.info(f"✅ Nomad 抓取: {self.stats['nomad_scraped']} 个套餐")
+        logger.info(f"✅ 数据库更新成功: {self.stats['upsert_success']} 条")
+        logger.info(f"❌ 数据库更新失败: {self.stats['upsert_error']} 条")
+        logger.info("=" * 60)
 
 if __name__ == "__main__":
-    import sys
-    sys.exit(main())
+    scraper = UniversalScraper()
+    scraper.run()
