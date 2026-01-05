@@ -88,3 +88,17 @@
 - [x] 手动运行爬虫更新价格
 - [x] 验证前端显示的价格（保留 SGD/EUR 原始价格）
 - [ ] 保存 Checkpoint
+
+## Bug Fix: 前端价格显示仍然不准确（第二次报告）
+
+### 问题描述
+- [x] 用户报告前端仍显示不准确的价格
+- [x] 需要检查前端数据加载逻辑
+- [x] 需要检查 JSON 文件是否已更新
+
+### 修复步骤
+- [x] 检查 public/data/esim-packages.json 文件内容
+- [x] 运行 export_data.py 重新导出数据（添加 raw_data 字段）
+- [x] 检查前端价格显示逻辑（更新为显示原始币种）
+- [x] 验证修复效果（Airalo 显示 EUR，Nomad 显示 SGD）
+- [ ] 保存 Checkpoint

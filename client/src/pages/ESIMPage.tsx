@@ -565,8 +565,34 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
         <div className="mb-6 pb-6 border-b border-white/10">
           <p className="text-sm text-slate-400 mb-2">价格</p>
           <div className="flex items-baseline gap-1">
-            <span className="text-4xl font-bold text-white">${pkg.price}</span>
-            <span className="text-slate-400">/套餐</span>
+            {(() => {
+              // 解析 raw_data 获取币种信息
+              let currency = "USD";
+              let currencySymbol = "$";
+              
+              if (pkg.raw_data) {
+                try {
+                  const rawData = JSON.parse(pkg.raw_data);
+                  if (rawData.currency) {
+                    currency = rawData.currency;
+                    // 根据币种设置符号
+                    if (currency === "EUR") currencySymbol = "€";
+                    else if (currency === "SGD") currencySymbol = "S$";
+                    else if (currency === "CNY") currencySymbol = "¥";
+                    else currencySymbol = "$";
+                  }
+                } catch (e) {
+                  console.error("解析 raw_data 失败:", e);
+                }
+              }
+              
+              return (
+                <>
+                  <span className="text-4xl font-bold text-white">{currencySymbol}{pkg.price}</span>
+                  <span className="text-slate-400">/{currency}</span>
+                </>
+              );
+            })()}
           </div>
         </div>
 

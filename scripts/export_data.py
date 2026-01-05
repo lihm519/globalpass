@@ -64,6 +64,7 @@ def export_packages():
                 'network': pkg.get('network'),
                 'link': pkg.get('link'),
                 'last_checked': pkg.get('last_checked'),
+                'raw_data': pkg.get('raw_data'),  # 包含 currency 等元数据
             }
             packages_by_country[country].append(clean_pkg)
         

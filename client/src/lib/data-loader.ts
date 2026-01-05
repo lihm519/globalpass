@@ -16,6 +16,7 @@ export interface ESIMPackage {
   network: string;
   link: string;
   last_checked: string;
+  raw_data?: string; // JSON 字符串，包含 currency 等元数据
 }
 
 export interface ESIMData {

@@ -151,7 +151,28 @@ export function AIChatDialog({ open, onOpenChange }: AIChatDialogProps) {
                               </div>
                               <div className="text-right">
                                 <p className="text-lg font-bold text-emerald-400">
-                                  ${pkg.price}
+                                  {(() => {
+                                    // 解析 raw_data 获取币种信息
+                                    let currency = "USD";
+                                    let currencySymbol = "$";
+                                    
+                                    if (pkg.raw_data) {
+                                      try {
+                                        const rawData = JSON.parse(pkg.raw_data);
+                                        if (rawData.currency) {
+                                          currency = rawData.currency;
+                                          if (currency === "EUR") currencySymbol = "€";
+                                          else if (currency === "SGD") currencySymbol = "S$";
+                                          else if (currency === "CNY") currencySymbol = "¥";
+                                          else currencySymbol = "$";
+                                        }
+                                      } catch (e) {
+                                        console.error("解析 raw_data 失败:", e);
+                                      }
+                                    }
+                                    
+                                    return `${currencySymbol}${pkg.price} ${currency}`;
+                                  })()}
                                 </p>
                                 <p className="text-xs text-slate-400 mt-1">
                                   点击购买 →
