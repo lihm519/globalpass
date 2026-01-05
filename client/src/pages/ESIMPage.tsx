@@ -27,10 +27,12 @@ import { CheckCircle2, AlertCircle, Smartphone, Globe, Loader2 } from "lucide-re
 import {
   getPackagesByCountry,
   getCountries,
+  type ESIMPackage,
+} from "@/lib/data-loader";
+import {
   getSupportedDevices,
   isDeviceSupported,
   getDeviceRegions,
-  type ESIMPackage,
   type SupportedDevice,
 } from "@/lib/supabase";
 
@@ -56,11 +58,11 @@ export default function ESIMPage() {
       try {
         setLoading(true);
         
-        // 获取国家列表
+        // 获取国家列表（从本地 JSON）
         const countriesList = await getCountries();
         setCountries(countriesList);
         
-        // 获取设备列表
+        // 获取设备列表（从 Supabase）
         const devicesList = await getSupportedDevices();
         setDevices(devicesList);
         
@@ -288,9 +290,9 @@ export default function ESIMPage() {
         <div>
           <div className="mb-8">
             <h2 className="text-3xl font-bold mb-3">🌍 热门套餐</h2>
-            <p className="text-slate-400">
-              浏览全球主要国家的 E-SIM 套餐价格（数据来自 Airalo）
-            </p>
+           <p className="text-slate-400 mt-1">
+            浏览全球主要国家的 E-SIM 套餐价格（数据每日自动更新）
+          </p>
           </div>
 
           {/* 国家选择标签 */}
@@ -391,7 +393,7 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
 
         {/* 购买按钮 */}
         <a
-          href={pkg.affiliate_link}
+          href={pkg.link}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full py-3 px-4 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 text-center block shadow-lg hover:shadow-emerald-500/50"
