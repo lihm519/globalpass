@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-GlobalPass - 通用爬虫核心系统（修复版）
+GlobalPass - 通用爬虫核心系统（网页抓取版）
 阶段二：自动化供货系统
 
 功能：
-- 从本地配置文件生成模拟数据（作为临时方案）
-- 货币锁定（USD）
+- 从 Airalo 官网网页抓取真实数据
+- 货币转换（EUR → USD）
 - 无限流量识别
 - 有效期清洗
 - Upsert 入库
@@ -18,6 +18,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional
 import re
+from bs4 import BeautifulSoup
 
 # 配置日志
 logging.basicConfig(
@@ -30,9 +31,12 @@ logger = logging.getLogger(__name__)
 SUPABASE_URL = "https://mzodnvjtlujvvwfnpcyb.supabase.co"
 SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2Rudmp0bHVqdnZ3Zm5wY3liIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzU0MDk4NiwiZXhwIjoyMDgzMTE2OTg2fQ.gr-5J22EhV08PLghNcoS8o5lUFjaEyby21MwE-35ENs"
 
+# EUR 到 USD 的汇率（近似值，实际应该使用 API）
+EUR_TO_USD = 1.10
 
-class UniversalScraper:
-    """通用爬虫类"""
+
+class AiraloScraper:
+    """Airalo 网页抓取类"""
     
     def __init__(self):
         self.supabase_headers = {
@@ -40,9 +44,12 @@ class UniversalScraper:
             "Authorization": f"Bearer {SERVICE_ROLE_KEY}",
             "Content-Type": "application/json",
         }
-        self.packages = []
+        self.session = requests.Session()
+        self.session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        })
         self.stats = {
-            "generated": 0,
+            "scraped": 0,
             "upsert_success": 0,
             "upsert_error": 0,
         }
@@ -58,76 +65,103 @@ class UniversalScraper:
         with open(config_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     
-    def generate_mock_data(self, country: Dict) -> List[Dict]:
-        """生成模拟数据（临时方案，等待真实 API）"""
-        
-        # 模拟数据库
-        mock_data = {
-            "Japan": [
-                {"plan": "1GB", "validity": "7 Days", "price": 4.40, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 7.70, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 16.50, "provider": "Airalo"},
-            ],
-            "USA": [
-                {"plan": "1GB", "validity": "7 Days", "price": 6.05, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 8.80, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 18.70, "provider": "Airalo"},
-            ],
-            "Thailand": [
-                {"plan": "1GB", "validity": "3 Days", "price": 3.85, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 7.20, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 15.40, "provider": "Airalo"},
-            ],
-            "South Korea": [
-                {"plan": "1GB", "validity": "3 Days", "price": 4.95, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 8.50, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 17.60, "provider": "Airalo"},
-            ],
-            "China": [
-                {"plan": "1GB", "validity": "7 Days", "price": 5.50, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 9.20, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 19.80, "provider": "Airalo"},
-            ],
-            "Singapore": [
-                {"plan": "1GB", "validity": "3 Days", "price": 4.20, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 7.80, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 16.90, "provider": "Airalo"},
-            ],
-            "France": [
-                {"plan": "1GB", "validity": "7 Days", "price": 5.80, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 9.50, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 20.30, "provider": "Airalo"},
-            ],
-            "United Kingdom": [
-                {"plan": "1GB", "validity": "7 Days", "price": 5.60, "provider": "Airalo"},
-                {"plan": "3GB", "validity": "7 Days", "price": 9.10, "provider": "Airalo"},
-                {"plan": "10GB", "validity": "30 Days", "price": 19.50, "provider": "Airalo"},
-            ],
-        }
-        
-        packages = []
-        country_name = country['name']
-        
-        if country_name in mock_data:
-            for item in mock_data[country_name]:
-                package = {
-                    "provider": item['provider'],
-                    "country": country_name,
-                    "plan_name": f"{country_name} {item['plan']} {item['validity']}",
-                    "data_type": "Unlimited" if "Unlimited" in item['plan'] else "Fixed",
-                    "data_amount": item['plan'],
-                    "validity": item['validity'],
-                    "price": float(item['price']),
-                    "network": "Local Operators",
-                    "link": "https://www.airalo.com",
-                    "raw_data": json.dumps(item),
-                    "last_checked": datetime.utcnow().isoformat(),
-                }
-                packages.append(package)
-        
-        logger.info(f"✅ {country_name}: 生成 {len(packages)} 个模拟套餐")
-        self.stats["generated"] += len(packages)
-        return packages
+    def eur_to_usd(self, eur_price: float) -> float:
+        """EUR 转 USD"""
+        return round(eur_price * EUR_TO_USD, 2)
+    
+    def scrape_airalo_country(self, country: Dict) -> List[Dict]:
+        """从 Airalo 官网抓取单个国家的数据"""
+        try:
+            url = f"https://www.airalo.com/{country['airalo_slug']}-esim"
+            
+            logger.info(f"🌐 正在抓取 Airalo - {country['name']}...")
+            
+            response = self.session.get(url, timeout=15)
+            
+            if response.status_code != 200:
+                logger.warning(f"❌ Airalo {country['name']}: HTTP {response.status_code}")
+                return []
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            packages = []
+            
+            # 查找所有套餐链接
+            # Airalo 页面中套餐显示为 "1GB4.00 €" 格式的链接文本
+            package_links = soup.find_all('a')
+            
+            validity_map = {}
+            current_validity = "7 Days"  # 默认有效期
+            
+            for link in package_links:
+                text = link.get_text(strip=True)
+                
+                # 检查是否是有效期标签（如 "3 days", "7 days" 等）
+                if re.match(r'^\d+\s*days?$', text, re.IGNORECASE):
+                    current_validity = text.replace('days', 'Days').replace('day', 'Day')
+                    continue
+                
+                # 解析套餐文本: "1GB4.00 €" 或 "10GB15.00 €"
+                match = re.match(r'^(\d+)GB([\d.]+)\s*€$', text)
+                
+                if match:
+                    data_amount = f"{match.group(1)}GB"
+                    eur_price = float(match.group(2))
+                    usd_price = self.eur_to_usd(eur_price)
+                    
+                    package = {
+                        "provider": "Airalo",
+                        "country": country['name'],
+                        "plan_name": f"{country['name']} {data_amount} {current_validity}",
+                        "data_type": "Fixed",
+                        "data_amount": data_amount,
+                        "validity": current_validity,
+                        "price": usd_price,
+                        "network": "Local Operators",
+                        "link": f"https://www.airalo.com/{country['airalo_slug']}-esim",
+                        "raw_data": json.dumps({
+                            "eur_price": eur_price,
+                            "usd_price": usd_price,
+                            "data": data_amount,
+                            "validity": current_validity,
+                        }),
+                        "last_checked": datetime.utcnow().isoformat(),
+                    }
+                    packages.append(package)
+                
+                # 解析无限流量套餐: "Unlimited7.50 €" 或 "UnlimitedData7.50 €"
+                unlimited_match = re.match(r'^Unlimited(?:Data)?([\d.]+)\s*€$', text)
+                
+                if unlimited_match:
+                    eur_price = float(unlimited_match.group(1))
+                    usd_price = self.eur_to_usd(eur_price)
+                    
+                    package = {
+                        "provider": "Airalo",
+                        "country": country['name'],
+                        "plan_name": f"{country['name']} Unlimited {current_validity}",
+                        "data_type": "Unlimited",
+                        "data_amount": "Unlimited",
+                        "validity": current_validity,
+                        "price": usd_price,
+                        "network": "Local Operators",
+                        "link": f"https://www.airalo.com/{country['airalo_slug']}-esim",
+                        "raw_data": json.dumps({
+                            "eur_price": eur_price,
+                            "usd_price": usd_price,
+                            "data": "Unlimited",
+                            "validity": current_validity,
+                        }),
+                        "last_checked": datetime.utcnow().isoformat(),
+                    }
+                    packages.append(package)
+            
+            logger.info(f"✅ Airalo {country['name']}: 获取 {len(packages)} 个套餐")
+            self.stats["scraped"] += len(packages)
+            return packages
+            
+        except Exception as e:
+            logger.error(f"❌ Airalo {country['name']} 错误: {str(e)[:100]}")
+            return []
     
     def upsert_to_supabase(self, packages: List[Dict]) -> int:
         """Upsert 数据到 Supabase"""
@@ -171,9 +205,9 @@ class UniversalScraper:
                 
                 if response.status_code in [200, 201]:
                     success_count += 1
-                    logger.info(f"✅ {pkg['provider']} - {pkg['country']} - {pkg['plan_name']}: 入库成功")
+                    logger.info(f"✅ {pkg['country']} - {pkg['plan_name']}: 入库成功 (${pkg['price']})")
                 else:
-                    logger.warning(f"⚠️  {pkg['provider']} - {pkg['country']}: {response.status_code}")
+                    logger.warning(f"⚠️  {pkg['country']}: {response.status_code}")
                     logger.debug(f"   响应: {response.text[:100]}")
                     self.stats["upsert_error"] += 1
                     
@@ -187,7 +221,7 @@ class UniversalScraper:
     def run(self):
         """执行爬虫"""
         print("\n" + "=" * 70)
-        print("🚀 GlobalPass - 通用爬虫系统启动（模拟数据模式）")
+        print("🚀 GlobalPass - Airalo 网页抓取系统启动")
         print("=" * 70)
         
         countries = self.load_countries()
@@ -204,8 +238,8 @@ class UniversalScraper:
             logger.info(f"🌍 处理国家: {country['name']}")
             logger.info(f"{'='*60}")
             
-            # 生成模拟数据
-            packages = self.generate_mock_data(country)
+            # 抓取 Airalo 数据
+            packages = self.scrape_airalo_country(country)
             if packages:
                 self.upsert_to_supabase(packages)
         
@@ -213,17 +247,15 @@ class UniversalScraper:
         print("\n" + "=" * 70)
         print("📊 爬虫执行统计")
         print("=" * 70)
-        print(f"生成数据: {self.stats['generated']}")
+        print(f"抓取套餐: {self.stats['scraped']}")
         print(f"Upsert 成功: {self.stats['upsert_success']}, 失败: {self.stats['upsert_error']}")
         print("=" * 70)
-        print("\n📝 注意: 当前使用模拟数据模式")
-        print("待 Airalo/Nomad 真实 API 可用时，将自动切换到实时数据抓取")
         
         return 0
 
 
 def main():
-    scraper = UniversalScraper()
+    scraper = AiraloScraper()
     return scraper.run()
 
 
