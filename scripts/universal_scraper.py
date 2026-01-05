@@ -183,8 +183,8 @@ class UniversalScraper:
             for item in plan_items:
                 text = item.get_text(strip=True)
                 
-                # 跳过不包含 SGD 或 EUR 的项目
-                if 'SGD' not in text and 'EUR' not in text:
+                # 跳过不包含 USD/SGD/EUR 的项目
+                if 'USD' not in text and 'SGD' not in text and 'EUR' not in text:
                     continue
                 
                 # 提取数据量、有效期和价格
@@ -208,15 +208,15 @@ class UniversalScraper:
                 validity_days = validity_match.group(1)
                 validity = f"{validity_days} Days"
                 
-                # 匹配价格 (SGD 或 EUR)
-                price_match = re.search(r'(SGD|EUR)([\d.]+)', text_clean)
+                # 匹配价格 (USD/SGD/EUR)
+                price_match = re.search(r'(USD|SGD|EUR)\s*([\d.]+)', text_clean)
                 if not price_match:
                     continue
                 
                 currency = price_match.group(1)
                 price_value = float(price_match.group(2))
                 
-                # 使用原始价格，不进行汇率转换
+                # 使用原始价格
                 original_price = price_value
                 
                 # 判断是否是无限流量
