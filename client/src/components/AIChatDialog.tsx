@@ -124,34 +124,42 @@ export function AIChatDialog({ open, onOpenChange }: AIChatDialogProps) {
                         推荐套餐：
                       </p>
                       {msg.packages.map((pkg: any) => (
-                        <Card
+                        <a
                           key={pkg.id}
-                          className="bg-white/5 border-white/10 p-3"
+                          href={pkg.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block hover:scale-[1.02] transition-transform"
                         >
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="font-semibold text-white">
-                              {pkg.country}
-                            </span>
-                            <Badge
-                              variant="secondary"
-                              className="bg-emerald-500/20 text-emerald-300 text-xs"
-                            >
-                              {pkg.provider}
-                            </Badge>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <p className="text-xs text-slate-400">
-                                {pkg.data_amount} · {pkg.validity}
-                              </p>
+                          <Card className="bg-white/5 border-white/10 p-3 hover:bg-white/10 hover:border-emerald-500/30 cursor-pointer">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="font-semibold text-white">
+                                {pkg.country}
+                              </span>
+                              <Badge
+                                variant="secondary"
+                                className="bg-emerald-500/20 text-emerald-300 text-xs"
+                              >
+                                {pkg.provider}
+                              </Badge>
                             </div>
-                            <div className="text-right">
-                              <p className="text-lg font-bold text-emerald-400">
-                                ${pkg.price}
-                              </p>
+                            <div className="flex items-center justify-between">
+                              <div>
+                                <p className="text-xs text-slate-400">
+                                  {pkg.data_amount} · {pkg.validity}
+                                </p>
+                              </div>
+                              <div className="text-right">
+                                <p className="text-lg font-bold text-emerald-400">
+                                  ${pkg.price}
+                                </p>
+                                <p className="text-xs text-slate-400 mt-1">
+                                  点击购买 →
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        </Card>
+                          </Card>
+                        </a>
                       ))}
                     </div>
                   )}
