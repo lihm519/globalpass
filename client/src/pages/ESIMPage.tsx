@@ -564,7 +564,7 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
         {/* 价格 */}
         <div className="mb-6 pb-6 border-b border-white/10">
           <p className="text-sm text-slate-400 mb-2">价格</p>
-          <div className="flex items-baseline gap-1">
+          <div className="flex items-baseline gap-1 mb-2">
             {(() => {
               // 解析 raw_data 获取币种信息
               // 统一显示美元价格
@@ -576,6 +576,9 @@ function PackageCard({ package: pkg }: { package: ESIMPackage }) {
               );
             })()}
           </div>
+          <p className="text-xs text-slate-500 italic">
+            *价格因汇率波动可能有所差异，实际价格请以官方为准
+          </p>
         </div>
 
         {/* 购买按钮 */}

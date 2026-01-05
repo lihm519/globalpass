@@ -137,4 +137,23 @@
 - [x] 清理数据库中的错误数据（删除旧 Airalo Japan 数据）
 - [x] 重新运行爬虫抓取正确数据（11 个 Airalo Japan 套餐）
 - [x] 验证所有套餐与官网完全一致（Airalo 1GB 3 Days $4）
+- [x] 保存 Checkpoint (version: ea5f912b)
+
+## Feature: 完善自动化价格抓取系统
+
+### 用户反馈
+- [ ] 问题1：原先有 GitHub Actions 定时爬虫，现在没有了？
+- [ ] 问题2：Nomad 价格还是汇率转换的，不准确
+- [ ] 问题3：只更新了 Airalo Japan，其他国家也需要更新
+
+### 实施步骤
+- [x] 研究 Nomad 官网美元价格显示机制（直接显示 USD）
+- [x] 测试 Nomad 是否也使用 JavaScript 渲染（不需要）
+- [x] 尝试开发 Playwright 自动化爬虫（Airalo 有反爬虫机制）
+- [x] 用户同意恢复使用汇率转换
+- [x] 使用 universal_scraper_v2.py 汇率转换爬虫
+- [x] 批量抓取所有 20 个国家的数据（312 个套餐）
+- [x] 前端套餐卡片添加汇率免责声明
+- [x] 恢复 GitHub Actions 定时任务（每天 UTC 02:00 自动运行）
+- [x] 验证所有功能（312 个套餐，20 个国家，免责声明已显示）
 - [ ] 保存 Checkpoint

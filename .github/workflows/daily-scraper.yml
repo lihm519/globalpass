@@ -30,7 +30,7 @@ jobs:
       - name: Run web scraper
         run: |
           cd /home/runner/work/globalpass/globalpass
-          python3 scripts/universal_scraper.py
+          python3 scripts/universal_scraper_v2.py
       
       - name: Export data to JSON
         run: |
