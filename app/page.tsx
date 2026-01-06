@@ -3,12 +3,17 @@
 import { useEffect, useState } from 'react';
 
 interface ESIMPackage {
-  country: string;
+  id: number;
   provider: string;
-  data: string;
+  country: string;
+  plan_name: string;
+  data_type: string;
+  data_amount: string;
   validity: string;
   price: number;
-  currency: string;
+  network: string;
+  link: string;
+  last_checked: string;
 }
 
 export default function Home() {
@@ -19,7 +24,14 @@ export default function Home() {
     fetch('/data/esim-packages.json')
       .then(res => res.json())
       .then(data => {
-        setPackages(data.slice(0, 10)); // 只显示前10条
+        // 数据结构是 { packages: { country: [...] } }
+        const allPackages: ESIMPackage[] = [];
+        if (data.packages) {
+          Object.values(data.packages).forEach((countryPackages: any) => {
+            allPackages.push(...countryPackages.slice(0, 2)); // 每个国家取2条
+          });
+        }
+        setPackages(allPackages.slice(0, 10)); // 总共显示10条
         setLoading(false);
       })
       .catch(err => {
@@ -85,13 +97,13 @@ export default function Home() {
                 </thead>
                 <tbody>
                   {packages.map((pkg, index) => (
-                    <tr key={index} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                    <tr key={pkg.id} className="border-b border-white/5 hover:bg-white/5 transition-colors">
                       <td className="py-3 px-4">{pkg.country}</td>
                       <td className="py-3 px-4 text-emerald-400">{pkg.provider}</td>
-                      <td className="py-3 px-4">{pkg.data}</td>
+                      <td className="py-3 px-4">{pkg.data_amount}</td>
                       <td className="py-3 px-4">{pkg.validity}</td>
                       <td className="py-3 px-4 text-right font-semibold">
-                        {pkg.currency} {pkg.price.toFixed(2)}
+                        ${pkg.price.toFixed(2)}
                       </td>
                     </tr>
                   ))}
