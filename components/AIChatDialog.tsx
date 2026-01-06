@@ -48,8 +48,8 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
         throw new Error('API Key not configured');
       }
 
-      // 调用 Google Gemini API (使用最新的 gemini-1.5-flash 模型)
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+      // 调用 Google Gemini API (使用 v1 版本和 gemini-1.5-flash 模型)
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

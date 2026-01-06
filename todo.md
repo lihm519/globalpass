@@ -40,5 +40,6 @@
 - [x] 检查 Google Gemini API 端点
 - [x] 修复 API 请求格式（将 API Key 放在 URL 参数中）
 - [x] 添加详细错误日志
+- [x] 更新模型名称（gemini-pro → gemini-1.5-flash）
 - [ ] 测试 API 调用
-- [ ] 部署修复
+- [x] 部署修复
