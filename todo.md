@@ -43,3 +43,9 @@
 - [x] 更新模型名称（gemini-pro → gemini-1.5-flash）
 - [ ] 测试 API 调用
 - [x] 部署修复
+
+## 切换到 Google 官方 SDK
+- [x] 安装 @google/generative-ai (v0.24.1)
+- [x] 重写 AIChatDialog 使用 SDK
+- [ ] 测试 API 调用
+- [ ] 推送部署

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -45,36 +46,22 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
       const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
       
       if (!apiKey) {
-        throw new Error('API Key not configured');
+        throw new Error('API Key not configured. Please add NEXT_PUBLIC_GEMINI_API_KEY to your environment variables.');
       }
 
-      // 调用 Google Gemini API (使用 v1 版本和 gemini-1.5-flash 模型)
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [{
-            parts: [{
-              text: `You are an E-SIM shopping assistant for GlobalPass. Help users find the best E-SIM packages based on their needs. User question: ${input}`,
-            }],
-          }],
-        }),
-      });
+      // 使用 Google 官方 SDK
+      const genAI = new GoogleGenerativeAI(apiKey);
+      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error('API Error:', errorData);
-        throw new Error(`API returned ${response.status}: ${JSON.stringify(errorData)}`);
-      }
-
-      const data = await response.json();
-      console.log('API Response:', data);
+      const prompt = `You are an E-SIM shopping assistant for GlobalPass. Help users find the best E-SIM packages based on their needs. User question: ${input}`;
       
-      const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not process your request.';
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text = response.text();
 
-      setMessages(prev => [...prev, { role: 'assistant', content: aiResponse }]);
+      console.log('AI Response:', text);
+
+      setMessages(prev => [...prev, { role: 'assistant', content: text }]);
     } catch (error) {
       console.error('AI Error:', error);
       setMessages(prev => [...prev, {
