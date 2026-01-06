@@ -56,8 +56,10 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
       // 使用 Google 官方 SDK
       console.log('Initializing Google Generative AI SDK...');
       const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-      console.log('Model initialized: gemini-1.5-flash');
+      
+      // 尝试使用 gemini-pro 模型（更稳定的模型名称）
+      const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+      console.log('Model initialized: gemini-pro');
 
       const prompt = `You are an E-SIM shopping assistant for GlobalPass. Help users find the best E-SIM packages based on their needs. User question: ${input}`;
       
