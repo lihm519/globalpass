@@ -49,3 +49,9 @@
 - [x] 重写 AIChatDialog 使用 SDK
 - [ ] 测试 API 调用
 - [ ] 推送部署
+
+## 使用新 API Key 修复 AI
+- [x] 更新本地 .env.local 文件
+- [x] 增强 SDK 调试日志（API Key 检查）
+- [ ] 推送部署
+- [ ] 提醒用户更新 Vercel 环境变量

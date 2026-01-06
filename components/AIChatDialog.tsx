@@ -45,13 +45,19 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
     try {
       const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
       
+      // 调试日志：检查 API Key 是否加载
+      console.log('API Key loaded:', !!apiKey);
+      console.log('API Key prefix:', apiKey?.substring(0, 10) + '...');
+      
       if (!apiKey) {
         throw new Error('API Key not configured. Please add NEXT_PUBLIC_GEMINI_API_KEY to your environment variables.');
       }
 
       // 使用 Google 官方 SDK
+      console.log('Initializing Google Generative AI SDK...');
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      console.log('Model initialized: gemini-1.5-flash');
 
       const prompt = `You are an E-SIM shopping assistant for GlobalPass. Help users find the best E-SIM packages based on their needs. User question: ${input}`;
       
