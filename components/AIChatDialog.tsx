@@ -43,11 +43,13 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
     setLoading(true);
 
     try {
-      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+      // 尝试两个环境变量名（兼容之前的配置）
+      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
       
       // 调试日志：检查 API Key 是否加载
       console.log('API Key loaded:', !!apiKey);
       console.log('API Key prefix:', apiKey?.substring(0, 10) + '...');
+      console.log('Using env var:', process.env.NEXT_PUBLIC_GEMINI_API_KEY ? 'NEXT_PUBLIC_GEMINI_API_KEY' : 'GOOGLE_GENERATIVE_AI_API_KEY');
       
       if (!apiKey) {
         throw new Error('API Key not configured. Please add NEXT_PUBLIC_GEMINI_API_KEY to your environment variables.');
