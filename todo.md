@@ -280,3 +280,16 @@
 - [x] 检查 package.json 构建命令是否正确
 - [x] 创建 vercel.json 配置文件指定 Next.js 框架
 - [ ] 保存 checkpoint 并重新发布
+
+## Feature: GitHub + Vercel 直接部署
+
+### 背景
+- [ ] Manus 发布系统不支持 Next.js SSR 部署
+- [ ] 需要通过 GitHub + Vercel 直接部署以获得完整 SSR 功能
+
+### 实施步骤
+- [ ] 检查 GitHub 仓库状态
+- [ ] 推送代码到 GitHub
+- [ ] 在 Vercel 控制台连接 GitHub 仓库
+- [ ] 验证部署成功
+- [ ] 在 Impact 后台验证所有权
