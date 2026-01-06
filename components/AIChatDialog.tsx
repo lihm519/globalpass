@@ -58,7 +58,7 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
       // 1. 加载套餐数据
       const packagesResponse = await fetch('/data/esim-packages.json');
       const packagesData = await packagesResponse.json();
-      const allPackages: ESIMPackage[] = Object.values(packagesData.packages).flat();
+      const allPackages = (Object.values(packagesData.packages).flat() as ESIMPackage[]);
       
       console.log('Loaded packages:', allPackages.length);
 
