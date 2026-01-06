@@ -269,3 +269,14 @@
 - [x] 创建 .vercelignore 文件排除 venv 目录
 - [x] 清理项目中的 venv 目录
 - [ ] 保存 checkpoint 并重新发布
+
+## Bug Fix: Vercel 构建配置错误（dist 目录不存在）
+
+### 问题描述
+- [x] Vercel 部署失败：`open /tmp/deploy-s3-v2-3894563430/W6srbd3yoMv63MQEo9nDkM/dist: no such file or directory`
+- [x] 原因：Vercel 期望静态导出（dist 目录），但 Next.js 使用 SSR（.next 目录）
+
+### 修复步骤
+- [x] 检查 package.json 构建命令是否正确
+- [x] 创建 vercel.json 配置文件指定 Next.js 框架
+- [ ] 保存 checkpoint 并重新发布
