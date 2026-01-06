@@ -1,0 +1,39 @@
+# Python virtual environment
+venv/
+env/
+.venv/
+
+# Backup directories
+client_vite_backup/
+server_backup/
+shared_backup/
+drizzle_backup/
+
+# Old config files
+*.bak
+
+# Node modules (already in .gitignore but adding for safety)
+node_modules/
+
+# Build outputs
+.next/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

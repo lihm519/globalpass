@@ -258,3 +258,14 @@
 - [x] 清除旧 Vite 文件
 - [x] 测试 Next.js 构建
 - [ ] 部署到 Vercel
+
+## Bug Fix: Vercel 部署错误（venv 目录问题）
+
+### 问题描述
+- [x] Vercel 部署失败：`failed to create zip from repository: writing file 11484: lib64: is a directory`
+- [x] 原因：项目中包含 Python 虚拟环境目录（venv/lib64）
+
+### 修复步骤
+- [x] 创建 .vercelignore 文件排除 venv 目录
+- [x] 清理项目中的 venv 目录
+- [ ] 保存 checkpoint 并重新发布
