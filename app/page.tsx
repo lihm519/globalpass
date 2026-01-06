@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '@/lib/i18n';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import AIChatDialog from '@/components/AIChatDialog';
 
 interface ESIMPackage {
   id: number;
@@ -23,6 +24,7 @@ export default function Home() {
   const { t } = useTranslation();
   const [packages, setPackages] = useState<ESIMPackage[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showAIChat, setShowAIChat] = useState(false);
 
   useEffect(() => {
     fetch('/data/esim-packages.json')
@@ -88,11 +90,14 @@ export default function Home() {
             <p className="text-slate-300">{t('compatibilityCheckDesc')}</p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all">
+          <button
+            onClick={() => setShowAIChat(true)}
+            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-500/50 transition-all text-left w-full"
+          >
             <div className="text-4xl mb-4">🤖</div>
             <h2 className="text-xl font-bold mb-2">{t('aiAssistant')}</h2>
             <p className="text-slate-300">{t('aiAssistantDesc')}</p>
-          </div>
+          </button>
         </div>
 
         {/* Data Display */}
@@ -142,6 +147,18 @@ export default function Home() {
           </p>
         </footer>
       </div>
+
+      {/* AI Chat Dialog */}
+      <AIChatDialog isOpen={showAIChat} onClose={() => setShowAIChat(false)} />
+
+      {/* Floating AI Button */}
+      <button
+        onClick={() => setShowAIChat(true)}
+        className="fixed bottom-6 right-6 w-16 h-16 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl flex items-center justify-center text-3xl transition-all hover:scale-110 z-40"
+        aria-label="Open AI Assistant"
+      >
+        🤖
+      </button>
     </div>
   );
 }

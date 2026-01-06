@@ -53,6 +53,18 @@ const resources = {
       
       // 通用
       copyright: '© 2024 GlobalPass. All rights reserved.',
+      
+      // AI
+      aiWelcome: 'Hi! I can help you find the best E-SIM package. Tell me about your travel plans!',
+      
+      // 兼容性
+      compatibleMessage: 'Great! Your phone supports E-SIM. You can start shopping for packages!',
+      notCompatibleMessage: 'Unfortunately, this model does not support E-SIM. Please check with your carrier or consider upgrading.',
+      browsePackages: 'Browse E-SIM Packages',
+      aboutESIM: 'About E-SIM',
+      esimDescription: 'E-SIM (embedded SIM) is a digital SIM that allows you to activate a cellular plan without using a physical SIM card.',
+      esimBenefits: 'Benefits: No physical SIM card needed, easy to switch carriers, perfect for international travel, and supports multiple numbers on one device.',
+      esimRequirements: 'Requirements: Your device must support E-SIM technology, and your carrier must offer E-SIM activation.',
     },
   },
   'zh-CN': {
@@ -98,6 +110,16 @@ const resources = {
       notCompatible: '不兼容',
       
       copyright: '© 2024 GlobalPass. 保留所有权利。',
+      
+      aiWelcome: '你好！我可以帮你找到最合适的 E-SIM 套餐。告诉我你的旅行计划吧！',
+      
+      compatibleMessage: '太好了！您的手机支持 E-SIM。您可以开始选购套餐了！',
+      notCompatibleMessage: '很遗憾，此型号不支持 E-SIM。请咨询运营商或考虑升级设备。',
+      browsePackages: '浏览 E-SIM 套餐',
+      aboutESIM: '关于 E-SIM',
+      esimDescription: 'E-SIM（嵌入式 SIM 卡）是一种数字 SIM 卡，无需使用实体 SIM 卡即可激活移动套餐。',
+      esimBenefits: '优势：无需实体 SIM 卡、轻松切换运营商、非常适合国际旅行、一台设备支持多个号码。',
+      esimRequirements: '要求：您的设备必须支持 E-SIM 技术，且运营商必须提供 E-SIM 激活服务。',
     },
   },
   ja: {
@@ -143,6 +165,16 @@ const resources = {
       notCompatible: '非対応',
       
       copyright: '© 2024 GlobalPass. All rights reserved.',
+      
+      aiWelcome: 'こんにちは！最適なE-SIMパッケージを見つけるお手伝いをします。旅行の計画を教えてください！',
+      
+      compatibleMessage: '素晴らしい！お使いの携帯電話はE-SIMに対応しています。パッケージの購入を開始できます！',
+      notCompatibleMessage: '残念ながら、このモデルはE-SIMに対応していません。通信事業者にお問い合わせいただくか、アップグレードをご検討ください。',
+      browsePackages: 'E-SIMパッケージを閲覧',
+      aboutESIM: 'E-SIMについて',
+      esimDescription: 'E-SIM（組み込みSIM）は、物理的なSIMカードを使用せずに携帯電話プランをアクティベートできるデジタルSIMです。',
+      esimBenefits: 'メリット：物理的なSIMカード不要、通信事業者の切り替えが簡単、国際旅行に最適、1台のデバイスで複数の番号をサポート。',
+      esimRequirements: '要件：デバイスがE-SIM技術に対応している必要があり、通信事業者がE-SIMアクティベーションを提供している必要があります。',
     },
   },
 };
