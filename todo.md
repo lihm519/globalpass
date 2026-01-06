@@ -293,3 +293,15 @@
 - [ ] 在 Vercel 控制台连接 GitHub 仓库
 - [ ] 验证部署成功
 - [ ] 在 Impact 后台验证所有权
+
+## Feature: 手动触发 Vercel 部署
+
+### 背景
+- [x] Manus GitHub 同步后，Vercel 没有自动触发新部署
+- [x] 需要手动推送代码触发 Vercel 部署
+
+### 实施步骤
+- [x] 创建一个小的代码更改
+- [ ] 保存 checkpoint 触发 GitHub 同步
+- [ ] 验证 Vercel 部署成功
+- [ ] 在 Impact 后台验证所有权
