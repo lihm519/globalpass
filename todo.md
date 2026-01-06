@@ -32,6 +32,13 @@
 - [ ] 优化移动端响应式设计
 
 ## Phase 6: 测试和部署
-- [ ] 测试所有功能
-- [ ] 推送到 GitHub
-- [ ] 验证 Vercel 部署
+- [x] 测试所有功能
+- [x] 推送到 GitHub
+- [x] 验证 Vercel 部署
+
+## 紧急修复：AI 功能
+- [x] 检查 Google Gemini API 端点
+- [x] 修复 API 请求格式（将 API Key 放在 URL 参数中）
+- [x] 添加详细错误日志
+- [ ] 测试 API 调用
+- [ ] 部署修复

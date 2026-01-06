@@ -42,12 +42,17 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
     setLoading(true);
 
     try {
+      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+      
+      if (!apiKey) {
+        throw new Error('API Key not configured');
+      }
+
       // 调用 Google Gemini API
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent', {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-goog-api-key': process.env.NEXT_PUBLIC_GEMINI_API_KEY || '',
         },
         body: JSON.stringify({
           contents: [{
@@ -58,7 +63,15 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
         }),
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('API Error:', errorData);
+        throw new Error(`API returned ${response.status}: ${JSON.stringify(errorData)}`);
+      }
+
       const data = await response.json();
+      console.log('API Response:', data);
+      
       const aiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, I could not process your request.';
 
       setMessages(prev => [...prev, { role: 'assistant', content: aiResponse }]);
@@ -66,7 +79,7 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
       console.error('AI Error:', error);
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
+        content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : 'Unknown error'}. Please check the console for details.`,
       }]);
     } finally {
       setLoading(false);
