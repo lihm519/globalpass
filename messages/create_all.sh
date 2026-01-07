@@ -1,0 +1,53 @@
+#!/bin/bash
+# 中文
+cat > zh.json << 'EOF'
+{
+  "home": "首页",
+  "esimComparison": "E-SIM 比价",
+  "compatibility": "兼容性检测",
+  "searchPlaceholder": "搜索国家或地区...",
+  "allCountries": "所有国家",
+  "searchCountry": "搜索国家",
+  "dataAmount": "流量",
+  "validity": "有效期",
+  "price": "价格",
+  "provider": "供应商",
+  "buyNow": "立即购买",
+  "noResults": "未找到结果",
+  "loading": "加载中...",
+  "error": "发生错误",
+  "selectCountry": "选择国家",
+  "checkCompatibility": "检查兼容性",
+  "deviceModel": "设备型号",
+  "manufacturer": "制造商",
+  "compatible": "兼容",
+  "notCompatible": "不兼容",
+  "unknown": "未知",
+  "aiAssistant": "AI 助手",
+  "askQuestion": "询问关于 eSIM 的任何问题...",
+  "send": "发送",
+  "popularDestinations": "热门目的地",
+  "comparePackages": "比较套餐",
+  "findBestDeal": "找到最优惠",
+  "instantActivation": "即时激活",
+  "globalCoverage": "全球覆盖",
+  "secureConnection": "安全连接",
+  "howItWorks": "如何使用",
+  "step1": "选择目的地",
+  "step2": "选择套餐",
+  "step3": "安装并激活",
+  "faq": "常见问题",
+  "contact": "联系我们",
+  "about": "关于",
+  "terms": "条款",
+  "privacy": "隐私",
+  "support": "支持"
+}
+EOF
+
+# 日语 - 复制英文作为占位
+for lang in ja ko th es fr de it pt ar; do
+  cp en.json $lang.json
+done
+
+echo "All language files created"
