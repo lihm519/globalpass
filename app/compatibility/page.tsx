@@ -7,7 +7,9 @@ import '@/lib/i18n';
 // 手机品牌和型号数据
 const phoneData = {
   Apple: [
-    // 2024-2025 最新机型
+    // 2025-2026 最新机型
+    'iPhone 17 Pro Max', 'iPhone 17 Pro', 'iPhone 17', 'iPhone Air',
+    // 2024-2025 机型
     'iPhone 16 Pro Max', 'iPhone 16 Pro', 'iPhone 16 Plus', 'iPhone 16',
     'iPhone 15 Pro Max', 'iPhone 15 Pro', 'iPhone 15 Plus', 'iPhone 15',
     // 2022-2023 机型
@@ -21,7 +23,9 @@ const phoneData = {
     'iPhone SE (2022)', 'iPhone SE (2020)',
   ],
   Samsung: [
-    // 2024-2025 最新机型
+    // 2026 最新机型
+    'Galaxy S26 Ultra', 'Galaxy S26+', 'Galaxy S26',
+    // 2024-2025 机型
     'Galaxy S24 Ultra', 'Galaxy S24+', 'Galaxy S24',
     'Galaxy Z Fold 6', 'Galaxy Z Fold 5', 'Galaxy Z Flip 6', 'Galaxy Z Flip 5',
     // 2023 机型
@@ -36,7 +40,9 @@ const phoneData = {
     'Galaxy A54', 'Galaxy A53', 'Galaxy A34',
   ],
   Google: [
-    // 2024-2025 最新机型
+    // 2025-2026 最新机型
+    'Pixel 10 Pro XL', 'Pixel 10 Pro', 'Pixel 10',
+    // 2024-2025 机型
     'Pixel 9 Pro XL', 'Pixel 9 Pro', 'Pixel 9',
     'Pixel 8 Pro', 'Pixel 8', 'Pixel 8a',
     // 2022-2023 机型
@@ -85,6 +91,12 @@ const phoneData = {
 // E-SIM 兼容性数据（简化版）
 const esimCompatibility: Record<string, boolean> = {
   // Apple - 所有 iPhone XR 及以后的机型均支持 eSIM
+  // 2025-2026 最新机型
+  'iPhone 17 Pro Max': true,
+  'iPhone 17 Pro': true,
+  'iPhone 17': true,
+  'iPhone Air': true,
+  // 2024-2025 机型
   'iPhone 16 Pro Max': true,
   'iPhone 16 Pro': true,
   'iPhone 16 Plus': true,
@@ -115,6 +127,11 @@ const esimCompatibility: Record<string, boolean> = {
   'iPhone SE (2020)': true,
   
   // Samsung - 2021 年以后的旗舰机型支持 eSIM
+  // 2026 最新机型
+  'Galaxy S26 Ultra': true,
+  'Galaxy S26+': true,
+  'Galaxy S26': true,
+  // 2024-2025 机型
   'Galaxy S24 Ultra': true,
   'Galaxy S24+': true,
   'Galaxy S24': true,
@@ -142,6 +159,11 @@ const esimCompatibility: Record<string, boolean> = {
   'Galaxy A34': false,
   
   // Google - Pixel 3 及以后的机型支持 eSIM
+  // 2025-2026 最新机型（美国版仅支持 eSIM）
+  'Pixel 10 Pro XL': true,
+  'Pixel 10 Pro': true,
+  'Pixel 10': true,
+  // 2024-2025 机型
   'Pixel 9 Pro XL': true,
   'Pixel 9 Pro': true,
   'Pixel 9': true,
