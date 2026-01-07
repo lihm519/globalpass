@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'next/navigation';
 import '@/lib/i18n';
 
 interface ESIMPackage {
@@ -20,6 +21,7 @@ interface ESIMPackage {
 
 export default function ESIMPage() {
   const { t } = useTranslation();
+  const searchParams = useSearchParams();
   const [packages, setPackages] = useState<ESIMPackage[]>([]);
   const [filteredPackages, setFilteredPackages] = useState<ESIMPackage[]>([]);
   const [loading, setLoading] = useState(true);
@@ -44,6 +46,19 @@ export default function ESIMPage() {
         setFilteredPackages(allPackages);
         setCountries(countryList.sort());
         setLoading(false);
+        
+        // 读取 URL 参数并设置初始国家
+        const countryParam = searchParams.get('country');
+        if (countryParam) {
+          const normalizedParam = countryParam.toLowerCase();
+          // 尝试匹配国家名称（不区分大小写）
+          const matchedCountry = countryList.find(
+            country => country.toLowerCase() === normalizedParam
+          );
+          if (matchedCountry) {
+            setSelectedCountry(matchedCountry);
+          }
+        }
       })
       .catch(err => {
         console.error('Failed to load data:', err);
