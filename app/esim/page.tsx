@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'next/navigation';
 import '@/lib/i18n';
@@ -19,7 +19,7 @@ interface ESIMPackage {
   last_checked: string;
 }
 
-function ESIMContent() {
+export default function ESIMPage() {
   const { t } = useTranslation();
   const searchParams = useSearchParams();
   const [packages, setPackages] = useState<ESIMPackage[]>([]);
@@ -64,7 +64,7 @@ function ESIMContent() {
         console.error('Failed to load data:', err);
         setLoading(false);
       });
-  }, [searchParams]);
+  }, []);
 
   useEffect(() => {
     if (selectedCountry === 'all') {
@@ -170,20 +170,5 @@ function ESIMContent() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function ESIMPage() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto"></div>
-          <p className="mt-4 text-slate-400">Loading...</p>
-        </div>
-      </div>
-    }>
-      <ESIMContent />
-    </Suspense>
   );
 }
