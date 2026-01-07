@@ -40,3 +40,21 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env.local
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+ENV/
+
+# Backup files
+*.bak
+*_backup/
+
+# Temporary files
+*.tmp
+*.temp
