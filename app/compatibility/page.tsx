@@ -4,6 +4,16 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '@/lib/i18n';
 
+// 地区定义
+const regions = [
+  { id: 'global', name: '国际版 (Global)', nameEn: 'Global' },
+  { id: 'cn', name: '中国大陆 (China Mainland)', nameEn: 'China Mainland' },
+  { id: 'hk', name: '香港/澳门 (Hong Kong/Macau)', nameEn: 'Hong Kong/Macau' },
+  { id: 'us', name: '美国 (USA)', nameEn: 'USA' },
+  { id: 'jp', name: '日本 (Japan)', nameEn: 'Japan' },
+  { id: 'eu', name: '欧洲 (Europe)', nameEn: 'Europe' },
+];
+
 // 手机品牌和型号数据
 const phoneData = {
   Apple: [
@@ -88,290 +98,356 @@ const phoneData = {
   ],
 };
 
-// E-SIM 兼容性数据（简化版）
-const esimCompatibility: Record<string, boolean> = {
-  // Apple - 所有 iPhone XR 及以后的机型均支持 eSIM
-  // 2025-2026 最新机型
-  'iPhone 17 Pro Max': true,
-  'iPhone 17 Pro': true,
-  'iPhone 17': true,
-  'iPhone Air': true,
-  // 2024-2025 机型
-  'iPhone 16 Pro Max': true,
-  'iPhone 16 Pro': true,
-  'iPhone 16 Plus': true,
-  'iPhone 16': true,
-  'iPhone 15 Pro Max': true,
-  'iPhone 15 Pro': true,
-  'iPhone 15 Plus': true,
-  'iPhone 15': true,
-  'iPhone 14 Pro Max': true,
-  'iPhone 14 Pro': true,
-  'iPhone 14 Plus': true,
-  'iPhone 14': true,
-  'iPhone 13 Pro Max': true,
-  'iPhone 13 Pro': true,
-  'iPhone 13': true,
-  'iPhone 13 mini': true,
-  'iPhone 12 Pro Max': true,
-  'iPhone 12 Pro': true,
-  'iPhone 12': true,
-  'iPhone 12 mini': true,
-  'iPhone 11 Pro Max': true,
-  'iPhone 11 Pro': true,
-  'iPhone 11': true,
-  'iPhone XS Max': true,
-  'iPhone XS': true,
-  'iPhone XR': true,
-  'iPhone SE (2022)': true,
-  'iPhone SE (2020)': true,
+// E-SIM 地区兼容性数据
+// 格式：{ 机型: { 地区: 是否支持 } }
+const esimRegionalCompatibility: Record<string, Record<string, boolean>> = {
+  // Apple iPhone - 地区差异最大
+  // iPhone 17 系列
+  'iPhone 17 Pro Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 17 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 17': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone Air': { global: true, cn: true, hk: true, us: true, jp: true, eu: true }, // 特殊：中国大陆唯一支持 eSIM 的 iPhone
   
-  // Samsung - 2021 年以后的旗舰机型支持 eSIM
-  // 2026 最新机型
-  'Galaxy S26 Ultra': true,
-  'Galaxy S26+': true,
-  'Galaxy S26': true,
-  // 2024-2025 机型
-  'Galaxy S24 Ultra': true,
-  'Galaxy S24+': true,
-  'Galaxy S24': true,
-  'Galaxy Z Fold 6': true,
-  'Galaxy Z Fold 5': true,
-  'Galaxy Z Flip 6': true,
-  'Galaxy Z Flip 5': true,
-  'Galaxy S23 Ultra': true,
-  'Galaxy S23+': true,
-  'Galaxy S23': true,
-  'Galaxy S23 FE': true,
-  'Galaxy Z Fold 4': true,
-  'Galaxy Z Flip 4': true,
-  'Galaxy S22 Ultra': true,
-  'Galaxy S22+': true,
-  'Galaxy S22': true,
-  'Galaxy Z Fold 3': true,
-  'Galaxy Z Flip 3': true,
-  'Galaxy S21 Ultra': true,
-  'Galaxy S21+': true,
-  'Galaxy S21': true,
-  'Galaxy S21 FE': true,
-  'Galaxy A54': true,
-  'Galaxy A53': false,
-  'Galaxy A34': false,
+  // iPhone 16 系列
+  'iPhone 16 Pro Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 16 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 16 Plus': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 16': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
   
-  // Google - Pixel 3 及以后的机型支持 eSIM
-  // 2025-2026 最新机型（美国版仅支持 eSIM）
-  'Pixel 10 Pro XL': true,
-  'Pixel 10 Pro': true,
-  'Pixel 10': true,
-  // 2024-2025 机型
-  'Pixel 9 Pro XL': true,
-  'Pixel 9 Pro': true,
-  'Pixel 9': true,
-  'Pixel 8 Pro': true,
-  'Pixel 8': true,
-  'Pixel 8a': true,
-  'Pixel 7 Pro': true,
-  'Pixel 7': true,
-  'Pixel 7a': true,
-  'Pixel 6 Pro': true,
-  'Pixel 6': true,
-  'Pixel 6a': true,
-  'Pixel 5': true,
-  'Pixel 4a': true,
+  // iPhone 15 系列
+  'iPhone 15 Pro Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 15 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 15 Plus': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 15': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
   
-  // Huawei - 部分机型支持 eSIM（主要是国际版）
-  'Pura 70 Ultra': true,
-  'Pura 70 Pro': true,
-  'Pura 70': true,
-  'Mate 60 Pro+': true,
-  'Mate 60 Pro': true,
-  'Mate 60': true,
-  'P60 Pro': true,
-  'P60': true,
-  'P50 Pro': true,
-  'P50': false,
-  'Mate 50 Pro': true,
-  'Mate 50': false,
-  'P40 Pro': true,
-  'Mate 40 Pro': true,
+  // iPhone 14 系列
+  'iPhone 14 Pro Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 14 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 14 Plus': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 14': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
   
-  // Xiaomi - 2022 年以后的旗舰机型支持 eSIM
-  'Xiaomi 14 Ultra': true,
-  'Xiaomi 14 Pro': true,
-  'Xiaomi 14': true,
-  'Xiaomi 13 Ultra': true,
-  'Xiaomi 13 Pro': true,
-  'Xiaomi 13': true,
-  'Xiaomi 12S Ultra': true,
-  'Xiaomi 12 Pro': true,
-  'Xiaomi 12': true,
-  'Xiaomi 11 Ultra': false,
-  'Xiaomi 11 Pro': false,
-  'Xiaomi 11': false,
-  'Redmi Note 13 Pro+': true,
-  'Redmi Note 12 Pro+': false,
+  // iPhone 13 系列
+  'iPhone 13 Pro Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 13 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 13': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 13 mini': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
   
-  // OPPO - 2023 年以后的旗舰机型支持 eSIM
-  'Find X7 Ultra': true,
-  'Find X7 Pro': true,
-  'Find X7': true,
-  'Find X6 Pro': true,
-  'Find X6': true,
-  'Find X5 Pro': true,
-  'Find X5': false,
-  'Reno 11 Pro': true,
-  'Reno 10 Pro+': false,
+  // iPhone 12 系列
+  'iPhone 12 Pro Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 12 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 12': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 12 mini': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
   
-  // OnePlus - 2022 年以后的机型支持 eSIM
-  'OnePlus 12': true,
-  'OnePlus 12R': true,
-  'OnePlus 11': true,
-  'OnePlus 11R': true,
-  'OnePlus 10 Pro': true,
-  'OnePlus 10T': true,
-  'OnePlus 9 Pro': false,
-  'OnePlus 9': false,
+  // iPhone 11 系列
+  'iPhone 11 Pro Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 11 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone 11': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // iPhone XS/XR 系列
+  'iPhone XS Max': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone XS': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone XR': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // iPhone SE
+  'iPhone SE (2022)': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'iPhone SE (2020)': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Samsung - 大部分地区支持
+  // Galaxy S26 系列
+  'Galaxy S26 Ultra': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S26+': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S26': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  
+  // Galaxy S24 系列
+  'Galaxy S24 Ultra': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S24+': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S24': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Fold 6': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Fold 5': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Flip 6': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Flip 5': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  
+  // Galaxy S23 系列
+  'Galaxy S23 Ultra': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S23+': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S23': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S23 FE': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Fold 4': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Flip 4': { global: true, cn: true, hk: true, us: true, jp: true, eu: true },
+  
+  // Galaxy S22 系列
+  'Galaxy S22 Ultra': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S22+': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S22': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Fold 3': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Galaxy Z Flip 3': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Galaxy S21 系列
+  'Galaxy S21 Ultra': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S21+': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S21': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Galaxy S21 FE': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Galaxy A 系列
+  'Galaxy A54': { global: true, cn: false, hk: false, us: true, jp: false, eu: true },
+  'Galaxy A53': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  'Galaxy A34': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  
+  // Google Pixel - 美国版特殊
+  // Pixel 10 系列（美国版仅 eSIM）
+  'Pixel 10 Pro XL': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 10 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 10': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Pixel 9 系列
+  'Pixel 9 Pro XL': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 9 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 9': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Pixel 8 系列
+  'Pixel 8 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 8': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 8a': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Pixel 7 系列
+  'Pixel 7 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 7': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 7a': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Pixel 6 系列
+  'Pixel 6 Pro': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 6': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 6a': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Pixel 老款
+  'Pixel 5': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  'Pixel 4a': { global: true, cn: false, hk: true, us: true, jp: true, eu: true },
+  
+  // Huawei - 国际版支持
+  'Pura 70 Ultra': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Pura 70 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Pura 70': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Mate 60 Pro+': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Mate 60 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Mate 60': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'P60 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'P60': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'P50 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'P50': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Mate 50 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Mate 50': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'P40 Pro': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  'Mate 40 Pro': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  
+  // Xiaomi - 国际版支持
+  'Xiaomi 14 Ultra': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 14 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 14': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 13 Ultra': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 13 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 13': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 12S Ultra': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 12 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 12': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 11 Ultra': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 11 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Xiaomi 11': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Redmi Note 13 Pro+': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  'Redmi Note 12 Pro+': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  
+  // OPPO - 国际版支持
+  'Find X7 Ultra': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Find X7 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Find X7': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Find X6 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Find X6': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Find X5 Pro': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Find X5': { global: true, cn: false, hk: true, us: false, jp: false, eu: true },
+  'Reno 11 Pro': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  'Reno 10 Pro+': { global: false, cn: false, hk: false, us: false, jp: false, eu: false },
+  
+  // OnePlus - 国际版支持
+  'OnePlus 12': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
+  'OnePlus 12R': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
+  'OnePlus 11': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
+  'OnePlus 11R': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
+  'OnePlus 10 Pro': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
+  'OnePlus 10T': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
+  'OnePlus 9 Pro': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
+  'OnePlus 9': { global: true, cn: false, hk: true, us: true, jp: false, eu: true },
 };
 
 export default function CompatibilityPage() {
   const { t } = useTranslation();
   const [selectedBrand, setSelectedBrand] = useState<string>('');
   const [selectedModel, setSelectedModel] = useState<string>('');
-  const [result, setResult] = useState<boolean | null>(null);
+  const [selectedRegion, setSelectedRegion] = useState<string>('global');
+  const [result, setResult] = useState<{ compatible: boolean; message: string } | null>(null);
 
   const handleCheck = () => {
-    if (selectedModel) {
-      setResult(esimCompatibility[selectedModel] || false);
+    if (!selectedBrand || !selectedModel || !selectedRegion) {
+      setResult({
+        compatible: false,
+        message: t('compatibility.pleaseSelectAll') || '请选择品牌、型号和地区',
+      });
+      return;
+    }
+
+    const regionalSupport = esimRegionalCompatibility[selectedModel];
+    if (!regionalSupport) {
+      setResult({
+        compatible: false,
+        message: t('compatibility.notSupported') || '该机型不支持 eSIM',
+      });
+      return;
+    }
+
+    const isSupported = regionalSupport[selectedRegion];
+    const regionName = regions.find(r => r.id === selectedRegion)?.name || selectedRegion;
+    
+    if (isSupported) {
+      // 特殊提示
+      let specialNote = '';
+      if (selectedModel === 'iPhone Air' && selectedRegion === 'cn') {
+        specialNote = '\n\n✨ iPhone Air 是中国大陆唯一支持 eSIM 的 iPhone 机型！';
+      } else if (selectedModel.startsWith('Pixel 10') && selectedRegion === 'us') {
+        specialNote = '\n\n⚠️ 美国版 Pixel 10 仅支持 eSIM，无实体 SIM 卡槽。';
+      } else if (selectedBrand === 'Apple' && selectedRegion === 'cn' && selectedModel !== 'iPhone Air') {
+        specialNote = '\n\n❌ 注意：中国大陆销售的 iPhone（除 iPhone Air 外）均不支持 eSIM。';
+      }
+      
+      setResult({
+        compatible: true,
+        message: `✅ ${selectedModel} (${regionName}) 支持 eSIM！${specialNote}`,
+      });
+    } else {
+      let reason = '';
+      if (selectedBrand === 'Apple' && selectedRegion === 'cn' && selectedModel !== 'iPhone Air') {
+        reason = '\n\n原因：中国大陆销售的 iPhone（除 iPhone Air 外）均不支持 eSIM 功能。';
+      } else if (selectedRegion === 'cn') {
+        reason = '\n\n原因：中国大陆版本不支持 eSIM。';
+      } else {
+        reason = '\n\n原因：该地区版本不支持 eSIM 功能。';
+      }
+      
+      setResult({
+        compatible: false,
+        message: `❌ ${selectedModel} (${regionName}) 不支持 eSIM${reason}`,
+      });
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      {/* 导航栏 */}
-      <nav className="border-b border-white/10 backdrop-blur-md bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
-              GlobalPass
-            </a>
-            <div className="flex items-center gap-6">
-              <a href="/" className="hover:text-emerald-400 transition-colors">{t('home')}</a>
-              <a href="/esim" className="hover:text-emerald-400 transition-colors">{t('esimComparison')}</a>
-              <a href="/compatibility" className="text-emerald-400">{t('compatibility')}</a>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+          {t('compatibility.title') || '手机兼容性检测'}
+        </h1>
+        <p className="text-center text-gray-300 mb-12">
+          {t('compatibility.subtitle') || '检查您的手机是否支持 eSIM（按地区）'}
+        </p>
+
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
+          {/* 地区选择 */}
+          <div className="mb-6">
+            <label className="block text-sm font-medium mb-2 text-gray-200">
+              {t('compatibility.selectRegion') || '1. 选择购买地区'}
+            </label>
+            <select
+              className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={selectedRegion}
+              onChange={(e) => {
+                setSelectedRegion(e.target.value);
+                setResult(null);
+              }}
+            >
+              {regions.map((region) => (
+                <option key={region.id} value={region.id} className="bg-slate-800">
+                  {region.name}
+                </option>
+              ))}
+            </select>
           </div>
-        </div>
-      </nav>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* 页头 */}
-        <div className="text-center mb-12">
-          <div className="text-6xl mb-6">📱</div>
-          <h1 className="text-4xl font-bold mb-4">{t('checkCompatibility')}</h1>
-          <p className="text-slate-300 text-lg">{t('compatibilityCheckDesc')}</p>
-        </div>
+          {/* 品牌选择 */}
+          <div className="mb-6">
+            <label className="block text-sm font-medium mb-2 text-gray-200">
+              {t('compatibility.selectBrand') || '2. 选择手机品牌'}
+            </label>
+            <select
+              className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={selectedBrand}
+              onChange={(e) => {
+                setSelectedBrand(e.target.value);
+                setSelectedModel('');
+                setResult(null);
+              }}
+            >
+              <option value="" className="bg-slate-800">{t('compatibility.chooseBrand') || '-- 请选择品牌 --'}</option>
+              {Object.keys(phoneData).map((brand) => (
+                <option key={brand} value={brand} className="bg-slate-800">
+                  {brand}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        {/* 检测表单 */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label className="block text-sm font-semibold mb-2">{t('selectBrand')}</label>
+          {/* 型号选择 */}
+          {selectedBrand && (
+            <div className="mb-6">
+              <label className="block text-sm font-medium mb-2 text-gray-200">
+                {t('compatibility.selectModel') || '3. 选择手机型号'}
+              </label>
               <select
-                value={selectedBrand}
-                onChange={(e) => {
-                  setSelectedBrand(e.target.value);
-                  setSelectedModel('');
-                  setResult(null);
-                }}
-                className="w-full px-4 py-3 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-              >
-                <option value="">{t('selectBrand')}</option>
-                {Object.keys(phoneData).map(brand => (
-                  <option key={brand} value={brand}>{brand}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">{t('selectModel')}</label>
-              <select
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={selectedModel}
                 onChange={(e) => {
                   setSelectedModel(e.target.value);
                   setResult(null);
                 }}
-                disabled={!selectedBrand}
-                className="w-full px-4 py-3 bg-slate-800 border border-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <option value="">{t('selectModel')}</option>
-                {selectedBrand && phoneData[selectedBrand as keyof typeof phoneData]?.map(model => (
-                  <option key={model} value={model}>{model}</option>
+                <option value="" className="bg-slate-800">{t('compatibility.chooseModel') || '-- 请选择型号 --'}</option>
+                {phoneData[selectedBrand as keyof typeof phoneData].map((model) => (
+                  <option key={model} value={model} className="bg-slate-800">
+                    {model}
+                  </option>
                 ))}
               </select>
             </div>
-          </div>
+          )}
 
+          {/* 检测按钮 */}
           <button
             onClick={handleCheck}
-            disabled={!selectedModel}
-            className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
+            disabled={!selectedBrand || !selectedModel}
+            className="w-full py-4 rounded-lg bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold text-lg hover:from-blue-600 hover:to-emerald-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
           >
-            {t('check')}
+            {t('compatibility.checkButton') || '检测兼容性'}
           </button>
+
+          {/* 结果显示 */}
+          {result && (
+            <div
+              className={`mt-6 p-6 rounded-lg ${
+                result.compatible
+                  ? 'bg-emerald-500/20 border-2 border-emerald-500'
+                  : 'bg-red-500/20 border-2 border-red-500'
+              }`}
+            >
+              <p className="text-lg whitespace-pre-line">{result.message}</p>
+            </div>
+          )}
         </div>
 
-        {/* 检测结果 */}
-        {result !== null && (
-          <div className={`bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
-            result ? 'border-emerald-500/50' : 'border-red-500/50'
-          }`}>
-            <div className="text-center">
-              <div className="text-6xl mb-4">{result ? '✅' : '❌'}</div>
-              <h2 className="text-2xl font-bold mb-2">
-                {result ? t('compatible') : t('notCompatible')}
-              </h2>
-              <p className="text-slate-300 mb-6">
-                {selectedBrand} {selectedModel}
-              </p>
-              {result ? (
-                <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 mb-6">
-                  <p className="text-emerald-400">
-                    🎉 {t('compatibleMessage', 'Great! Your phone supports E-SIM. You can start shopping for packages!')}
-                  </p>
-                </div>
-              ) : (
-                <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 mb-6">
-                  <p className="text-red-400">
-                    😔 {t('notCompatibleMessage', 'Unfortunately, this model does not support E-SIM. Please check with your carrier or consider upgrading.')}
-                  </p>
-                </div>
-              )}
-              {result && (
-                <a
-                  href="/esim"
-                  className="inline-block px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors"
-                >
-                  {t('browsePackages', 'Browse E-SIM Packages')}
-                </a>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* 说明 */}
-        <div className="mt-12 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
-          <h3 className="text-xl font-bold mb-4">📖 {t('aboutESIM', 'About E-SIM')}</h3>
-          <div className="space-y-4 text-slate-300">
-            <p>
-              {t('esimDescription', 'E-SIM (embedded SIM) is a digital SIM that allows you to activate a cellular plan without using a physical SIM card.')}
-            </p>
-            <p>
-              {t('esimBenefits', 'Benefits: No physical SIM card needed, easy to switch carriers, perfect for international travel, and supports multiple numbers on one device.')}
-            </p>
-            <p>
-              {t('esimRequirements', 'Requirements: Your device must support E-SIM technology, and your carrier must offer E-SIM activation.')}
-            </p>
-          </div>
+        {/* 重要提示 */}
+        <div className="mt-8 bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-6">
+          <h3 className="text-xl font-semibold mb-3 text-yellow-400">⚠️ 重要提示</h3>
+          <ul className="space-y-2 text-gray-300">
+            <li>• <strong>iPhone：</strong>中国大陆销售的所有 iPhone（除 iPhone Air 外）均不支持 eSIM</li>
+            <li>• <strong>Google Pixel 10：</strong>美国版仅支持 eSIM，无实体 SIM 卡槽</li>
+            <li>• <strong>Samsung：</strong>S23 及以后的机型在中国大陆也支持 eSIM</li>
+            <li>• <strong>其他品牌：</strong>中国大陆版本通常不支持 eSIM，建议购买国际版或香港版</li>
+          </ul>
         </div>
       </div>
     </div>
