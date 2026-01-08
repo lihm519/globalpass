@@ -13,22 +13,32 @@ GlobalPass - 通用爬虫核心系统（网页抓取版）
 import json
 import requests
 import logging
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional
 import re
 from bs4 import BeautifulSoup
 
-# 配置日志
+# 创建日志目录
+log_dir = Path("logs")
+log_dir.mkdir(exist_ok=True)
+
+# 配置日志（同时输出到文件和控制台）
+log_file = log_dir / f"scraper_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()
+    ]
 )
 logger = logging.getLogger(__name__)
 
-# Supabase 配置
-SUPABASE_URL = "https://mzodnvjtlujvvwfnpcyb.supabase.co"
-SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2Rudmp0bHVqdnZ3Zm5wY3liIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzU0MDk4NiwiZXhwIjoyMDgzMTE2OTg2fQ.gr-5J22EhV08PLghNcoS8o5lUFjaEyby21MwE-35ENs"
+# Supabase 配置（优先使用环境变量）
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://mzodnvjtlujvvwfnpcyb.supabase.co")
+SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16b2Rudmp0bHVqdnZ3Zm5wY3liIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzU0MDk4NiwiZXhwIjoyMDgzMTE2OTg2fQ.gr-5J22EhV08PLghNcoS8o5lUFjaEyby21MwE-35ENs")
 
 # 注意：不再使用汇率转换，直接使用提供商的原始价格
 
