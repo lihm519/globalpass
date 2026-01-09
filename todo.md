@@ -61,3 +61,12 @@
 - [ ] 找到之前可用的版本
 - [ ] 恢复可用的配置
 - [ ] 测试并部署
+
+## Preview & Testing Environment
+
+- [x] 诊断 Manus Preview 问题（Turbopack 文件限制）
+- [x] 决定使用 Vercel Preview 作为测试环境
+- [x] 创建 dev 分支用于 Vercel Preview
+- [x] 配置 Vercel Preview 自动部署
+- [x] 编写 Vercel Preview 使用文档
+- [ ] 验证 Vercel Preview 自动部署
