@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-01-21T21:03:35.863997Z",
-  "total_packages": 356,
+  "timestamp": "2026-01-22T20:56:40.147420Z",
+  "total_packages": 365,
   "countries": [
     "Australia",
     "Brazil",
@@ -41,7 +41,7 @@
         "price": 4.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551536",
+        "last_checked": "2026-01-22T20:56:07.424646",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -83,7 +83,7 @@
         "price": 8.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551565",
+        "last_checked": "2026-01-22T20:56:07.424677",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -97,7 +97,7 @@
         "price": 10.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551586",
+        "last_checked": "2026-01-22T20:56:07.424696",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -125,7 +125,7 @@
         "price": 12.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551655",
+        "last_checked": "2026-01-22T20:56:07.424766",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -139,7 +139,7 @@
         "price": 15.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551605",
+        "last_checked": "2026-01-22T20:56:07.424714",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -167,7 +167,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.55167",
+        "last_checked": "2026-01-22T20:56:07.424782",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -181,7 +181,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551622",
+        "last_checked": "2026-01-22T20:56:07.424732",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
       },
       {
@@ -195,7 +195,7 @@
         "price": 24.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551686",
+        "last_checked": "2026-01-22T20:56:07.424797",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -223,7 +223,7 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551702",
+        "last_checked": "2026-01-22T20:56:07.424813",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -237,7 +237,7 @@
         "price": 38.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/australia-esim",
-        "last_checked": "2026-01-21T21:02:17.551638",
+        "last_checked": "2026-01-22T20:56:07.424749",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 38.0, \"data\": \"50 GB\", \"validity\": \"45 Days\"}"
       },
       {
@@ -437,7 +437,7 @@
         "price": 5.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233396",
+        "last_checked": "2026-01-22T20:56:24.991765",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -479,7 +479,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233427",
+        "last_checked": "2026-01-22T20:56:24.991797",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -493,7 +493,7 @@
         "price": 14.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233448",
+        "last_checked": "2026-01-22T20:56:24.991824",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -521,7 +521,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233468",
+        "last_checked": "2026-01-22T20:56:24.991843",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -549,7 +549,7 @@
         "price": 21.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.23352",
+        "last_checked": "2026-01-22T20:56:24.991911",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 21.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -563,7 +563,7 @@
         "price": 28.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233485",
+        "last_checked": "2026-01-22T20:56:24.991874",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 28.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -577,7 +577,7 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233536",
+        "last_checked": "2026-01-22T20:56:24.991927",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -605,7 +605,7 @@
         "price": 41.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233552",
+        "last_checked": "2026-01-22T20:56:24.991943",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 41.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -619,7 +619,7 @@
         "price": 49.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233503",
+        "last_checked": "2026-01-22T20:56:24.991894",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -633,7 +633,7 @@
         "price": 49.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/canada-esim",
-        "last_checked": "2026-01-21T21:02:37.233574",
+        "last_checked": "2026-01-22T20:56:24.991959",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -663,7 +663,7 @@
         "price": 4.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806444",
+        "last_checked": "2026-01-22T20:56:26.515203",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -691,7 +691,7 @@
         "price": 7.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806478",
+        "last_checked": "2026-01-22T20:56:26.515237",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -719,7 +719,7 @@
         "price": 10.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806498",
+        "last_checked": "2026-01-22T20:56:26.515258",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -733,7 +733,7 @@
         "price": 12.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806519",
+        "last_checked": "2026-01-22T20:56:26.515278",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -747,7 +747,7 @@
         "price": 12.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806604",
+        "last_checked": "2026-01-22T20:56:26.515331",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -775,7 +775,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.80662",
+        "last_checked": "2026-01-22T20:56:26.515348",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -789,7 +789,7 @@
         "price": 20.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806537",
+        "last_checked": "2026-01-22T20:56:26.515296",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -817,7 +817,7 @@
         "price": 24.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806636",
+        "last_checked": "2026-01-22T20:56:26.515363",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -831,8 +831,22 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/china-esim",
-        "last_checked": "2026-01-21T21:03:23.806652",
+        "last_checked": "2026-01-22T20:56:26.515378",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+      },
+      {
+        "id": 492,
+        "provider": "Nomad",
+        "country": "China",
+        "plan_name": "China 50 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "50GB",
+        "validity": "30 Days",
+        "price": 35.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/china-esim",
+        "last_checked": "2026-01-22T20:56:26.515313",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 35.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 92,
@@ -931,7 +945,7 @@
         "price": 4.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365594",
+        "last_checked": "2026-01-22T20:55:54.670954",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -959,7 +973,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365629",
+        "last_checked": "2026-01-22T20:55:54.671001",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -987,7 +1001,7 @@
         "price": 11.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365721",
+        "last_checked": "2026-01-22T20:55:54.671096",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -1001,7 +1015,7 @@
         "price": 12.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.36565",
+        "last_checked": "2026-01-22T20:55:54.671024",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1029,7 +1043,7 @@
         "price": 16.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365668",
+        "last_checked": "2026-01-22T20:55:54.671043",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1043,7 +1057,7 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365737",
+        "last_checked": "2026-01-22T20:55:54.671112",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -1057,7 +1071,7 @@
         "price": 20.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365686",
+        "last_checked": "2026-01-22T20:55:54.671061",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1085,7 +1099,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365754",
+        "last_checked": "2026-01-22T20:55:54.671127",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -1099,7 +1113,7 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.36577",
+        "last_checked": "2026-01-22T20:55:54.671143",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -1127,7 +1141,7 @@
         "price": 45.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/france-esim",
-        "last_checked": "2026-01-21T21:02:53.365704",
+        "last_checked": "2026-01-22T20:55:54.671079",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       }
     ],
@@ -1157,7 +1171,7 @@
         "price": 4.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194854",
+        "last_checked": "2026-01-22T20:56:02.931923",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -1185,7 +1199,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194886",
+        "last_checked": "2026-01-22T20:56:02.931956",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1213,7 +1227,7 @@
         "price": 11.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194981",
+        "last_checked": "2026-01-22T20:56:02.932066",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -1227,7 +1241,7 @@
         "price": 12.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194907",
+        "last_checked": "2026-01-22T20:56:02.931993",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1255,7 +1269,7 @@
         "price": 16.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194926",
+        "last_checked": "2026-01-22T20:56:02.932013",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1269,7 +1283,7 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194998",
+        "last_checked": "2026-01-22T20:56:02.932083",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -1283,7 +1297,7 @@
         "price": 20.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194946",
+        "last_checked": "2026-01-22T20:56:02.93203",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1311,7 +1325,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.195014",
+        "last_checked": "2026-01-22T20:56:02.932098",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -1325,7 +1339,7 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.195031",
+        "last_checked": "2026-01-22T20:56:02.932115",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -1353,7 +1367,7 @@
         "price": 45.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/germany-esim",
-        "last_checked": "2026-01-21T21:03:01.194963",
+        "last_checked": "2026-01-22T20:56:02.932048",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       }
     ],
@@ -1369,7 +1383,7 @@
         "price": 4.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/hong-kong-esim",
-        "last_checked": "2026-01-21T21:01:33.196249",
+        "last_checked": "2026-01-22T20:55:24.792349",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -1380,11 +1394,11 @@
         "data_type": "Data",
         "data_amount": "3GB",
         "validity": "30 Days",
-        "price": 9.0,
+        "price": 8.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/hong-kong-esim",
-        "last_checked": "2026-01-21T21:01:33.19628",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:24.792388",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 442,
@@ -1394,11 +1408,11 @@
         "data_type": "Data",
         "data_amount": "5GB",
         "validity": "30 Days",
-        "price": 12.0,
+        "price": 11.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/hong-kong-esim",
-        "last_checked": "2026-01-21T21:01:33.196301",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:24.792409",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 443,
@@ -1408,11 +1422,11 @@
         "data_type": "Data",
         "data_amount": "10GB",
         "validity": "30 Days",
-        "price": 18.0,
+        "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/hong-kong-esim",
-        "last_checked": "2026-01-21T21:01:33.196319",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:24.792428",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 446,
@@ -1425,8 +1439,22 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/hong-kong-esim",
-        "last_checked": "2026-01-21T21:01:33.196387",
+        "last_checked": "2026-01-22T20:55:24.792494",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
+      },
+      {
+        "id": 488,
+        "provider": "Nomad",
+        "country": "Hong Kong",
+        "plan_name": "Hong Kong 20 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "20GB",
+        "validity": "30 Days",
+        "price": 27.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/hong-kong-esim",
+        "last_checked": "2026-01-22T20:55:24.792445",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 27.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 444,
@@ -1453,8 +1481,22 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/hong-kong-esim",
-        "last_checked": "2026-01-21T21:01:33.196406",
+        "last_checked": "2026-01-22T20:55:24.792513",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+      },
+      {
+        "id": 489,
+        "provider": "Nomad",
+        "country": "Hong Kong",
+        "plan_name": "Hong Kong 50 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "50GB",
+        "validity": "30 Days",
+        "price": 39.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/hong-kong-esim",
+        "last_checked": "2026-01-22T20:55:24.792463",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 445,
@@ -1483,7 +1525,7 @@
         "price": 4.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:32.689414",
+        "last_checked": "2026-01-22T20:56:34.345719",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -1497,7 +1539,7 @@
         "price": 8.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:32.689445",
+        "last_checked": "2026-01-22T20:56:34.345749",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1511,7 +1553,7 @@
         "price": 13.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:32.689466",
+        "last_checked": "2026-01-22T20:56:34.34577",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1525,7 +1567,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:30.171514",
+        "last_checked": "2026-01-22T20:56:34.345842",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -1539,7 +1581,7 @@
         "price": 21.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:32.689484",
+        "last_checked": "2026-01-22T20:56:34.345789",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 21.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1553,7 +1595,7 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:30.171465",
+        "last_checked": "2026-01-22T20:56:34.345808",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1567,7 +1609,7 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:30.17153",
+        "last_checked": "2026-01-22T20:56:34.345858",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -1581,25 +1623,11 @@
         "price": 45.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/india-esim",
-        "last_checked": "2026-01-21T21:03:30.171496",
+        "last_checked": "2026-01-22T20:56:34.345825",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       }
     ],
     "Indonesia": [
-      {
-        "id": 227,
-        "provider": "Nomad",
-        "country": "Indonesia",
-        "plan_name": "Indonesia 1 GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "1GB",
-        "validity": "7 Days",
-        "price": 4.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206248",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
-      },
       {
         "id": 406,
         "provider": "Airalo",
@@ -1615,6 +1643,20 @@
         "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
       },
       {
+        "id": 227,
+        "provider": "Nomad",
+        "country": "Indonesia",
+        "plan_name": "Indonesia 1 GB 7 Days",
+        "data_type": "Data",
+        "data_amount": "1GB",
+        "validity": "7 Days",
+        "price": 4.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/indonesia-esim",
+        "last_checked": "2026-01-22T20:55:46.301093",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
+      },
+      {
         "id": 228,
         "provider": "Nomad",
         "country": "Indonesia",
@@ -1625,7 +1667,7 @@
         "price": 8.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206282",
+        "last_checked": "2026-01-22T20:55:46.301128",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1653,7 +1695,7 @@
         "price": 10.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206303",
+        "last_checked": "2026-01-22T20:55:46.30115",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1681,7 +1723,7 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206321",
+        "last_checked": "2026-01-22T20:55:46.301168",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1695,7 +1737,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206406",
+        "last_checked": "2026-01-22T20:55:46.301235",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -1723,7 +1765,7 @@
         "price": 24.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206338",
+        "last_checked": "2026-01-22T20:55:46.301184",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"15 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1737,7 +1779,7 @@
         "price": 30.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206355",
+        "last_checked": "2026-01-22T20:55:46.301201",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 30.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
       },
       {
@@ -1765,7 +1807,7 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206422",
+        "last_checked": "2026-01-22T20:55:46.301251",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -1793,7 +1835,7 @@
         "price": 61.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/indonesia-esim",
-        "last_checked": "2026-01-21T21:01:56.206387",
+        "last_checked": "2026-01-22T20:55:46.301217",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 61.0, \"data\": \"50 GB\", \"validity\": \"45 Days\"}"
       }
     ],
@@ -1823,7 +1865,7 @@
         "price": 4.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995238",
+        "last_checked": "2026-01-22T20:56:11.089204",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -1851,7 +1893,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.99527",
+        "last_checked": "2026-01-22T20:56:11.089236",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1865,7 +1907,7 @@
         "price": 11.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995364",
+        "last_checked": "2026-01-22T20:56:11.089327",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -1893,7 +1935,7 @@
         "price": 12.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995292",
+        "last_checked": "2026-01-22T20:56:11.089256",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1907,7 +1949,7 @@
         "price": 16.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995311",
+        "last_checked": "2026-01-22T20:56:11.089275",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1921,7 +1963,7 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995397",
+        "last_checked": "2026-01-22T20:56:11.089344",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -1949,7 +1991,7 @@
         "price": 20.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995328",
+        "last_checked": "2026-01-22T20:56:11.089293",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -1963,7 +2005,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995414",
+        "last_checked": "2026-01-22T20:56:11.089359",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -1991,7 +2033,7 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.99543",
+        "last_checked": "2026-01-22T20:56:11.089375",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -2019,24 +2061,24 @@
         "price": 45.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/italy-esim",
-        "last_checked": "2026-01-21T21:03:08.995346",
+        "last_checked": "2026-01-22T20:56:11.08931",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       }
     ],
     "Japan": [
       {
-        "id": 323,
-        "provider": "Airalo",
+        "id": 48,
+        "provider": "Nomad",
         "country": "Japan",
-        "plan_name": "Japan 1GB 7 Days",
+        "plan_name": "Japan 1 GB 7 Days",
         "data_type": "Data",
         "data_amount": "1GB",
         "validity": "7 Days",
         "price": 4.0,
         "network": "Local Operators",
-        "link": "https://www.airalo.com/japan-esim",
-        "last_checked": "2026-01-05T21:12:34.245145",
-        "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
+        "link": "https://www.getnomad.app/japan-esim",
+        "last_checked": "2026-01-22T20:54:54.283675",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
         "id": 305,
@@ -2053,18 +2095,18 @@
         "raw_data": "{\"original_price\": 4.0, \"currency\": \"USD\", \"data\": \"1GB\", \"validity\": \"3 Days\"}"
       },
       {
-        "id": 48,
-        "provider": "Nomad",
+        "id": 323,
+        "provider": "Airalo",
         "country": "Japan",
-        "plan_name": "Japan 1 GB 7 Days",
+        "plan_name": "Japan 1GB 7 Days",
         "data_type": "Data",
         "data_amount": "1GB",
         "validity": "7 Days",
         "price": 4.0,
         "network": "Local Operators",
-        "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.63209",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
+        "link": "https://www.airalo.com/japan-esim",
+        "last_checked": "2026-01-05T21:12:34.245145",
+        "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
       },
       {
         "id": 306,
@@ -2102,11 +2144,11 @@
         "data_type": "Data",
         "data_amount": "3GB",
         "validity": "30 Days",
-        "price": 8.0,
+        "price": 7.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.63214",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:54:54.283726",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 50,
@@ -2119,7 +2161,7 @@
         "price": 10.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.632165",
+        "last_checked": "2026-01-22T20:54:54.28375",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2151,6 +2193,20 @@
         "raw_data": "{\"original_price\": 10.5, \"currency\": \"USD\", \"data\": \"5GB\", \"validity\": \"15 Days\"}"
       },
       {
+        "id": 54,
+        "provider": "Nomad",
+        "country": "Japan",
+        "plan_name": "Japan Unlimited 3 Days",
+        "data_type": "Unlimited",
+        "data_amount": "Unlimited",
+        "validity": "3 Days",
+        "price": 11.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/japan-esim",
+        "last_checked": "2026-01-22T20:54:54.283823",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
+      },
+      {
         "id": 313,
         "provider": "Airalo",
         "country": "Japan",
@@ -2163,20 +2219,6 @@
         "link": "https://www.airalo.com/japan-esim",
         "last_checked": "2026-01-05T18:25:07.712737",
         "raw_data": "{\"original_price\": 11.0, \"currency\": \"USD\", \"data\": \"5GB\", \"validity\": \"30 Days\"}"
-      },
-      {
-        "id": 54,
-        "provider": "Nomad",
-        "country": "Japan",
-        "plan_name": "Japan Unlimited 3 Days",
-        "data_type": "Unlimited",
-        "data_amount": "Unlimited",
-        "validity": "3 Days",
-        "price": 11.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.632242",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
         "id": 326,
@@ -2193,20 +2235,6 @@
         "raw_data": "{\"original_price\": 16.0, \"currency\": \"EUR\", \"data\": \"10GB\", \"validity\": \"7 Days\"}"
       },
       {
-        "id": 51,
-        "provider": "Nomad",
-        "country": "Japan",
-        "plan_name": "Japan 10 GB 30 Days",
-        "data_type": "Data",
-        "data_amount": "10GB",
-        "validity": "30 Days",
-        "price": 17.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.632186",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
-      },
-      {
         "id": 55,
         "provider": "Nomad",
         "country": "Japan",
@@ -2217,8 +2245,22 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.632266",
+        "last_checked": "2026-01-22T20:54:54.283849",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
+      },
+      {
+        "id": 51,
+        "provider": "Nomad",
+        "country": "Japan",
+        "plan_name": "Japan 10 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "10GB",
+        "validity": "30 Days",
+        "price": 17.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/japan-esim",
+        "last_checked": "2026-01-22T20:54:54.28377",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 311,
@@ -2273,7 +2315,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.632285",
+        "last_checked": "2026-01-22T20:54:54.28387",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -2305,6 +2347,20 @@
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
       },
       {
+        "id": 484,
+        "provider": "Nomad",
+        "country": "Japan",
+        "plan_name": "Japan 20 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "20GB",
+        "validity": "30 Days",
+        "price": 24.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/japan-esim",
+        "last_checked": "2026-01-22T20:54:54.283788",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
+      },
+      {
         "id": 315,
         "provider": "Airalo",
         "country": "Japan",
@@ -2329,8 +2385,22 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/japan-esim",
-        "last_checked": "2026-01-21T21:00:55.632308",
+        "last_checked": "2026-01-22T20:54:54.283891",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+      },
+      {
+        "id": 485,
+        "provider": "Nomad",
+        "country": "Japan",
+        "plan_name": "Japan 50 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "50GB",
+        "validity": "30 Days",
+        "price": 39.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/japan-esim",
+        "last_checked": "2026-01-22T20:54:54.283806",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 53,
@@ -2373,7 +2443,7 @@
         "price": 5.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.392032",
+        "last_checked": "2026-01-22T20:55:39.753691",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -2387,7 +2457,7 @@
         "price": 7.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.392061",
+        "last_checked": "2026-01-22T20:55:39.753742",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2415,7 +2485,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.392081",
+        "last_checked": "2026-01-22T20:55:39.753765",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2443,7 +2513,7 @@
         "price": 13.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.3921",
+        "last_checked": "2026-01-22T20:55:39.753803",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2457,7 +2527,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.392151",
+        "last_checked": "2026-01-22T20:55:39.753871",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -2485,7 +2555,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.392117",
+        "last_checked": "2026-01-22T20:55:39.753826",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"15 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2499,7 +2569,7 @@
         "price": 22.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.392134",
+        "last_checked": "2026-01-22T20:55:39.75385",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 22.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
       },
       {
@@ -2527,7 +2597,7 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/malaysia-esim",
-        "last_checked": "2026-01-21T21:01:49.392168",
+        "last_checked": "2026-01-22T20:55:39.753888",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -2783,7 +2853,7 @@
         "price": 4.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.542902",
+        "last_checked": "2026-01-22T20:55:53.94182",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -2797,7 +2867,7 @@
         "price": 7.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.542932",
+        "last_checked": "2026-01-22T20:55:53.941852",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2811,7 +2881,7 @@
         "price": 10.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.542951",
+        "last_checked": "2026-01-22T20:55:53.941873",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2825,7 +2895,7 @@
         "price": 13.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.54297",
+        "last_checked": "2026-01-22T20:55:53.941891",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2839,7 +2909,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.54302",
+        "last_checked": "2026-01-22T20:55:53.941941",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -2853,7 +2923,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.542986",
+        "last_checked": "2026-01-22T20:55:53.941908",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
       },
       {
@@ -2867,7 +2937,7 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.543036",
+        "last_checked": "2026-01-22T20:55:53.941958",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -2881,25 +2951,11 @@
         "price": 49.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/philippines-esim",
-        "last_checked": "2026-01-21T21:02:03.543003",
+        "last_checked": "2026-01-22T20:55:53.941924",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       }
     ],
     "Singapore": [
-      {
-        "id": 99,
-        "provider": "Nomad",
-        "country": "Singapore",
-        "plan_name": "Singapore 1 GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "1GB",
-        "validity": "7 Days",
-        "price": 4.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960423",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
-      },
       {
         "id": 352,
         "provider": "Airalo",
@@ -2915,18 +2971,18 @@
         "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
       },
       {
-        "id": 100,
+        "id": 99,
         "provider": "Nomad",
         "country": "Singapore",
-        "plan_name": "Singapore 3 GB 30 Days",
+        "plan_name": "Singapore 1 GB 7 Days",
         "data_type": "Data",
-        "data_amount": "3GB",
-        "validity": "30 Days",
-        "price": 6.5,
+        "data_amount": "1GB",
+        "validity": "7 Days",
+        "price": 4.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960455",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 6.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:18.073214",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
         "id": 353,
@@ -2941,6 +2997,20 @@
         "link": "https://www.airalo.com/singapore-esim",
         "last_checked": "2026-01-05T21:13:27.199936",
         "raw_data": "{\"original_price\": 6.5, \"currency\": \"EUR\", \"data\": \"3GB\", \"validity\": \"7 Days\"}"
+      },
+      {
+        "id": 100,
+        "provider": "Nomad",
+        "country": "Singapore",
+        "plan_name": "Singapore 3 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "3GB",
+        "validity": "30 Days",
+        "price": 6.5,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/singapore-esim",
+        "last_checked": "2026-01-22T20:55:18.073247",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 6.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 354,
@@ -2967,7 +3037,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960477",
+        "last_checked": "2026-01-22T20:55:18.073269",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -2981,7 +3051,7 @@
         "price": 13.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960499",
+        "last_checked": "2026-01-22T20:55:18.073288",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3009,7 +3079,7 @@
         "price": 15.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960569",
+        "last_checked": "2026-01-22T20:55:18.073343",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -3020,11 +3090,11 @@
         "data_type": "Data",
         "data_amount": "20GB",
         "validity": "30 Days",
-        "price": 16.0,
+        "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960518",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:18.073305",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 356,
@@ -3051,8 +3121,22 @@
         "price": 25.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960586",
+        "last_checked": "2026-01-22T20:55:18.073359",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+      },
+      {
+        "id": 105,
+        "provider": "Nomad",
+        "country": "Singapore",
+        "plan_name": "Singapore 50 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "50GB",
+        "validity": "30 Days",
+        "price": 29.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/singapore-esim",
+        "last_checked": "2026-01-22T20:55:18.073325",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 29.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 104,
@@ -3067,20 +3151,6 @@
         "link": "https://www.getnomad.app/singapore-esim",
         "last_checked": "2026-01-21T21:01:23.960536",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 35.0, \"data\": \"30 GB\", \"validity\": \"30 Days\"}"
-      },
-      {
-        "id": 105,
-        "provider": "Nomad",
-        "country": "Singapore",
-        "plan_name": "Singapore 50 GB 30 Days",
-        "data_type": "Data",
-        "data_amount": "50GB",
-        "validity": "30 Days",
-        "price": 39.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/singapore-esim",
-        "last_checked": "2026-01-21T21:01:23.960553",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 357,
@@ -3099,20 +3169,6 @@
     ],
     "South Korea": [
       {
-        "id": 78,
-        "provider": "Nomad",
-        "country": "South Korea",
-        "plan_name": "South Korea 1 GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "1GB",
-        "validity": "7 Days",
-        "price": 4.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656551",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
-      },
-      {
         "id": 340,
         "provider": "Airalo",
         "country": "South Korea",
@@ -3125,6 +3181,34 @@
         "link": "https://www.airalo.com/south-korea-esim",
         "last_checked": "2026-01-05T21:13:08.405574",
         "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
+      },
+      {
+        "id": 78,
+        "provider": "Nomad",
+        "country": "South Korea",
+        "plan_name": "South Korea 1 GB 7 Days",
+        "data_type": "Data",
+        "data_amount": "1GB",
+        "validity": "7 Days",
+        "price": 4.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/south-korea-esim",
+        "last_checked": "2026-01-22T20:55:05.370026",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
+      },
+      {
+        "id": 79,
+        "provider": "Nomad",
+        "country": "South Korea",
+        "plan_name": "South Korea 3 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "3GB",
+        "validity": "30 Days",
+        "price": 8.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/south-korea-esim",
+        "last_checked": "2026-01-22T20:55:05.370057",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 341,
@@ -3141,34 +3225,6 @@
         "raw_data": "{\"original_price\": 8.0, \"currency\": \"EUR\", \"data\": \"3GB\", \"validity\": \"7 Days\"}"
       },
       {
-        "id": 79,
-        "provider": "Nomad",
-        "country": "South Korea",
-        "plan_name": "South Korea 3 GB 30 Days",
-        "data_type": "Data",
-        "data_amount": "3GB",
-        "validity": "30 Days",
-        "price": 9.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656582",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
-      },
-      {
-        "id": 80,
-        "provider": "Nomad",
-        "country": "South Korea",
-        "plan_name": "South Korea 5 GB 30 Days",
-        "data_type": "Data",
-        "data_amount": "5GB",
-        "validity": "30 Days",
-        "price": 10.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656603",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
-      },
-      {
         "id": 342,
         "provider": "Airalo",
         "country": "South Korea",
@@ -3183,6 +3239,20 @@
         "raw_data": "{\"original_price\": 10.0, \"currency\": \"EUR\", \"data\": \"5GB\", \"validity\": \"7 Days\"}"
       },
       {
+        "id": 80,
+        "provider": "Nomad",
+        "country": "South Korea",
+        "plan_name": "South Korea 5 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "5GB",
+        "validity": "30 Days",
+        "price": 10.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/south-korea-esim",
+        "last_checked": "2026-01-22T20:55:05.370078",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
+      },
+      {
         "id": 83,
         "provider": "Nomad",
         "country": "South Korea",
@@ -3193,7 +3263,7 @@
         "price": 11.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656657",
+        "last_checked": "2026-01-22T20:55:05.370145",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -3207,22 +3277,8 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656673",
+        "last_checked": "2026-01-22T20:55:05.370161",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
-      },
-      {
-        "id": 81,
-        "provider": "Nomad",
-        "country": "South Korea",
-        "plan_name": "South Korea 10 GB 30 Days",
-        "data_type": "Data",
-        "data_amount": "10GB",
-        "validity": "30 Days",
-        "price": 17.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656622",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 343,
@@ -3239,6 +3295,20 @@
         "raw_data": "{\"original_price\": 18.0, \"currency\": \"EUR\", \"data\": \"10GB\", \"validity\": \"7 Days\"}"
       },
       {
+        "id": 81,
+        "provider": "Nomad",
+        "country": "South Korea",
+        "plan_name": "South Korea 10 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "10GB",
+        "validity": "30 Days",
+        "price": 18.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/south-korea-esim",
+        "last_checked": "2026-01-22T20:55:05.370096",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+      },
+      {
         "id": 85,
         "provider": "Nomad",
         "country": "South Korea",
@@ -3249,7 +3319,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656689",
+        "last_checked": "2026-01-22T20:55:05.370177",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -3265,6 +3335,20 @@
         "link": "https://www.getnomad.app/south-korea-esim",
         "last_checked": "2026-01-21T21:01:08.656639",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
+      },
+      {
+        "id": 486,
+        "provider": "Nomad",
+        "country": "South Korea",
+        "plan_name": "South Korea 20 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "20GB",
+        "validity": "30 Days",
+        "price": 25.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/south-korea-esim",
+        "last_checked": "2026-01-22T20:55:05.370113",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 344,
@@ -3291,8 +3375,22 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/south-korea-esim",
-        "last_checked": "2026-01-21T21:01:08.656705",
+        "last_checked": "2026-01-22T20:55:05.370193",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+      },
+      {
+        "id": 487,
+        "provider": "Nomad",
+        "country": "South Korea",
+        "plan_name": "South Korea 50 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "50GB",
+        "validity": "30 Days",
+        "price": 39.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/south-korea-esim",
+        "last_checked": "2026-01-22T20:55:05.370129",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 345,
@@ -3335,7 +3433,7 @@
         "price": 4.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575551",
+        "last_checked": "2026-01-22T20:56:19.001124",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -3363,7 +3461,7 @@
         "price": 8.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575586",
+        "last_checked": "2026-01-22T20:56:19.001156",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3391,7 +3489,7 @@
         "price": 10.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575606",
+        "last_checked": "2026-01-22T20:56:19.001177",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3405,7 +3503,7 @@
         "price": 14.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575625",
+        "last_checked": "2026-01-22T20:56:19.001196",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3433,7 +3531,7 @@
         "price": 15.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575676",
+        "last_checked": "2026-01-22T20:56:19.001247",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -3461,7 +3559,7 @@
         "price": 20.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575643",
+        "last_checked": "2026-01-22T20:56:19.001213",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3475,7 +3573,7 @@
         "price": 29.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575692",
+        "last_checked": "2026-01-22T20:56:19.001264",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 29.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -3489,7 +3587,7 @@
         "price": 35.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.57566",
+        "last_checked": "2026-01-22T20:56:19.00123",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 35.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3517,7 +3615,7 @@
         "price": 41.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/spain-esim",
-        "last_checked": "2026-01-21T21:03:16.575708",
+        "last_checked": "2026-01-22T20:56:19.00128",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 41.0, \"data\": \"Unlimited\", \"validity\": \"15 Days\"}"
       }
     ],
@@ -3533,7 +3631,7 @@
         "price": 4.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599514",
+        "last_checked": "2026-01-22T20:55:30.916393",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -3544,11 +3642,11 @@
         "data_type": "Data",
         "data_amount": "3GB",
         "validity": "30 Days",
-        "price": 6.0,
+        "price": 7.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599543",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 6.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:30.916425",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 450,
@@ -3558,11 +3656,11 @@
         "data_type": "Data",
         "data_amount": "5GB",
         "validity": "30 Days",
-        "price": 9.0,
+        "price": 10.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599563",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:30.916446",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 454,
@@ -3575,7 +3673,7 @@
         "price": 12.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599634",
+        "last_checked": "2026-01-22T20:55:30.916538",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -3586,11 +3684,11 @@
         "data_type": "Data",
         "data_amount": "10GB",
         "validity": "30 Days",
-        "price": 14.0,
+        "price": 16.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599582",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:30.916465",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 455,
@@ -3603,7 +3701,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.59965",
+        "last_checked": "2026-01-22T20:55:30.916556",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -3617,7 +3715,7 @@
         "price": 24.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599667",
+        "last_checked": "2026-01-22T20:55:30.916572",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -3631,7 +3729,7 @@
         "price": 25.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.5996",
+        "last_checked": "2026-01-22T20:55:30.916498",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3645,7 +3743,7 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599682",
+        "last_checked": "2026-01-22T20:55:30.916588",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -3656,11 +3754,11 @@
         "data_type": "Data",
         "data_amount": "50GB",
         "validity": "30 Days",
-        "price": 45.0,
+        "price": 39.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/taiwan-esim",
-        "last_checked": "2026-01-21T21:01:40.599618",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:55:30.916517",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       }
     ],
     "Thailand": [
@@ -3689,7 +3787,7 @@
         "price": 5.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/thailand-esim",
-        "last_checked": "2026-01-21T21:01:18.106866",
+        "last_checked": "2026-01-22T20:55:12.850052",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -3731,7 +3829,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/thailand-esim",
-        "last_checked": "2026-01-21T21:01:18.106919",
+        "last_checked": "2026-01-22T20:55:12.850106",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"50 GB\", \"validity\": \"10 Days\"}"
       },
       {
@@ -3759,7 +3857,7 @@
         "price": 12.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/thailand-esim",
-        "last_checked": "2026-01-21T21:01:18.106897",
+        "last_checked": "2026-01-22T20:55:12.850085",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -3773,7 +3871,7 @@
         "price": 14.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/thailand-esim",
-        "last_checked": "2026-01-21T21:01:18.106938",
+        "last_checked": "2026-01-22T20:55:12.850125",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -3801,7 +3899,7 @@
         "price": 19.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/thailand-esim",
-        "last_checked": "2026-01-21T21:01:18.106955",
+        "last_checked": "2026-01-22T20:55:12.850142",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 19.0, \"data\": \"Unlimited\", \"validity\": \"15 Days\"}"
       },
       {
@@ -3829,7 +3927,7 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/thailand-esim",
-        "last_checked": "2026-01-21T21:01:18.106972",
+        "last_checked": "2026-01-22T20:55:12.850159",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"30 Days\"}"
       }
     ],
@@ -4241,7 +4339,7 @@
         "price": 4.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590119",
+        "last_checked": "2026-01-22T20:56:32.979125",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -4255,7 +4353,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590151",
+        "last_checked": "2026-01-22T20:56:32.979158",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4269,7 +4367,7 @@
         "price": 11.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590244",
+        "last_checked": "2026-01-22T20:56:32.979249",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -4283,7 +4381,7 @@
         "price": 12.5,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590172",
+        "last_checked": "2026-01-22T20:56:32.979179",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4297,7 +4395,7 @@
         "price": 16.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590192",
+        "last_checked": "2026-01-22T20:56:32.979198",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4311,7 +4409,7 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.59026",
+        "last_checked": "2026-01-22T20:56:32.979266",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -4325,7 +4423,7 @@
         "price": 20.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.59021",
+        "last_checked": "2026-01-22T20:56:32.979215",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4339,7 +4437,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590276",
+        "last_checked": "2026-01-22T20:56:32.979282",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -4353,7 +4451,7 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590293",
+        "last_checked": "2026-01-22T20:56:32.979297",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -4367,7 +4465,7 @@
         "price": 45.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-kingdom-esim",
-        "last_checked": "2026-01-21T21:02:45.590227",
+        "last_checked": "2026-01-22T20:56:32.979232",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       }
     ],
@@ -4623,7 +4721,7 @@
         "price": 5.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007797",
+        "last_checked": "2026-01-22T20:56:15.078968",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
@@ -4651,7 +4749,7 @@
         "price": 9.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007828",
+        "last_checked": "2026-01-22T20:56:15.078998",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4665,7 +4763,7 @@
         "price": 11.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007955",
+        "last_checked": "2026-01-22T20:56:15.079121",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
       },
       {
@@ -4693,7 +4791,7 @@
         "price": 13.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007849",
+        "last_checked": "2026-01-22T20:56:15.079018",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4707,7 +4805,7 @@
         "price": 15.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007867",
+        "last_checked": "2026-01-22T20:56:15.079036",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4721,7 +4819,7 @@
         "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007971",
+        "last_checked": "2026-01-22T20:56:15.079137",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -4735,7 +4833,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007886",
+        "last_checked": "2026-01-22T20:56:15.079053",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4763,7 +4861,7 @@
         "price": 23.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007987",
+        "last_checked": "2026-01-22T20:56:15.079152",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
       },
       {
@@ -4777,7 +4875,7 @@
         "price": 27.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007904",
+        "last_checked": "2026-01-22T20:56:15.07907",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 27.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
@@ -4791,7 +4889,7 @@
         "price": 31.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.008003",
+        "last_checked": "2026-01-22T20:56:15.079167",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
       },
       {
@@ -4833,7 +4931,7 @@
         "price": 45.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.008024",
+        "last_checked": "2026-01-22T20:56:15.079183",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"Unlimited\", \"validity\": \"15 Days\"}"
       },
       {
@@ -4847,7 +4945,7 @@
         "price": 49.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.00804",
+        "last_checked": "2026-01-22T20:56:15.079197",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"Unlimited\", \"validity\": \"20 Days\"}"
       },
       {
@@ -4861,7 +4959,7 @@
         "price": 89.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007921",
+        "last_checked": "2026-01-22T20:56:15.079087",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 89.0, \"data\": \"75 GB\", \"validity\": \"180 Days\"}"
       },
       {
@@ -4875,11 +4973,25 @@
         "price": 120.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/united-states-esim",
-        "last_checked": "2026-01-21T21:02:26.007938",
+        "last_checked": "2026-01-22T20:56:15.079105",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 120.0, \"data\": \"100 GB\", \"validity\": \"365 Days\"}"
       }
     ],
     "Vietnam": [
+      {
+        "id": 242,
+        "provider": "Nomad",
+        "country": "Vietnam",
+        "plan_name": "Vietnam 1 GB 7 Days",
+        "data_type": "Data",
+        "data_amount": "1GB",
+        "validity": "7 Days",
+        "price": 4.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/vietnam-esim",
+        "last_checked": "2026-01-22T20:56:00.643247",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
+      },
       {
         "id": 412,
         "provider": "Airalo",
@@ -4893,20 +5005,6 @@
         "link": "https://www.airalo.com/vietnam-esim",
         "last_checked": "2026-01-05T21:15:10.605154",
         "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
-      },
-      {
-        "id": 242,
-        "provider": "Nomad",
-        "country": "Vietnam",
-        "plan_name": "Vietnam 1 GB 7 Days",
-        "data_type": "Data",
-        "data_amount": "1GB",
-        "validity": "7 Days",
-        "price": 4.0,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/vietnam-esim",
-        "last_checked": "2026-01-21T21:02:11.278864",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
       },
       {
         "id": 413,
@@ -4930,11 +5028,25 @@
         "data_type": "Data",
         "data_amount": "3GB",
         "validity": "30 Days",
-        "price": 8.5,
+        "price": 8.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/vietnam-esim",
-        "last_checked": "2026-01-21T21:02:11.278894",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:56:00.643279",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+      },
+      {
+        "id": 244,
+        "provider": "Nomad",
+        "country": "Vietnam",
+        "plan_name": "Vietnam 5 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "5GB",
+        "validity": "30 Days",
+        "price": 10.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/vietnam-esim",
+        "last_checked": "2026-01-22T20:56:00.643299",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 414,
@@ -4951,20 +5063,6 @@
         "raw_data": "{\"original_price\": 10.5, \"currency\": \"EUR\", \"data\": \"5GB\", \"validity\": \"7 Days\"}"
       },
       {
-        "id": 244,
-        "provider": "Nomad",
-        "country": "Vietnam",
-        "plan_name": "Vietnam 5 GB 30 Days",
-        "data_type": "Data",
-        "data_amount": "5GB",
-        "validity": "30 Days",
-        "price": 10.5,
-        "network": "Local Operators",
-        "link": "https://www.getnomad.app/vietnam-esim",
-        "last_checked": "2026-01-21T21:02:11.278914",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
-      },
-      {
         "id": 245,
         "provider": "Nomad",
         "country": "Vietnam",
@@ -4972,11 +5070,11 @@
         "data_type": "Data",
         "data_amount": "10GB",
         "validity": "30 Days",
-        "price": 16.0,
+        "price": 17.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/vietnam-esim",
-        "last_checked": "2026-01-21T21:02:11.278933",
-        "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+        "last_checked": "2026-01-22T20:56:00.643318",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 247,
@@ -4989,7 +5087,7 @@
         "price": 18.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/vietnam-esim",
-        "last_checked": "2026-01-21T21:02:11.278968",
+        "last_checked": "2026-01-22T20:56:00.643371",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
       },
       {
@@ -5021,6 +5119,20 @@
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
       },
       {
+        "id": 490,
+        "provider": "Nomad",
+        "country": "Vietnam",
+        "plan_name": "Vietnam 20 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "20GB",
+        "validity": "30 Days",
+        "price": 25.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/vietnam-esim",
+        "last_checked": "2026-01-22T20:56:00.643336",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
+      },
+      {
         "id": 416,
         "provider": "Airalo",
         "country": "Vietnam",
@@ -5045,8 +5157,22 @@
         "price": 33.0,
         "network": "Local Operators",
         "link": "https://www.getnomad.app/vietnam-esim",
-        "last_checked": "2026-01-21T21:02:11.278984",
+        "last_checked": "2026-01-22T20:56:00.643388",
         "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+      },
+      {
+        "id": 491,
+        "provider": "Nomad",
+        "country": "Vietnam",
+        "plan_name": "Vietnam 50 GB 30 Days",
+        "data_type": "Data",
+        "data_amount": "50GB",
+        "validity": "30 Days",
+        "price": 39.0,
+        "network": "Local Operators",
+        "link": "https://www.getnomad.app/vietnam-esim",
+        "last_checked": "2026-01-22T20:56:00.643354",
+        "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
       },
       {
         "id": 417,
@@ -5076,7 +5202,7 @@
       "price": 4.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551536",
+      "last_checked": "2026-01-22T20:56:07.424646",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -5118,7 +5244,7 @@
       "price": 8.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551565",
+      "last_checked": "2026-01-22T20:56:07.424677",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5132,7 +5258,7 @@
       "price": 10.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551586",
+      "last_checked": "2026-01-22T20:56:07.424696",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5160,7 +5286,7 @@
       "price": 12.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551655",
+      "last_checked": "2026-01-22T20:56:07.424766",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -5174,7 +5300,7 @@
       "price": 15.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551605",
+      "last_checked": "2026-01-22T20:56:07.424714",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5202,7 +5328,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.55167",
+      "last_checked": "2026-01-22T20:56:07.424782",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -5216,7 +5342,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551622",
+      "last_checked": "2026-01-22T20:56:07.424732",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
     },
     {
@@ -5230,7 +5356,7 @@
       "price": 24.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551686",
+      "last_checked": "2026-01-22T20:56:07.424797",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -5258,7 +5384,7 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551702",
+      "last_checked": "2026-01-22T20:56:07.424813",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -5272,7 +5398,7 @@
       "price": 38.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/australia-esim",
-      "last_checked": "2026-01-21T21:02:17.551638",
+      "last_checked": "2026-01-22T20:56:07.424749",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 38.0, \"data\": \"50 GB\", \"validity\": \"45 Days\"}"
     },
     {
@@ -5468,7 +5594,7 @@
       "price": 5.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233396",
+      "last_checked": "2026-01-22T20:56:24.991765",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -5510,7 +5636,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233427",
+      "last_checked": "2026-01-22T20:56:24.991797",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5524,7 +5650,7 @@
       "price": 14.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233448",
+      "last_checked": "2026-01-22T20:56:24.991824",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5552,7 +5678,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233468",
+      "last_checked": "2026-01-22T20:56:24.991843",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5580,7 +5706,7 @@
       "price": 21.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.23352",
+      "last_checked": "2026-01-22T20:56:24.991911",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 21.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -5594,7 +5720,7 @@
       "price": 28.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233485",
+      "last_checked": "2026-01-22T20:56:24.991874",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 28.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5608,7 +5734,7 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233536",
+      "last_checked": "2026-01-22T20:56:24.991927",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -5636,7 +5762,7 @@
       "price": 41.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233552",
+      "last_checked": "2026-01-22T20:56:24.991943",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 41.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -5650,7 +5776,7 @@
       "price": 49.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233503",
+      "last_checked": "2026-01-22T20:56:24.991894",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5664,7 +5790,7 @@
       "price": 49.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/canada-esim",
-      "last_checked": "2026-01-21T21:02:37.233574",
+      "last_checked": "2026-01-22T20:56:24.991959",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -5692,7 +5818,7 @@
       "price": 4.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806444",
+      "last_checked": "2026-01-22T20:56:26.515203",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -5720,7 +5846,7 @@
       "price": 7.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806478",
+      "last_checked": "2026-01-22T20:56:26.515237",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5748,7 +5874,7 @@
       "price": 10.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806498",
+      "last_checked": "2026-01-22T20:56:26.515258",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5762,7 +5888,7 @@
       "price": 12.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806519",
+      "last_checked": "2026-01-22T20:56:26.515278",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5776,7 +5902,7 @@
       "price": 12.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806604",
+      "last_checked": "2026-01-22T20:56:26.515331",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -5804,7 +5930,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.80662",
+      "last_checked": "2026-01-22T20:56:26.515348",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -5818,7 +5944,7 @@
       "price": 20.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806537",
+      "last_checked": "2026-01-22T20:56:26.515296",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -5846,7 +5972,7 @@
       "price": 24.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806636",
+      "last_checked": "2026-01-22T20:56:26.515363",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -5860,8 +5986,22 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/china-esim",
-      "last_checked": "2026-01-21T21:03:23.806652",
+      "last_checked": "2026-01-22T20:56:26.515378",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+    },
+    {
+      "id": 492,
+      "provider": "Nomad",
+      "country": "China",
+      "plan_name": "China 50 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "50GB",
+      "validity": "30 Days",
+      "price": 35.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/china-esim",
+      "last_checked": "2026-01-22T20:56:26.515313",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 35.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 92,
@@ -5958,7 +6098,7 @@
       "price": 4.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365594",
+      "last_checked": "2026-01-22T20:55:54.670954",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -5986,7 +6126,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365629",
+      "last_checked": "2026-01-22T20:55:54.671001",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6014,7 +6154,7 @@
       "price": 11.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365721",
+      "last_checked": "2026-01-22T20:55:54.671096",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -6028,7 +6168,7 @@
       "price": 12.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.36565",
+      "last_checked": "2026-01-22T20:55:54.671024",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6056,7 +6196,7 @@
       "price": 16.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365668",
+      "last_checked": "2026-01-22T20:55:54.671043",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6070,7 +6210,7 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365737",
+      "last_checked": "2026-01-22T20:55:54.671112",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -6084,7 +6224,7 @@
       "price": 20.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365686",
+      "last_checked": "2026-01-22T20:55:54.671061",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6112,7 +6252,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365754",
+      "last_checked": "2026-01-22T20:55:54.671127",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -6126,7 +6266,7 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.36577",
+      "last_checked": "2026-01-22T20:55:54.671143",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -6154,7 +6294,7 @@
       "price": 45.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/france-esim",
-      "last_checked": "2026-01-21T21:02:53.365704",
+      "last_checked": "2026-01-22T20:55:54.671079",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6182,7 +6322,7 @@
       "price": 4.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194854",
+      "last_checked": "2026-01-22T20:56:02.931923",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -6210,7 +6350,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194886",
+      "last_checked": "2026-01-22T20:56:02.931956",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6238,7 +6378,7 @@
       "price": 11.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194981",
+      "last_checked": "2026-01-22T20:56:02.932066",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -6252,7 +6392,7 @@
       "price": 12.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194907",
+      "last_checked": "2026-01-22T20:56:02.931993",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6280,7 +6420,7 @@
       "price": 16.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194926",
+      "last_checked": "2026-01-22T20:56:02.932013",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6294,7 +6434,7 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194998",
+      "last_checked": "2026-01-22T20:56:02.932083",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -6308,7 +6448,7 @@
       "price": 20.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194946",
+      "last_checked": "2026-01-22T20:56:02.93203",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6336,7 +6476,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.195014",
+      "last_checked": "2026-01-22T20:56:02.932098",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -6350,7 +6490,7 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.195031",
+      "last_checked": "2026-01-22T20:56:02.932115",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -6378,7 +6518,7 @@
       "price": 45.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/germany-esim",
-      "last_checked": "2026-01-21T21:03:01.194963",
+      "last_checked": "2026-01-22T20:56:02.932048",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6392,7 +6532,7 @@
       "price": 4.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/hong-kong-esim",
-      "last_checked": "2026-01-21T21:01:33.196249",
+      "last_checked": "2026-01-22T20:55:24.792349",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -6403,11 +6543,11 @@
       "data_type": "Data",
       "data_amount": "3GB",
       "validity": "30 Days",
-      "price": 9.0,
+      "price": 8.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/hong-kong-esim",
-      "last_checked": "2026-01-21T21:01:33.19628",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:24.792388",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 442,
@@ -6417,11 +6557,11 @@
       "data_type": "Data",
       "data_amount": "5GB",
       "validity": "30 Days",
-      "price": 12.0,
+      "price": 11.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/hong-kong-esim",
-      "last_checked": "2026-01-21T21:01:33.196301",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:24.792409",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 443,
@@ -6431,11 +6571,11 @@
       "data_type": "Data",
       "data_amount": "10GB",
       "validity": "30 Days",
-      "price": 18.0,
+      "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/hong-kong-esim",
-      "last_checked": "2026-01-21T21:01:33.196319",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:24.792428",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 446,
@@ -6448,8 +6588,22 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/hong-kong-esim",
-      "last_checked": "2026-01-21T21:01:33.196387",
+      "last_checked": "2026-01-22T20:55:24.792494",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
+    },
+    {
+      "id": 488,
+      "provider": "Nomad",
+      "country": "Hong Kong",
+      "plan_name": "Hong Kong 20 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "20GB",
+      "validity": "30 Days",
+      "price": 27.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/hong-kong-esim",
+      "last_checked": "2026-01-22T20:55:24.792445",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 27.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 444,
@@ -6476,8 +6630,22 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/hong-kong-esim",
-      "last_checked": "2026-01-21T21:01:33.196406",
+      "last_checked": "2026-01-22T20:55:24.792513",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+    },
+    {
+      "id": 489,
+      "provider": "Nomad",
+      "country": "Hong Kong",
+      "plan_name": "Hong Kong 50 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "50GB",
+      "validity": "30 Days",
+      "price": 39.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/hong-kong-esim",
+      "last_checked": "2026-01-22T20:55:24.792463",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 445,
@@ -6504,7 +6672,7 @@
       "price": 4.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:32.689414",
+      "last_checked": "2026-01-22T20:56:34.345719",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -6518,7 +6686,7 @@
       "price": 8.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:32.689445",
+      "last_checked": "2026-01-22T20:56:34.345749",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6532,7 +6700,7 @@
       "price": 13.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:32.689466",
+      "last_checked": "2026-01-22T20:56:34.34577",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6546,7 +6714,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:30.171514",
+      "last_checked": "2026-01-22T20:56:34.345842",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -6560,7 +6728,7 @@
       "price": 21.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:32.689484",
+      "last_checked": "2026-01-22T20:56:34.345789",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 21.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6574,7 +6742,7 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:30.171465",
+      "last_checked": "2026-01-22T20:56:34.345808",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6588,7 +6756,7 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:30.17153",
+      "last_checked": "2026-01-22T20:56:34.345858",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -6602,22 +6770,8 @@
       "price": 45.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/india-esim",
-      "last_checked": "2026-01-21T21:03:30.171496",
+      "last_checked": "2026-01-22T20:56:34.345825",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
-    },
-    {
-      "id": 227,
-      "provider": "Nomad",
-      "country": "Indonesia",
-      "plan_name": "Indonesia 1 GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "1GB",
-      "validity": "7 Days",
-      "price": 4.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206248",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 406,
@@ -6634,6 +6788,20 @@
       "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
     },
     {
+      "id": 227,
+      "provider": "Nomad",
+      "country": "Indonesia",
+      "plan_name": "Indonesia 1 GB 7 Days",
+      "data_type": "Data",
+      "data_amount": "1GB",
+      "validity": "7 Days",
+      "price": 4.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/indonesia-esim",
+      "last_checked": "2026-01-22T20:55:46.301093",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
+    },
+    {
       "id": 228,
       "provider": "Nomad",
       "country": "Indonesia",
@@ -6644,7 +6812,7 @@
       "price": 8.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206282",
+      "last_checked": "2026-01-22T20:55:46.301128",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6672,7 +6840,7 @@
       "price": 10.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206303",
+      "last_checked": "2026-01-22T20:55:46.30115",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6700,7 +6868,7 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206321",
+      "last_checked": "2026-01-22T20:55:46.301168",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6714,7 +6882,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206406",
+      "last_checked": "2026-01-22T20:55:46.301235",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -6742,7 +6910,7 @@
       "price": 24.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206338",
+      "last_checked": "2026-01-22T20:55:46.301184",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"15 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6756,7 +6924,7 @@
       "price": 30.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206355",
+      "last_checked": "2026-01-22T20:55:46.301201",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 30.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
     },
     {
@@ -6784,7 +6952,7 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206422",
+      "last_checked": "2026-01-22T20:55:46.301251",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -6812,7 +6980,7 @@
       "price": 61.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/indonesia-esim",
-      "last_checked": "2026-01-21T21:01:56.206387",
+      "last_checked": "2026-01-22T20:55:46.301217",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 61.0, \"data\": \"50 GB\", \"validity\": \"45 Days\"}"
     },
     {
@@ -6840,7 +7008,7 @@
       "price": 4.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995238",
+      "last_checked": "2026-01-22T20:56:11.089204",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -6868,7 +7036,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.99527",
+      "last_checked": "2026-01-22T20:56:11.089236",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6882,7 +7050,7 @@
       "price": 11.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995364",
+      "last_checked": "2026-01-22T20:56:11.089327",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -6910,7 +7078,7 @@
       "price": 12.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995292",
+      "last_checked": "2026-01-22T20:56:11.089256",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6924,7 +7092,7 @@
       "price": 16.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995311",
+      "last_checked": "2026-01-22T20:56:11.089275",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6938,7 +7106,7 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995397",
+      "last_checked": "2026-01-22T20:56:11.089344",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -6966,7 +7134,7 @@
       "price": 20.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995328",
+      "last_checked": "2026-01-22T20:56:11.089293",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -6980,7 +7148,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995414",
+      "last_checked": "2026-01-22T20:56:11.089359",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -7008,7 +7176,7 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.99543",
+      "last_checked": "2026-01-22T20:56:11.089375",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -7036,22 +7204,22 @@
       "price": 45.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/italy-esim",
-      "last_checked": "2026-01-21T21:03:08.995346",
+      "last_checked": "2026-01-22T20:56:11.08931",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
-      "id": 323,
-      "provider": "Airalo",
+      "id": 48,
+      "provider": "Nomad",
       "country": "Japan",
-      "plan_name": "Japan 1GB 7 Days",
+      "plan_name": "Japan 1 GB 7 Days",
       "data_type": "Data",
       "data_amount": "1GB",
       "validity": "7 Days",
       "price": 4.0,
       "network": "Local Operators",
-      "link": "https://www.airalo.com/japan-esim",
-      "last_checked": "2026-01-05T21:12:34.245145",
-      "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
+      "link": "https://www.getnomad.app/japan-esim",
+      "last_checked": "2026-01-22T20:54:54.283675",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 305,
@@ -7068,18 +7236,18 @@
       "raw_data": "{\"original_price\": 4.0, \"currency\": \"USD\", \"data\": \"1GB\", \"validity\": \"3 Days\"}"
     },
     {
-      "id": 48,
-      "provider": "Nomad",
+      "id": 323,
+      "provider": "Airalo",
       "country": "Japan",
-      "plan_name": "Japan 1 GB 7 Days",
+      "plan_name": "Japan 1GB 7 Days",
       "data_type": "Data",
       "data_amount": "1GB",
       "validity": "7 Days",
       "price": 4.0,
       "network": "Local Operators",
-      "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.63209",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
+      "link": "https://www.airalo.com/japan-esim",
+      "last_checked": "2026-01-05T21:12:34.245145",
+      "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 306,
@@ -7117,11 +7285,11 @@
       "data_type": "Data",
       "data_amount": "3GB",
       "validity": "30 Days",
-      "price": 8.0,
+      "price": 7.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.63214",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:54:54.283726",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 50,
@@ -7134,7 +7302,7 @@
       "price": 10.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.632165",
+      "last_checked": "2026-01-22T20:54:54.28375",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7166,6 +7334,20 @@
       "raw_data": "{\"original_price\": 10.5, \"currency\": \"USD\", \"data\": \"5GB\", \"validity\": \"15 Days\"}"
     },
     {
+      "id": 54,
+      "provider": "Nomad",
+      "country": "Japan",
+      "plan_name": "Japan Unlimited 3 Days",
+      "data_type": "Unlimited",
+      "data_amount": "Unlimited",
+      "validity": "3 Days",
+      "price": 11.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/japan-esim",
+      "last_checked": "2026-01-22T20:54:54.283823",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
+    },
+    {
       "id": 313,
       "provider": "Airalo",
       "country": "Japan",
@@ -7178,20 +7360,6 @@
       "link": "https://www.airalo.com/japan-esim",
       "last_checked": "2026-01-05T18:25:07.712737",
       "raw_data": "{\"original_price\": 11.0, \"currency\": \"USD\", \"data\": \"5GB\", \"validity\": \"30 Days\"}"
-    },
-    {
-      "id": 54,
-      "provider": "Nomad",
-      "country": "Japan",
-      "plan_name": "Japan Unlimited 3 Days",
-      "data_type": "Unlimited",
-      "data_amount": "Unlimited",
-      "validity": "3 Days",
-      "price": 11.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.632242",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
       "id": 326,
@@ -7208,20 +7376,6 @@
       "raw_data": "{\"original_price\": 16.0, \"currency\": \"EUR\", \"data\": \"10GB\", \"validity\": \"7 Days\"}"
     },
     {
-      "id": 51,
-      "provider": "Nomad",
-      "country": "Japan",
-      "plan_name": "Japan 10 GB 30 Days",
-      "data_type": "Data",
-      "data_amount": "10GB",
-      "validity": "30 Days",
-      "price": 17.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.632186",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
-    },
-    {
       "id": 55,
       "provider": "Nomad",
       "country": "Japan",
@@ -7232,8 +7386,22 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.632266",
+      "last_checked": "2026-01-22T20:54:54.283849",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
+    },
+    {
+      "id": 51,
+      "provider": "Nomad",
+      "country": "Japan",
+      "plan_name": "Japan 10 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "10GB",
+      "validity": "30 Days",
+      "price": 17.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/japan-esim",
+      "last_checked": "2026-01-22T20:54:54.28377",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 311,
@@ -7288,7 +7456,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.632285",
+      "last_checked": "2026-01-22T20:54:54.28387",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -7320,6 +7488,20 @@
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
     },
     {
+      "id": 484,
+      "provider": "Nomad",
+      "country": "Japan",
+      "plan_name": "Japan 20 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "20GB",
+      "validity": "30 Days",
+      "price": 24.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/japan-esim",
+      "last_checked": "2026-01-22T20:54:54.283788",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
+    },
+    {
       "id": 315,
       "provider": "Airalo",
       "country": "Japan",
@@ -7344,8 +7526,22 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/japan-esim",
-      "last_checked": "2026-01-21T21:00:55.632308",
+      "last_checked": "2026-01-22T20:54:54.283891",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+    },
+    {
+      "id": 485,
+      "provider": "Nomad",
+      "country": "Japan",
+      "plan_name": "Japan 50 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "50GB",
+      "validity": "30 Days",
+      "price": 39.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/japan-esim",
+      "last_checked": "2026-01-22T20:54:54.283806",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 53,
@@ -7386,7 +7582,7 @@
       "price": 5.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.392032",
+      "last_checked": "2026-01-22T20:55:39.753691",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -7400,7 +7596,7 @@
       "price": 7.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.392061",
+      "last_checked": "2026-01-22T20:55:39.753742",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7428,7 +7624,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.392081",
+      "last_checked": "2026-01-22T20:55:39.753765",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7456,7 +7652,7 @@
       "price": 13.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.3921",
+      "last_checked": "2026-01-22T20:55:39.753803",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7470,7 +7666,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.392151",
+      "last_checked": "2026-01-22T20:55:39.753871",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -7498,7 +7694,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.392117",
+      "last_checked": "2026-01-22T20:55:39.753826",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"15 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7512,7 +7708,7 @@
       "price": 22.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.392134",
+      "last_checked": "2026-01-22T20:55:39.75385",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 22.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
     },
     {
@@ -7540,7 +7736,7 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/malaysia-esim",
-      "last_checked": "2026-01-21T21:01:49.392168",
+      "last_checked": "2026-01-22T20:55:39.753888",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -7792,7 +7988,7 @@
       "price": 4.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.542902",
+      "last_checked": "2026-01-22T20:55:53.94182",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -7806,7 +8002,7 @@
       "price": 7.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.542932",
+      "last_checked": "2026-01-22T20:55:53.941852",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7820,7 +8016,7 @@
       "price": 10.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.542951",
+      "last_checked": "2026-01-22T20:55:53.941873",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7834,7 +8030,7 @@
       "price": 13.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.54297",
+      "last_checked": "2026-01-22T20:55:53.941891",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7848,7 +8044,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.54302",
+      "last_checked": "2026-01-22T20:55:53.941941",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -7862,7 +8058,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.542986",
+      "last_checked": "2026-01-22T20:55:53.941908",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
     },
     {
@@ -7876,7 +8072,7 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.543036",
+      "last_checked": "2026-01-22T20:55:53.941958",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -7890,22 +8086,8 @@
       "price": 49.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/philippines-esim",
-      "last_checked": "2026-01-21T21:02:03.543003",
+      "last_checked": "2026-01-22T20:55:53.941924",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
-    },
-    {
-      "id": 99,
-      "provider": "Nomad",
-      "country": "Singapore",
-      "plan_name": "Singapore 1 GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "1GB",
-      "validity": "7 Days",
-      "price": 4.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960423",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 352,
@@ -7922,18 +8104,18 @@
       "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
     },
     {
-      "id": 100,
+      "id": 99,
       "provider": "Nomad",
       "country": "Singapore",
-      "plan_name": "Singapore 3 GB 30 Days",
+      "plan_name": "Singapore 1 GB 7 Days",
       "data_type": "Data",
-      "data_amount": "3GB",
-      "validity": "30 Days",
-      "price": 6.5,
+      "data_amount": "1GB",
+      "validity": "7 Days",
+      "price": 4.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960455",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 6.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:18.073214",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 353,
@@ -7948,6 +8130,20 @@
       "link": "https://www.airalo.com/singapore-esim",
       "last_checked": "2026-01-05T21:13:27.199936",
       "raw_data": "{\"original_price\": 6.5, \"currency\": \"EUR\", \"data\": \"3GB\", \"validity\": \"7 Days\"}"
+    },
+    {
+      "id": 100,
+      "provider": "Nomad",
+      "country": "Singapore",
+      "plan_name": "Singapore 3 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "3GB",
+      "validity": "30 Days",
+      "price": 6.5,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/singapore-esim",
+      "last_checked": "2026-01-22T20:55:18.073247",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 6.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 354,
@@ -7974,7 +8170,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960477",
+      "last_checked": "2026-01-22T20:55:18.073269",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -7988,7 +8184,7 @@
       "price": 13.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960499",
+      "last_checked": "2026-01-22T20:55:18.073288",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8016,7 +8212,7 @@
       "price": 15.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960569",
+      "last_checked": "2026-01-22T20:55:18.073343",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -8027,11 +8223,11 @@
       "data_type": "Data",
       "data_amount": "20GB",
       "validity": "30 Days",
-      "price": 16.0,
+      "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960518",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:18.073305",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 356,
@@ -8058,8 +8254,22 @@
       "price": 25.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960586",
+      "last_checked": "2026-01-22T20:55:18.073359",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+    },
+    {
+      "id": 105,
+      "provider": "Nomad",
+      "country": "Singapore",
+      "plan_name": "Singapore 50 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "50GB",
+      "validity": "30 Days",
+      "price": 29.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/singapore-esim",
+      "last_checked": "2026-01-22T20:55:18.073325",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 29.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 104,
@@ -8076,20 +8286,6 @@
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 35.0, \"data\": \"30 GB\", \"validity\": \"30 Days\"}"
     },
     {
-      "id": 105,
-      "provider": "Nomad",
-      "country": "Singapore",
-      "plan_name": "Singapore 50 GB 30 Days",
-      "data_type": "Data",
-      "data_amount": "50GB",
-      "validity": "30 Days",
-      "price": 39.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/singapore-esim",
-      "last_checked": "2026-01-21T21:01:23.960553",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
-    },
-    {
       "id": 357,
       "provider": "Airalo",
       "country": "Singapore",
@@ -8102,20 +8298,6 @@
       "link": "https://www.airalo.com/singapore-esim",
       "last_checked": "2026-01-05T21:13:27.200086",
       "raw_data": "{\"original_price\": 42.5, \"currency\": \"EUR\", \"data\": \"50GB\", \"validity\": \"7 Days\"}"
-    },
-    {
-      "id": 78,
-      "provider": "Nomad",
-      "country": "South Korea",
-      "plan_name": "South Korea 1 GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "1GB",
-      "validity": "7 Days",
-      "price": 4.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656551",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 340,
@@ -8132,6 +8314,34 @@
       "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
     },
     {
+      "id": 78,
+      "provider": "Nomad",
+      "country": "South Korea",
+      "plan_name": "South Korea 1 GB 7 Days",
+      "data_type": "Data",
+      "data_amount": "1GB",
+      "validity": "7 Days",
+      "price": 4.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/south-korea-esim",
+      "last_checked": "2026-01-22T20:55:05.370026",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
+    },
+    {
+      "id": 79,
+      "provider": "Nomad",
+      "country": "South Korea",
+      "plan_name": "South Korea 3 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "3GB",
+      "validity": "30 Days",
+      "price": 8.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/south-korea-esim",
+      "last_checked": "2026-01-22T20:55:05.370057",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+    },
+    {
       "id": 341,
       "provider": "Airalo",
       "country": "South Korea",
@@ -8144,34 +8354,6 @@
       "link": "https://www.airalo.com/south-korea-esim",
       "last_checked": "2026-01-05T21:13:08.405637",
       "raw_data": "{\"original_price\": 8.0, \"currency\": \"EUR\", \"data\": \"3GB\", \"validity\": \"7 Days\"}"
-    },
-    {
-      "id": 79,
-      "provider": "Nomad",
-      "country": "South Korea",
-      "plan_name": "South Korea 3 GB 30 Days",
-      "data_type": "Data",
-      "data_amount": "3GB",
-      "validity": "30 Days",
-      "price": 9.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656582",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
-    },
-    {
-      "id": 80,
-      "provider": "Nomad",
-      "country": "South Korea",
-      "plan_name": "South Korea 5 GB 30 Days",
-      "data_type": "Data",
-      "data_amount": "5GB",
-      "validity": "30 Days",
-      "price": 10.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656603",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 342,
@@ -8188,6 +8370,20 @@
       "raw_data": "{\"original_price\": 10.0, \"currency\": \"EUR\", \"data\": \"5GB\", \"validity\": \"7 Days\"}"
     },
     {
+      "id": 80,
+      "provider": "Nomad",
+      "country": "South Korea",
+      "plan_name": "South Korea 5 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "5GB",
+      "validity": "30 Days",
+      "price": 10.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/south-korea-esim",
+      "last_checked": "2026-01-22T20:55:05.370078",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
+    },
+    {
       "id": 83,
       "provider": "Nomad",
       "country": "South Korea",
@@ -8198,7 +8394,7 @@
       "price": 11.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656657",
+      "last_checked": "2026-01-22T20:55:05.370145",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -8212,22 +8408,8 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656673",
+      "last_checked": "2026-01-22T20:55:05.370161",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
-    },
-    {
-      "id": 81,
-      "provider": "Nomad",
-      "country": "South Korea",
-      "plan_name": "South Korea 10 GB 30 Days",
-      "data_type": "Data",
-      "data_amount": "10GB",
-      "validity": "30 Days",
-      "price": 17.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656622",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 343,
@@ -8244,6 +8426,20 @@
       "raw_data": "{\"original_price\": 18.0, \"currency\": \"EUR\", \"data\": \"10GB\", \"validity\": \"7 Days\"}"
     },
     {
+      "id": 81,
+      "provider": "Nomad",
+      "country": "South Korea",
+      "plan_name": "South Korea 10 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "10GB",
+      "validity": "30 Days",
+      "price": 18.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/south-korea-esim",
+      "last_checked": "2026-01-22T20:55:05.370096",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+    },
+    {
       "id": 85,
       "provider": "Nomad",
       "country": "South Korea",
@@ -8254,7 +8450,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656689",
+      "last_checked": "2026-01-22T20:55:05.370177",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -8270,6 +8466,20 @@
       "link": "https://www.getnomad.app/south-korea-esim",
       "last_checked": "2026-01-21T21:01:08.656639",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
+    },
+    {
+      "id": 486,
+      "provider": "Nomad",
+      "country": "South Korea",
+      "plan_name": "South Korea 20 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "20GB",
+      "validity": "30 Days",
+      "price": 25.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/south-korea-esim",
+      "last_checked": "2026-01-22T20:55:05.370113",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 344,
@@ -8296,8 +8506,22 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/south-korea-esim",
-      "last_checked": "2026-01-21T21:01:08.656705",
+      "last_checked": "2026-01-22T20:55:05.370193",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+    },
+    {
+      "id": 487,
+      "provider": "Nomad",
+      "country": "South Korea",
+      "plan_name": "South Korea 50 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "50GB",
+      "validity": "30 Days",
+      "price": 39.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/south-korea-esim",
+      "last_checked": "2026-01-22T20:55:05.370129",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 345,
@@ -8338,7 +8562,7 @@
       "price": 4.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575551",
+      "last_checked": "2026-01-22T20:56:19.001124",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -8366,7 +8590,7 @@
       "price": 8.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575586",
+      "last_checked": "2026-01-22T20:56:19.001156",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8394,7 +8618,7 @@
       "price": 10.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575606",
+      "last_checked": "2026-01-22T20:56:19.001177",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8408,7 +8632,7 @@
       "price": 14.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575625",
+      "last_checked": "2026-01-22T20:56:19.001196",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8436,7 +8660,7 @@
       "price": 15.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575676",
+      "last_checked": "2026-01-22T20:56:19.001247",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -8464,7 +8688,7 @@
       "price": 20.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575643",
+      "last_checked": "2026-01-22T20:56:19.001213",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8478,7 +8702,7 @@
       "price": 29.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575692",
+      "last_checked": "2026-01-22T20:56:19.001264",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 29.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -8492,7 +8716,7 @@
       "price": 35.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.57566",
+      "last_checked": "2026-01-22T20:56:19.00123",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 35.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8520,7 +8744,7 @@
       "price": 41.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/spain-esim",
-      "last_checked": "2026-01-21T21:03:16.575708",
+      "last_checked": "2026-01-22T20:56:19.00128",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 41.0, \"data\": \"Unlimited\", \"validity\": \"15 Days\"}"
     },
     {
@@ -8534,7 +8758,7 @@
       "price": 4.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599514",
+      "last_checked": "2026-01-22T20:55:30.916393",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -8545,11 +8769,11 @@
       "data_type": "Data",
       "data_amount": "3GB",
       "validity": "30 Days",
-      "price": 6.0,
+      "price": 7.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599543",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 6.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:30.916425",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 7.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 450,
@@ -8559,11 +8783,11 @@
       "data_type": "Data",
       "data_amount": "5GB",
       "validity": "30 Days",
-      "price": 9.0,
+      "price": 10.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599563",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:30.916446",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 454,
@@ -8576,7 +8800,7 @@
       "price": 12.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599634",
+      "last_checked": "2026-01-22T20:55:30.916538",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -8587,11 +8811,11 @@
       "data_type": "Data",
       "data_amount": "10GB",
       "validity": "30 Days",
-      "price": 14.0,
+      "price": 16.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599582",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:30.916465",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 455,
@@ -8604,7 +8828,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.59965",
+      "last_checked": "2026-01-22T20:55:30.916556",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -8618,7 +8842,7 @@
       "price": 24.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599667",
+      "last_checked": "2026-01-22T20:55:30.916572",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 24.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -8632,7 +8856,7 @@
       "price": 25.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.5996",
+      "last_checked": "2026-01-22T20:55:30.916498",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8646,7 +8870,7 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599682",
+      "last_checked": "2026-01-22T20:55:30.916588",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -8657,11 +8881,11 @@
       "data_type": "Data",
       "data_amount": "50GB",
       "validity": "30 Days",
-      "price": 45.0,
+      "price": 39.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/taiwan-esim",
-      "last_checked": "2026-01-21T21:01:40.599618",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:55:30.916517",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 334,
@@ -8688,7 +8912,7 @@
       "price": 5.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/thailand-esim",
-      "last_checked": "2026-01-21T21:01:18.106866",
+      "last_checked": "2026-01-22T20:55:12.850052",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -8730,7 +8954,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/thailand-esim",
-      "last_checked": "2026-01-21T21:01:18.106919",
+      "last_checked": "2026-01-22T20:55:12.850106",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"50 GB\", \"validity\": \"10 Days\"}"
     },
     {
@@ -8758,7 +8982,7 @@
       "price": 12.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/thailand-esim",
-      "last_checked": "2026-01-21T21:01:18.106897",
+      "last_checked": "2026-01-22T20:55:12.850085",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -8772,7 +8996,7 @@
       "price": 14.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/thailand-esim",
-      "last_checked": "2026-01-21T21:01:18.106938",
+      "last_checked": "2026-01-22T20:55:12.850125",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 14.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -8800,7 +9024,7 @@
       "price": 19.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/thailand-esim",
-      "last_checked": "2026-01-21T21:01:18.106955",
+      "last_checked": "2026-01-22T20:55:12.850142",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 19.0, \"data\": \"Unlimited\", \"validity\": \"15 Days\"}"
     },
     {
@@ -8828,7 +9052,7 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/thailand-esim",
-      "last_checked": "2026-01-21T21:01:18.106972",
+      "last_checked": "2026-01-22T20:55:12.850159",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9234,7 +9458,7 @@
       "price": 4.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590119",
+      "last_checked": "2026-01-22T20:56:32.979125",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.5, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -9248,7 +9472,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590151",
+      "last_checked": "2026-01-22T20:56:32.979158",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9262,7 +9486,7 @@
       "price": 11.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590244",
+      "last_checked": "2026-01-22T20:56:32.979249",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -9276,7 +9500,7 @@
       "price": 12.5,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590172",
+      "last_checked": "2026-01-22T20:56:32.979179",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 12.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9290,7 +9514,7 @@
       "price": 16.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590192",
+      "last_checked": "2026-01-22T20:56:32.979198",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9304,7 +9528,7 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.59026",
+      "last_checked": "2026-01-22T20:56:32.979266",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -9318,7 +9542,7 @@
       "price": 20.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.59021",
+      "last_checked": "2026-01-22T20:56:32.979215",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 20.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9332,7 +9556,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590276",
+      "last_checked": "2026-01-22T20:56:32.979282",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -9346,7 +9570,7 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590293",
+      "last_checked": "2026-01-22T20:56:32.979297",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -9360,7 +9584,7 @@
       "price": 45.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-kingdom-esim",
-      "last_checked": "2026-01-21T21:02:45.590227",
+      "last_checked": "2026-01-22T20:56:32.979232",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9612,7 +9836,7 @@
       "price": 5.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007797",
+      "last_checked": "2026-01-22T20:56:15.078968",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 5.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
@@ -9640,7 +9864,7 @@
       "price": 9.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007828",
+      "last_checked": "2026-01-22T20:56:15.078998",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 9.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9654,7 +9878,7 @@
       "price": 11.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007955",
+      "last_checked": "2026-01-22T20:56:15.079121",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 11.0, \"data\": \"Unlimited\", \"validity\": \"3 Days\"}"
     },
     {
@@ -9682,7 +9906,7 @@
       "price": 13.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007849",
+      "last_checked": "2026-01-22T20:56:15.079018",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 13.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9696,7 +9920,7 @@
       "price": 15.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007867",
+      "last_checked": "2026-01-22T20:56:15.079036",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 15.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9710,7 +9934,7 @@
       "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007971",
+      "last_checked": "2026-01-22T20:56:15.079137",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -9724,7 +9948,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007886",
+      "last_checked": "2026-01-22T20:56:15.079053",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9752,7 +9976,7 @@
       "price": 23.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007987",
+      "last_checked": "2026-01-22T20:56:15.079152",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"Unlimited\", \"validity\": \"7 Days\"}"
     },
     {
@@ -9766,7 +9990,7 @@
       "price": 27.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007904",
+      "last_checked": "2026-01-22T20:56:15.07907",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 27.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
@@ -9780,7 +10004,7 @@
       "price": 31.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.008003",
+      "last_checked": "2026-01-22T20:56:15.079167",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 31.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
     },
     {
@@ -9822,7 +10046,7 @@
       "price": 45.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.008024",
+      "last_checked": "2026-01-22T20:56:15.079183",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 45.0, \"data\": \"Unlimited\", \"validity\": \"15 Days\"}"
     },
     {
@@ -9836,7 +10060,7 @@
       "price": 49.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.00804",
+      "last_checked": "2026-01-22T20:56:15.079197",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 49.0, \"data\": \"Unlimited\", \"validity\": \"20 Days\"}"
     },
     {
@@ -9850,7 +10074,7 @@
       "price": 89.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007921",
+      "last_checked": "2026-01-22T20:56:15.079087",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 89.0, \"data\": \"75 GB\", \"validity\": \"180 Days\"}"
     },
     {
@@ -9864,8 +10088,22 @@
       "price": 120.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/united-states-esim",
-      "last_checked": "2026-01-21T21:02:26.007938",
+      "last_checked": "2026-01-22T20:56:15.079105",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 120.0, \"data\": \"100 GB\", \"validity\": \"365 Days\"}"
+    },
+    {
+      "id": 242,
+      "provider": "Nomad",
+      "country": "Vietnam",
+      "plan_name": "Vietnam 1 GB 7 Days",
+      "data_type": "Data",
+      "data_amount": "1GB",
+      "validity": "7 Days",
+      "price": 4.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/vietnam-esim",
+      "last_checked": "2026-01-22T20:56:00.643247",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 412,
@@ -9880,20 +10118,6 @@
       "link": "https://www.airalo.com/vietnam-esim",
       "last_checked": "2026-01-05T21:15:10.605154",
       "raw_data": "{\"original_price\": 4.0, \"currency\": \"EUR\", \"data\": \"1GB\", \"validity\": \"7 Days\"}"
-    },
-    {
-      "id": 242,
-      "provider": "Nomad",
-      "country": "Vietnam",
-      "plan_name": "Vietnam 1 GB 7 Days",
-      "data_type": "Data",
-      "data_amount": "1GB",
-      "validity": "7 Days",
-      "price": 4.0,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/vietnam-esim",
-      "last_checked": "2026-01-21T21:02:11.278864",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 4.0, \"data\": \"1 GB\", \"validity\": \"7 Days\"}"
     },
     {
       "id": 413,
@@ -9917,11 +10141,25 @@
       "data_type": "Data",
       "data_amount": "3GB",
       "validity": "30 Days",
-      "price": 8.5,
+      "price": 8.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/vietnam-esim",
-      "last_checked": "2026-01-21T21:02:11.278894",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.5, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:56:00.643279",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 8.0, \"data\": \"3 GB\", \"validity\": \"30 Days\"}"
+    },
+    {
+      "id": 244,
+      "provider": "Nomad",
+      "country": "Vietnam",
+      "plan_name": "Vietnam 5 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "5GB",
+      "validity": "30 Days",
+      "price": 10.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/vietnam-esim",
+      "last_checked": "2026-01-22T20:56:00.643299",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.0, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 414,
@@ -9938,20 +10176,6 @@
       "raw_data": "{\"original_price\": 10.5, \"currency\": \"EUR\", \"data\": \"5GB\", \"validity\": \"7 Days\"}"
     },
     {
-      "id": 244,
-      "provider": "Nomad",
-      "country": "Vietnam",
-      "plan_name": "Vietnam 5 GB 30 Days",
-      "data_type": "Data",
-      "data_amount": "5GB",
-      "validity": "30 Days",
-      "price": 10.5,
-      "network": "Local Operators",
-      "link": "https://www.getnomad.app/vietnam-esim",
-      "last_checked": "2026-01-21T21:02:11.278914",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 10.5, \"data\": \"5 GB\", \"validity\": \"30 Days\"}"
-    },
-    {
       "id": 245,
       "provider": "Nomad",
       "country": "Vietnam",
@@ -9959,11 +10183,11 @@
       "data_type": "Data",
       "data_amount": "10GB",
       "validity": "30 Days",
-      "price": 16.0,
+      "price": 17.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/vietnam-esim",
-      "last_checked": "2026-01-21T21:02:11.278933",
-      "raw_data": "{\"currency\": \"USD\", \"original_price\": 16.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
+      "last_checked": "2026-01-22T20:56:00.643318",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 17.0, \"data\": \"10 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 247,
@@ -9976,7 +10200,7 @@
       "price": 18.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/vietnam-esim",
-      "last_checked": "2026-01-21T21:02:11.278968",
+      "last_checked": "2026-01-22T20:56:00.643371",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 18.0, \"data\": \"Unlimited\", \"validity\": \"5 Days\"}"
     },
     {
@@ -10008,6 +10232,20 @@
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 23.0, \"data\": \"20 GB\", \"validity\": \"45 Days\"}"
     },
     {
+      "id": 490,
+      "provider": "Nomad",
+      "country": "Vietnam",
+      "plan_name": "Vietnam 20 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "20GB",
+      "validity": "30 Days",
+      "price": 25.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/vietnam-esim",
+      "last_checked": "2026-01-22T20:56:00.643336",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 25.0, \"data\": \"20 GB\", \"validity\": \"30 Days\"}"
+    },
+    {
       "id": 416,
       "provider": "Airalo",
       "country": "Vietnam",
@@ -10032,8 +10270,22 @@
       "price": 33.0,
       "network": "Local Operators",
       "link": "https://www.getnomad.app/vietnam-esim",
-      "last_checked": "2026-01-21T21:02:11.278984",
+      "last_checked": "2026-01-22T20:56:00.643388",
       "raw_data": "{\"currency\": \"USD\", \"original_price\": 33.0, \"data\": \"Unlimited\", \"validity\": \"10 Days\"}"
+    },
+    {
+      "id": 491,
+      "provider": "Nomad",
+      "country": "Vietnam",
+      "plan_name": "Vietnam 50 GB 30 Days",
+      "data_type": "Data",
+      "data_amount": "50GB",
+      "validity": "30 Days",
+      "price": 39.0,
+      "network": "Local Operators",
+      "link": "https://www.getnomad.app/vietnam-esim",
+      "last_checked": "2026-01-22T20:56:00.643354",
+      "raw_data": "{\"currency\": \"USD\", \"original_price\": 39.0, \"data\": \"50 GB\", \"validity\": \"30 Days\"}"
     },
     {
       "id": 417,
