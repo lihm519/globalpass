@@ -27,12 +27,14 @@ export async function POST(request: NextRequest) {
     
     const prompt = `You are an E-SIM shopping assistant for GlobalPass. 
 
+IMPORTANT: Respond in the SAME LANGUAGE as the user's question. If the user writes in Chinese, respond in Chinese. If in English, respond in English. If in Japanese, respond in Japanese, etc.
+
 User question: ${message}
 
 Available packages:
 ${packagesInfo}
 
-Please provide a helpful response recommending the best package(s) based on the user's needs. Keep your response concise and friendly.`;
+Please provide a helpful response recommending the best package(s) based on the user's needs. Keep your response concise and friendly. Remember to use the SAME LANGUAGE as the user's question.`;
     
     const result = await model.generateContent(prompt);
     const response = await result.response;
