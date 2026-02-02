@@ -98,3 +98,16 @@
 - [x] 验证 llms.txt 可访问（成功访问）
 - [x] 验证隐藏表格是否正常渲染（成功渲染）
 - [x] 验证 FAQ Schema（检测到 1 项有效内容）
+
+## Product Schema Offers 字段修复 (2026-02-03)
+
+### 问题描述
+- Google 富媒体测试检测到 355 项 "商家信息" 错误
+- 原因：Product Schema 的 offers 字段缺少必需的 seller 属性
+
+### 修复任务
+- [x] 分析 offers 字段错误原因
+- [x] 在 app/esim/page.tsx 中添加 seller 属性
+- [x] seller 指向 pkg.provider（Airalo 或 Nomad）
+- [ ] 推送到 GitHub 并部署
+- [ ] Google 富媒体测试验证修复效果

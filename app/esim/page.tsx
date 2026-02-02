@@ -154,7 +154,11 @@ function ESIMContent() {
                           "priceCurrency": "USD",
                           "price": pkg.price.toFixed(2),
                           "availability": "https://schema.org/InStock",
-                          "url": pkg.link
+                          "url": pkg.link,
+                          "seller": {
+                            "@type": "Organization",
+                            "name": pkg.provider
+                          }
                         }
                       })
                     }}
