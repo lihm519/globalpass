@@ -122,5 +122,24 @@
 ### 解决方案：方案 1 - 移除单独产品的 Product Schema
 - [x] 移除 app/esim/page.tsx 中为每个产品生成的 Product Schema
 - [x] 保留 app/layout.tsx 中的聚合 Product Schema
+- [x] 推送到 GitHub 并部署（commit 9e45d3f）
+- [x] 验证 Google 富媒体测试不再显示 Merchant Listing 错误（成功！）
+
+## GEO 技术基建 Phase 2 (2026-02-03)
+
+### P0 级任务
+- [x] 部署 llms.txt 文件（AI 爬虫站点地图）—— 已存在
+
+### P1 级任务
+- [x] 添加隐形数据表格（提高 LLM 数据提取准确率）—— 已存在
+
+### P2 级任务
+- [x] 配置 IndexNow API（自动通知搜索引擎更新）
+- [x] 优化 robots.txt（允许 AI 爬虫访问）—— 已存在
+
+### 部署验证
 - [ ] 推送到 GitHub 并部署
-- [ ] 验证 Google 富媒体测试不再显示 Merchant Listing 错误
+- [ ] 验证 llms.txt 可访问
+- [ ] 验证隐形表格正常渲染
+- [ ] 验证 IndexNow API 可用
+- [ ] 验证 robots.txt 配置正确
