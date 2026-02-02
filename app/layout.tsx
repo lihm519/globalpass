@@ -105,6 +105,40 @@ export default function RootLayout({
           }}
         />
         
+        {/* Organization Schema - 实体消歧，避免与 Eurail Global Pass 或 Visible Global Pass 混淆 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "GlobalPass",
+              "alternateName": "GlobalPass eSIM",
+              "url": "https://globalpass.vercel.app",
+              "logo": "https://globalpass.vercel.app/logo.png",
+              "description": "GlobalPass is an eSIM price comparison platform helping travelers find the best international data plans. Not affiliated with Eurail Global Pass or Visible Global Pass.",
+              "foundingDate": "2026",
+              "knowsAbout": [
+                "eSIM",
+                "International Data Plans",
+                "Travel Connectivity",
+                "Mobile Data Comparison",
+                "Digital SIM Cards"
+              ],
+              "sameAs": [
+                "https://twitter.com/globalpass",
+                "https://www.linkedin.com/company/globalpass-esim",
+                "https://github.com/lihm519/globalpass"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "email": "support@globalpass.com"
+              }
+            })
+          }}
+        />
+        
         {/* 产品聚合数据 - 告诉 AI 我们提供什么 */}
         <script
           type="application/ld+json"

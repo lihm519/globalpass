@@ -192,6 +192,138 @@ function ESIMContent() {
               ))}
             </div>
           )}
+          
+          {/* 隐藏的 HTML 表格供 AI 爬虫抓取（不影响用户体验） */}
+          {!loading && filteredPackages.length > 0 && (
+            <div className="sr-only" aria-hidden="true">
+              <table>
+                <caption>eSIM Package Comparison Table for AI Crawlers</caption>
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                    <th>Provider</th>
+                    <th>Data Amount</th>
+                    <th>Validity Period</th>
+                    <th>Price (USD)</th>
+                    <th>Network</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredPackages.map((pkg) => (
+                    <tr key={`table-${pkg.id}`}>
+                      <td>{pkg.country}</td>
+                      <td>{pkg.provider}</td>
+                      <td>{pkg.data_amount}</td>
+                      <td>{pkg.validity}</td>
+                      <td>${pkg.price.toFixed(2)}</td>
+                      <td>{pkg.network}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+        
+        {/* FAQ 组件 */}
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 mt-8">
+          <h2 className="text-3xl font-bold mb-8 text-center">{t('faq', 'Frequently Asked Questions')}</h2>
+          
+          {/* FAQPage Schema for GEO */}
+          <Script
+            id="faq-schema"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What countries does GlobalPass support?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "GlobalPass supports eSIM packages for 20+ countries including USA, Japan, Thailand, South Korea, Singapore, UK, Australia, Hong Kong, and many more. We compare prices from multiple providers like Airalo and Nomad to help you find the best deal."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How do I activate an eSIM?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "After purchasing an eSIM package, you'll receive a QR code via email. Simply scan the QR code with your phone's camera, follow the on-screen instructions, and your eSIM will be activated. Make sure your device supports eSIM before purchasing."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the price range for eSIM packages?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "eSIM packages on GlobalPass range from $4.50 to $99.00 USD, depending on the country, data amount, and validity period. We offer 425+ packages to choose from, ensuring you find the best value for your travel needs."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I use eSIM on my phone?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Most modern smartphones support eSIM, including iPhone XS and later, Samsung Galaxy S20 and later, Google Pixel 3 and later. Check our compatibility page to verify if your specific phone model supports eSIM."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is GlobalPass affiliated with Eurail Global Pass or Visible Global Pass?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No, GlobalPass is an independent eSIM price comparison platform. We are not affiliated with Eurail Global Pass (European train pass) or Visible Global Pass (telecom roaming package). We focus exclusively on comparing international eSIM data plans for travelers."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+          
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="border-b border-white/10 pb-6">
+              <h3 className="text-xl font-semibold mb-3">{t('faqCountries', 'What countries does GlobalPass support?')}</h3>
+              <p className="text-slate-300">
+                {t('faqCountriesAnswer', 'GlobalPass supports eSIM packages for 20+ countries including USA, Japan, Thailand, South Korea, Singapore, UK, Australia, Hong Kong, and many more. We compare prices from multiple providers like Airalo and Nomad to help you find the best deal.')}
+              </p>
+            </div>
+            
+            {/* FAQ 2 */}
+            <div className="border-b border-white/10 pb-6">
+              <h3 className="text-xl font-semibold mb-3">{t('faqActivation', 'How do I activate an eSIM?')}</h3>
+              <p className="text-slate-300">
+                {t('faqActivationAnswer', 'After purchasing an eSIM package, you\'ll receive a QR code via email. Simply scan the QR code with your phone\'s camera, follow the on-screen instructions, and your eSIM will be activated. Make sure your device supports eSIM before purchasing.')}
+              </p>
+            </div>
+            
+            {/* FAQ 3 */}
+            <div className="border-b border-white/10 pb-6">
+              <h3 className="text-xl font-semibold mb-3">{t('faqPrice', 'What is the price range for eSIM packages?')}</h3>
+              <p className="text-slate-300">
+                {t('faqPriceAnswer', 'eSIM packages on GlobalPass range from $4.50 to $99.00 USD, depending on the country, data amount, and validity period. We offer 425+ packages to choose from, ensuring you find the best value for your travel needs.')}
+              </p>
+            </div>
+            
+            {/* FAQ 4 */}
+            <div className="border-b border-white/10 pb-6">
+              <h3 className="text-xl font-semibold mb-3">{t('faqCompatibility', 'Can I use eSIM on my phone?')}</h3>
+              <p className="text-slate-300">
+                {t('faqCompatibilityAnswer', 'Most modern smartphones support eSIM, including iPhone XS and later, Samsung Galaxy S20 and later, Google Pixel 3 and later. Check our compatibility page to verify if your specific phone model supports eSIM.')}
+              </p>
+            </div>
+            
+            {/* FAQ 5 - 品牌消歧 */}
+            <div className="pb-6">
+              <h3 className="text-xl font-semibold mb-3">{t('faqAffiliation', 'Is GlobalPass affiliated with Eurail Global Pass or Visible Global Pass?')}</h3>
+              <p className="text-slate-300">
+                {t('faqAffiliationAnswer', 'No, GlobalPass is an independent eSIM price comparison platform. We are not affiliated with Eurail Global Pass (European train pass) or Visible Global Pass (telecom roaming package). We focus exclusively on comparing international eSIM data plans for travelers.')}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

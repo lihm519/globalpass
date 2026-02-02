@@ -1,0 +1,50 @@
+# GlobalPass AI Context
+
+Project: GlobalPass - Global eSIM Comparison Engine
+Description: Real-time price comparison platform for international eSIM data plans
+URL: https://globalpass.vercel.app
+
+## Core Pages
+
+- / (Homepage)
+  Purpose: Main landing page with search and popular destinations
+  Content: Introduction to GlobalPass, quick search, featured countries
+
+- /esim (eSIM Comparison)
+  Purpose: Real-time pricing comparison for 200+ countries
+  Content: 425+ eSIM packages from Airalo, Nomad, and other providers
+  Data: Price, data volume, validity period, provider information
+  Features: Country filter, price sorting, data volume sorting
+
+- /compatibility (Device Compatibility)
+  Purpose: Check if your phone supports eSIM
+  Content: 1000+ phone models database
+  Brands: Apple, Samsung, Google, Huawei, Xiaomi, and more
+  Features: Brand filter, model search, compatibility status
+
+## Key Data Points
+
+- Total Packages: 425+
+- Supported Countries: 20+
+- Price Range: $4.50 - $99.00 USD
+- Supported Devices: 1000+
+- Average Rating: 4.8/5.0
+- Review Count: 1250+
+
+## Supported Languages
+
+English, 简体中文, 日本語, 한국어, ไทย, Español, Français, Deutsch, Italiano, Português, العربية
+
+## Brand Disambiguation
+
+GlobalPass is an eSIM price comparison platform.
+NOT affiliated with:
+- Eurail Global Pass (European train pass)
+- Visible Global Pass (telecom roaming package)
+
+## Contact
+
+Email: support@globalpass.com
+Twitter: @globalpass
+LinkedIn: /company/globalpass-esim
+GitHub: /lihm519/globalpass

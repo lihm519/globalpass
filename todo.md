@@ -75,3 +75,26 @@
 - [x] 添加 Impact 验证代码到 HTML head 标签
 - [x] 测试验证代码是否正确显示
 - [x] 推送到 GitHub（Vercel 自动部署）
+
+## GEO 深度优化 Phase 1.5 (2026-02-03)
+
+### P0 级任务
+- [x] 在 app/layout.tsx 注入 Organization Schema（实体消歧）
+- [x] 添加 sameAs 属性（LinkedIn/Twitter/GitHub 链接）
+- [x] 添加 knowsAbout 属性（eSIM, International Data Plans, Travel Connectivity）
+
+### P1 级任务
+- [x] 创建 public/llms.txt 文件（AI 爬虫路标）
+- [x] 列出核心页面路由和说明
+
+### P2 级任务
+- [x] E-SIM 列表页添加隐藏的 HTML 表格供 AI 抓取
+- [x] 在 app/esim/page.tsx 底部添加 FAQ 组件
+- [x] 自动生成 FAQPage Schema
+
+### 部署验证
+- [ ] Google 富媒体测试验证 Organization Schema
+- [ ] 验证 llms.txt 可访问
+- [ ] 测试表格视图切换功能
+- [ ] 验证 FAQ Schema
+- [ ] 推送到 GitHub 并部署
