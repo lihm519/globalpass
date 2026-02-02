@@ -13,16 +13,16 @@ export default function Home() {
   const [showAIChat, setShowAIChat] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
-  // 热门目的地
+  // 热门目的地 - 使用数据文件中的确切国家名称
   const popularDestinations = [
-    { name: 'Japan', emoji: '🇯🇵', code: 'japan' },
-    { name: 'USA', emoji: '🇺🇸', code: 'usa' },
-    { name: 'Thailand', emoji: '🇹🇭', code: 'thailand' },
-    { name: 'South Korea', emoji: '🇰🇷', code: 'korea' },
-    { name: 'Singapore', emoji: '🇸🇬', code: 'singapore' },
-    { name: 'UK', emoji: '🇬🇧', code: 'uk' },
-    { name: 'Australia', emoji: '🇦🇺', code: 'australia' },
-    { name: 'Hong Kong', emoji: '🇭🇰', code: 'hong kong' },
+    { name: 'Japan', emoji: '🇯🇵', code: 'Japan' },
+    { name: 'USA', emoji: '🇺🇸', code: 'USA' },
+    { name: 'Thailand', emoji: '🇹🇭', code: 'Thailand' },
+    { name: 'South Korea', emoji: '🇰🇷', code: 'South Korea' },
+    { name: 'Singapore', emoji: '🇸🇬', code: 'Singapore' },
+    { name: 'UK', emoji: '🇬🇧', code: 'UK' },
+    { name: 'Australia', emoji: '🇦🇺', code: 'Australia' },
+    { name: 'Hong Kong', emoji: '🇭🇰', code: 'Hong Kong' },
   ];
 
   const handleSearch = () => {
