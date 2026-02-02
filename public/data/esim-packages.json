@@ -2383,108 +2383,6 @@
       ]
     }
   },
-  "United Kingdom": {
-    "providers": {
-      "Airalo": [
-        {
-          "plan_name": "1 GB - 3 days",
-          "data_amount": "1 GB",
-          "validity": "3 days",
-          "price": 4.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "3 GB - 3 days",
-          "data_amount": "3 GB",
-          "validity": "3 days",
-          "price": 8.5,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "3 GB - 7 days",
-          "data_amount": "3 GB",
-          "validity": "7 days",
-          "price": 9.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "5 GB - 7 days",
-          "data_amount": "5 GB",
-          "validity": "7 days",
-          "price": 12.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "10 GB - 7 days",
-          "data_amount": "10 GB",
-          "validity": "7 days",
-          "price": 18.5,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "5 GB - 15 days",
-          "data_amount": "5 GB",
-          "validity": "15 days",
-          "price": 12.5,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "10 GB - 15 days",
-          "data_amount": "10 GB",
-          "validity": "15 days",
-          "price": 19.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "20 GB - 15 days",
-          "data_amount": "20 GB",
-          "validity": "15 days",
-          "price": 31.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "5 GB - 30 days",
-          "data_amount": "5 GB",
-          "validity": "30 days",
-          "price": 13.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "10 GB - 30 days",
-          "data_amount": "10 GB",
-          "validity": "30 days",
-          "price": 19.5,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "20 GB - 30 days",
-          "data_amount": "20 GB",
-          "validity": "30 days",
-          "price": 32.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        },
-        {
-          "plan_name": "50 GB - 30 days",
-          "data_amount": "50 GB",
-          "validity": "30 days",
-          "price": 39.0,
-          "data_type": "Data",
-          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
-        }
-      ]
-    }
-  },
   "Canada": {
     "providers": {
       "Nomad": [
@@ -2865,6 +2763,190 @@
           "price": 45.0,
           "data_type": "Data",
           "link": "https://www.airalo.com/australia-esim?currency=USD"
+        }
+      ]
+    }
+  },
+  "UK": {
+    "providers": {
+      "Airalo": [
+        {
+          "plan_name": "1 GB - 3 days",
+          "data_amount": "1 GB",
+          "validity": "3 days",
+          "price": 4.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "3 GB - 3 days",
+          "data_amount": "3 GB",
+          "validity": "3 days",
+          "price": 8.5,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "3 GB - 7 days",
+          "data_amount": "3 GB",
+          "validity": "7 days",
+          "price": 9.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "5 GB - 7 days",
+          "data_amount": "5 GB",
+          "validity": "7 days",
+          "price": 12.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "10 GB - 7 days",
+          "data_amount": "10 GB",
+          "validity": "7 days",
+          "price": 18.5,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "5 GB - 15 days",
+          "data_amount": "5 GB",
+          "validity": "15 days",
+          "price": 12.5,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "10 GB - 15 days",
+          "data_amount": "10 GB",
+          "validity": "15 days",
+          "price": 19.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "20 GB - 15 days",
+          "data_amount": "20 GB",
+          "validity": "15 days",
+          "price": 31.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "5 GB - 30 days",
+          "data_amount": "5 GB",
+          "validity": "30 days",
+          "price": 13.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "10 GB - 30 days",
+          "data_amount": "10 GB",
+          "validity": "30 days",
+          "price": 19.5,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "20 GB - 30 days",
+          "data_amount": "20 GB",
+          "validity": "30 days",
+          "price": 32.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        },
+        {
+          "plan_name": "50 GB - 30 days",
+          "data_amount": "50 GB",
+          "validity": "30 days",
+          "price": 39.0,
+          "data_type": "Data",
+          "link": "https://www.airalo.com/united-kingdom-esim?currency=USD"
+        }
+      ],
+      "Nomad": [
+        {
+          "plan_name": "UK Unlimited 5 Days",
+          "data_amount": "Unlimited",
+          "validity": "5 Days",
+          "price": 17.0,
+          "data_type": "Unlimited",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK Unlimited 7 Days",
+          "data_amount": "Unlimited",
+          "validity": "7 Days",
+          "price": 23.0,
+          "data_type": "Unlimited",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK Unlimited 10 Days",
+          "data_amount": "Unlimited",
+          "validity": "10 Days",
+          "price": 31.0,
+          "data_type": "Unlimited",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK 1 GB 7 Days",
+          "data_amount": "1GB",
+          "validity": "7 Days",
+          "price": 4.5,
+          "data_type": "Data",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK 3 GB 30 Days",
+          "data_amount": "3GB",
+          "validity": "30 Days",
+          "price": 9.0,
+          "data_type": "Data",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK 5 GB 30 Days",
+          "data_amount": "5GB",
+          "validity": "30 Days",
+          "price": 12.5,
+          "data_type": "Data",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK 10 GB 30 Days",
+          "data_amount": "10GB",
+          "validity": "30 Days",
+          "price": 16.0,
+          "data_type": "Data",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK 20 GB 30 Days",
+          "data_amount": "20GB",
+          "validity": "30 Days",
+          "price": 20.0,
+          "data_type": "Data",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK 50 GB 30 Days",
+          "data_amount": "50GB",
+          "validity": "30 Days",
+          "price": 45.0,
+          "data_type": "Data",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
+        },
+        {
+          "plan_name": "UK Unlimited 3 Days",
+          "data_amount": "Unlimited",
+          "validity": "3 Days",
+          "price": 11.0,
+          "data_type": "Unlimited",
+          "link": "https://www.getnomad.app/united-kingdom-esim"
         }
       ]
     }
@@ -3601,92 +3683,6 @@
           "price": 45.0,
           "data_type": "Unlimited",
           "link": "https://www.getnomad.app/united-states-esim"
-        }
-      ]
-    }
-  },
-  "UK": {
-    "providers": {
-      "Nomad": [
-        {
-          "plan_name": "UK Unlimited 5 Days",
-          "data_amount": "Unlimited",
-          "validity": "5 Days",
-          "price": 17.0,
-          "data_type": "Unlimited",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK Unlimited 7 Days",
-          "data_amount": "Unlimited",
-          "validity": "7 Days",
-          "price": 23.0,
-          "data_type": "Unlimited",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK Unlimited 10 Days",
-          "data_amount": "Unlimited",
-          "validity": "10 Days",
-          "price": 31.0,
-          "data_type": "Unlimited",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK 1 GB 7 Days",
-          "data_amount": "1GB",
-          "validity": "7 Days",
-          "price": 4.5,
-          "data_type": "Data",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK 3 GB 30 Days",
-          "data_amount": "3GB",
-          "validity": "30 Days",
-          "price": 9.0,
-          "data_type": "Data",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK 5 GB 30 Days",
-          "data_amount": "5GB",
-          "validity": "30 Days",
-          "price": 12.5,
-          "data_type": "Data",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK 10 GB 30 Days",
-          "data_amount": "10GB",
-          "validity": "30 Days",
-          "price": 16.0,
-          "data_type": "Data",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK 20 GB 30 Days",
-          "data_amount": "20GB",
-          "validity": "30 Days",
-          "price": 20.0,
-          "data_type": "Data",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK 50 GB 30 Days",
-          "data_amount": "50GB",
-          "validity": "30 Days",
-          "price": 45.0,
-          "data_type": "Data",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
-        },
-        {
-          "plan_name": "UK Unlimited 3 Days",
-          "data_amount": "Unlimited",
-          "validity": "3 Days",
-          "price": 11.0,
-          "data_type": "Unlimited",
-          "link": "https://www.getnomad.app/united-kingdom-esim"
         }
       ]
     }
