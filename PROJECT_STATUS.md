@@ -1,8 +1,10 @@
 # GlobalPass 项目状态文档
 
 **最后更新：** 2026-02-03  
-**当前版本：** b6ed968  
+**当前版本：** fa271bb  
 **部署状态：** ✅ 已部署到 Vercel
+
+**最新功能：** GEO 深度优化 Phase 1.5 - 实体消歧、AI 爬虫路标、表格视图、FAQ Schema
 
 ---
 
@@ -11,7 +13,7 @@
 ### Git 状态
 ```
 分支：main
-最新提交：b6ed968 - fix: 修复首页国家跳转和 i18n SSR 问题
+最新提交：fa271bb - feat: GEO 深度优化 Phase 1.5
 远程仓库：https://github.com/lihm519/globalpass.git
 部署平台：Vercel (https://globalpass.vercel.app)
 ```
@@ -131,6 +133,70 @@
 - 💰 价格范围（$4.50 - $99.00）
 - 📦 套餐数量（425 个套餐）
 - 🏷️ 品牌名称（GlobalPass）
+
+### GEO 深度优化 Phase 1.5 (2026-02-03)
+
+#### P0 级：实体消歧 (Entity Disambiguation)
+**位置：** `app/layout.tsx`
+
+**Organization Schema 内容：**
+- **@type**: Organization
+- **name**: GlobalPass
+- **alternateName**: GlobalPass eSIM
+- **description**: 明确说明 "Not affiliated with Eurail Global Pass or Visible Global Pass"
+- **knowsAbout**: ["eSIM", "International Data Plans", "Travel Connectivity", "Mobile Data Comparison", "Digital SIM Cards"]
+- **sameAs**: [Twitter, LinkedIn, GitHub]
+- **contactPoint**: Customer Service 联系方式
+
+**Google 富媒体测试结果：**
+- ✅ 检测到 2 项有效内容
+- ✅ 符合 Schema.org Organization 标准
+
+#### P1 级：AI 爬虫路标 (llms.txt)
+**位置：** `public/llms.txt`
+
+**内容：**
+- 项目描述和 URL
+- 核心页面列表（/、/esim、/compatibility）
+- 关键数据点（套餐数量、价格范围、评分等）
+- 支持的 11 种语言
+- **品牌消歧说明**（明确与 Eurail/Visible 的区别）
+- 联系方式和社交媒体链接
+
+**验证结果：**
+- ✅ 成功访问 https://globalpass.vercel.app/llms.txt
+- ✅ 内容完整，格式正确
+
+#### P2 级：表格视图 (Data Density Optimization)
+**位置：** `app/esim/page.tsx`
+
+**实现方式：**
+- 隐藏的 HTML 表格（`sr-only` 类）
+- 包含所有套餐的结构化数据
+- 列：Country, Provider, Data Amount, Validity Period, Price, Network
+
+**验证结果：**
+- ✅ 表格成功渲染
+- ✅ 对用户不可见，但 AI 爬虫可抓取
+
+#### P2 级：FAQ Schema (FAQPage)
+**位置：** `app/esim/page.tsx`
+
+**FAQ 内容：**
+1. What countries does GlobalPass support?
+2. How do I activate an eSIM?
+3. What is the price range for eSIM packages?
+4. Can I use eSIM on my phone?
+5. Is GlobalPass affiliated with Eurail Global Pass or Visible Global Pass? (品牌消歧)
+
+**Google 富媒体测试结果：**
+- ✅ 检测到 1 项有效内容
+- ✅ 符合 Schema.org FAQPage 标准
+
+**预期效果：**
+- Google 搜索结果可能显示 FAQ 摘要
+- 直接答案 (Direct Answers) 功能
+- 提高点击率 (CTR)
 
 ---
 

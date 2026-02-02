@@ -93,8 +93,8 @@
 - [x] 自动生成 FAQPage Schema
 
 ### 部署验证
-- [ ] Google 富媒体测试验证 Organization Schema
-- [ ] 验证 llms.txt 可访问
-- [ ] 测试表格视图切换功能
-- [ ] 验证 FAQ Schema
-- [ ] 推送到 GitHub 并部署
+- [x] 推送到 GitHub 并部署
+- [x] Google 富媒体测试验证 Organization Schema（检测到 2 项有效内容）
+- [x] 验证 llms.txt 可访问（成功访问）
+- [x] 验证隐藏表格是否正常渲染（成功渲染）
+- [x] 验证 FAQ Schema（检测到 1 项有效内容）
