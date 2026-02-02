@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 
 interface ESIMPackage {
   id: number;
@@ -99,35 +98,24 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
         .sort((a, b) => a.price - b.price)
         .slice(0, 3);
 
-      // 3. 调用 AI 生成回复
-      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
-      
-      if (!apiKey) {
-        throw new Error('API Key not configured.');
+      // 3. 调用后端 API Route（避免 CORS 问题）
+      const aiResponse = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: input,
+          packages: topPackages,
+        }),
+      });
+
+      if (!aiResponse.ok) {
+        const errorData = await aiResponse.json();
+        throw new Error(errorData.error || 'AI API call failed');
       }
 
-      const genAI = new GoogleGenerativeAI(apiKey);
-      // 使用 gemini-1.5-flash - Gemini 1.5 系列中最基础、兼容性最好的模型
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-
-      // 构建包含套餐信息的 prompt
-      const packagesInfo = topPackages.map(pkg => 
-        `${pkg.provider} - ${pkg.plan_name}: ${pkg.data_amount}, ${pkg.validity}, $${pkg.price}`
-      ).join('\n');
-      
-      const prompt = `You are an E-SIM shopping assistant for GlobalPass. 
-
-User question: ${input}
-
-Available packages:
-${packagesInfo}
-
-Please provide a helpful response recommending the best package(s) based on the user's needs. Keep your response concise and friendly.`;
-      
-      const result = await model.generateContent(prompt);
-      const response = await result.response;
-      const text = response.text();
-
+      const { response: text } = await aiResponse.json();
       console.log('AI Response:', text);
 
       // 4. 添加回复和推荐套餐
