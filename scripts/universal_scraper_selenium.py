@@ -331,7 +331,7 @@ class UniversalScraper:
                             timeout=10
                         )
                     
-                    if response.status_code in [200, 201]:
+                    if response.status_code in [200, 201, 204]:
                         success_count += 1
                         self.stats["upsert_success"] += 1
                     else:
