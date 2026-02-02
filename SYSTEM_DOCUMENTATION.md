@@ -24,9 +24,9 @@ GlobalPass 是一个全球 E-SIM 比价与手机兼容性检测平台，帮助�
 └─────────────────────────────────────────────────┘
                     +
 ┌─────────────────────────────────────────────────┐
-│  手动触发 (按需运行)                             │
-│  ├─ Airalo 爬虫 (Manus Browser Operator)        │
-│  ├─ 频率：按需手动触发（建议每周一次）           │
+│  Manus Schedule (每周日 UTC 20:30)              │
+│  ├─ Airalo 爬虫 (Browser Operator)              │
+│  ├─ 频率：每周一次（周日运行）                  │
 │  ├─ 成本：消耗 Manus 积分                       │
 │  └─ 写入 Supabase ✅                            │
 └─────────────────────────────────────────────────┘
@@ -36,7 +36,7 @@ GlobalPass 是一个全球 E-SIM 比价与手机兼容性检测平台，帮助�
 
 1. **Nomad**：网站结构简单，Selenium 可以正常爬取，使用免费的 GitHub Actions
 2. **Airalo**：有反爬检测，Selenium 失效，使用 Manus Browser Operator（真实浏览器环境）
-3. **成本优化**：Airalo 改为手动触发，避免不必要的积分消耗
+3. **成本优化**：Airalo 改为每周运行，积分消耗减少约 85%
 
 ---
 
@@ -134,17 +134,23 @@ jq '.packages | keys | length' public/data/esim-packages.json
 - `SUPABASE_URL`
 - `SUPABASE_SERVICE_ROLE_KEY`
 
-### Airalo 数据更新（手动触发）
+### Manus Schedule 配置
 
-**更新方式**：使用 Manus Browser Operator 手动运行
+**任务名称**：Weekly Airalo eSIM Data Scraper
 
-**推荐频率**：每周一次（或按需）
+**触发时间**：每周日 UTC 20:30（北京时间周一凌晨 4:30）
 
-**执行步骤**：
-1. 在 Manus 中打开 GlobalPass 项目
-2. 运行 Airalo 数据采集任务
-3. 验证数据库更新
-4. 生成前端 JSON 并部署
+**Cron 表达式**：`0 30 20 * * 0`
+
+**运行逻辑**：
+1. 读取 `config/countries.json`
+2. 使用 Browser Operator 访问 Airalo 页面
+3. 提取套餐数据（hint 属性）
+4. UPSERT 到 Supabase
+
+**环境变量**（已配置在 Manus）：
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
 
 **数据采集方法**：
 ```python
@@ -292,7 +298,7 @@ with open('public/data/esim-packages.json', 'w', encoding='utf-8') as f:
 | 任务 | 频率 | 运行时间（UTC） | 运行时间（北京） | 平台 |
 |------|------|----------------|------------------|------|
 | **Nomad 数据更新** | 每天 | 20:00 | 凌晨 4:00 | GitHub Actions |
-| **Airalo 数据更新** | 手动触发 | 按需 | 按需 | Manus Browser Operator |
+| **Airalo 数据更新** | 每周日 | 20:30 | 周一凌晨 4:30 | Manus Schedule |
 
 ---
 
