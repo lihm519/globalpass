@@ -109,5 +109,18 @@
 - [x] 分析 offers 字段错误原因
 - [x] 在 app/esim/page.tsx 中添加 seller 属性
 - [x] seller 指向 pkg.provider（Airalo 或 Nomad）
+- [x] 推送到 GitHub 并部署（commit 4e33cac）
+- [x] 验证修复效果（355 个产品的 seller 属性已成功添加）
+
+## Product Schema 策略调整 (2026-02-03)
+
+### 问题根源
+- GlobalPass 是比价平台，不是直接销售商
+- 使用了 Merchant Listing 类型的 Product Schema（要求必须是卖家）
+- Google 检测到 355 个不符合要求的 Merchant Listing
+
+### 解决方案：方案 1 - 移除单独产品的 Product Schema
+- [x] 移除 app/esim/page.tsx 中为每个产品生成的 Product Schema
+- [x] 保留 app/layout.tsx 中的聚合 Product Schema
 - [ ] 推送到 GitHub 并部署
-- [ ] Google 富媒体测试验证修复效果
+- [ ] 验证 Google 富媒体测试不再显示 Merchant Listing 错误

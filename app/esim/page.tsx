@@ -135,34 +135,7 @@ function ESIMContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredPackages.map((pkg) => (
                 <div key={pkg.id} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all">
-                  {/* JSON-LD 结构化数据 for GEO */}
-                  <Script
-                    id={`product-schema-${pkg.id}`}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                      __html: JSON.stringify({
-                        "@context": "https://schema.org/",
-                        "@type": "Product",
-                        "name": `eSIM ${pkg.country} - ${pkg.data_amount} / ${pkg.validity}`,
-                        "description": `Travel eSIM for ${pkg.country} by ${pkg.provider}. ${pkg.data_amount} data valid for ${pkg.validity}.`,
-                        "brand": {
-                          "@type": "Brand",
-                          "name": pkg.provider
-                        },
-                        "offers": {
-                          "@type": "Offer",
-                          "priceCurrency": "USD",
-                          "price": pkg.price.toFixed(2),
-                          "availability": "https://schema.org/InStock",
-                          "url": pkg.link,
-                          "seller": {
-                            "@type": "Organization",
-                            "name": pkg.provider
-                          }
-                        }
-                      })
-                    }}
-                  />
+                  {/* Product Schema 已移除：GlobalPass 是比价平台，不是直接销售商，不应使用 Merchant Listing 标记 */}
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="font-bold text-lg mb-1">{pkg.country}</h3>
