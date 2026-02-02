@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Japan",
+    "airalo_slug": "japan",
+    "nomad_slug": "japan"
+  },
+  {
+    "name": "South Korea",
+    "airalo_slug": "south-korea",
+    "nomad_slug": "south-korea"
+  },
+  {
+    "name": "Thailand",
+    "airalo_slug": "thailand",
+    "nomad_slug": "thailand"
+  },
+  {
+    "name": "Singapore",
+    "airalo_slug": "singapore",
+    "nomad_slug": "singapore"
+  },
+  {
+    "name": "Hong Kong",
+    "airalo_slug": "hong-kong",
+    "nomad_slug": "hong-kong"
+  },
+  {
+    "name": "Taiwan",
+    "airalo_slug": "taiwan",
+    "nomad_slug": "taiwan"
+  },
+  {
+    "name": "Malaysia",
+    "airalo_slug": "malaysia",
+    "nomad_slug": "malaysia"
+  },
+  {
+    "name": "Indonesia",
+    "airalo_slug": "indonesia",
+    "nomad_slug": "indonesia"
+  },
+  {
+    "name": "Philippines",
+    "airalo_slug": "philippines",
+    "nomad_slug": "philippines"
+  },
+  {
+    "name": "Vietnam",
+    "airalo_slug": "vietnam",
+    "nomad_slug": "vietnam"
+  },
+  {
+    "name": "Australia",
+    "airalo_slug": "australia",
+    "nomad_slug": "australia"
+  },
+  {
+    "name": "USA",
+    "airalo_slug": "united-states",
+    "nomad_slug": "united-states"
+  },
+  {
+    "name": "Canada",
+    "airalo_slug": "canada",
+    "nomad_slug": "canada"
+  },
+  {
+    "name": "UK",
+    "airalo_slug": "united-kingdom",
+    "nomad_slug": "united-kingdom"
+  },
+  {
+    "name": "France",
+    "airalo_slug": "france",
+    "nomad_slug": "france"
+  },
+  {
+    "name": "Germany",
+    "airalo_slug": "germany",
+    "nomad_slug": "germany"
+  },
+  {
+    "name": "Italy",
+    "airalo_slug": "italy",
+    "nomad_slug": "italy"
+  },
+  {
+    "name": "Spain",
+    "airalo_slug": "spain",
+    "nomad_slug": "spain"
+  },
+  {
+    "name": "China",
+    "airalo_slug": "china",
+    "nomad_slug": "china"
+  },
+  {
+    "name": "India",
+    "airalo_slug": "india",
+    "nomad_slug": "india"
+  }
+]
