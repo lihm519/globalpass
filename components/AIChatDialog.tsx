@@ -107,7 +107,8 @@ export default function AIChatDialog({ isOpen, onClose }: AIChatDialogProps) {
       }
 
       const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
+      // 使用 gemini-pro (1.0 版本) - 最稳定的版本
+      const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
 
       // 构建包含套餐信息的 prompt
       const packagesInfo = topPackages.map(pkg => 
