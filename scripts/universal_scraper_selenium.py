@@ -102,19 +102,32 @@ class UniversalScraper:
             logger.warning(f"⚠️ 无法加载旧数据: {e}")
     
     def init_selenium(self):
-        """初始化 Selenium WebDriver"""
+        """初始化 Selenium WebDriver（增强反爬措施）"""
         if self.driver:
             return
         
         chrome_options = Options()
-        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--headless=new')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
         chrome_options.add_argument('--window-size=1920,1080')
-        chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+        chrome_options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+        chrome_options.add_argument('--accept-language=en-US,en;q=0.9')
+        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        chrome_options.add_experimental_option('useAutomationExtension', False)
         
         self.driver = webdriver.Chrome(options=chrome_options)
+        
+        # 执行 JavaScript 隐藏 webdriver 属性
+        self.driver.execute_cdp_cmd('Page.addScriptToEvaluateOnNewDocument', {
+            'source': '''
+                Object.defineProperty(navigator, 'webdriver', {
+                    get: () => undefined
+                });
+            '''
+        })
     
     def close_selenium(self):
         """关闭 Selenium"""
@@ -131,7 +144,12 @@ class UniversalScraper:
             logger.info(f"🌐 正在抓取 Airalo - {country['name']}...")
             
             self.driver.get(url)
-            WebDriverWait(self.driver, 10).until(
+            
+            # 等待页面加载完成
+            import time
+            time.sleep(3)  # 等待 JavaScript 渲染
+            
+            WebDriverWait(self.driver, 15).until(
                 EC.presence_of_element_located((By.TAG_NAME, "button"))
             )
             
@@ -271,7 +289,7 @@ class UniversalScraper:
             return []
     
     def upsert_to_supabase(self, packages: List[Dict]) -> int:
-        """Upsert 数据到 Supabase（使用 merge-duplicates 策略）"""
+        """Upsert 数据到 Supabase（先查询，存在则更新，不存在则插入）"""
         if not packages:
             return 0
         
@@ -279,31 +297,52 @@ class UniversalScraper:
         
         for pkg in packages:
             try:
-                url = f"{SUPABASE_URL}/rest/v1/esim_packages"
+                provider = pkg['provider']
+                country = pkg['country']
+                plan_name = pkg['plan_name']
                 
-                # 使用 Prefer: resolution=merge-duplicates 实现 Upsert
-                # 需要数据库有唯一键约束：(provider, country, plan_name)
-                upsert_headers = {
-                    **self.supabase_headers,
-                    "Prefer": "resolution=merge-duplicates"
-                }
-                
-                response = requests.post(
-                    url,
-                    headers=upsert_headers,
-                    json=pkg,
+                # 1. 先查询是否存在
+                query_url = f"{SUPABASE_URL}/rest/v1/esim_packages?provider=eq.{provider}&country=eq.{country}&plan_name=eq.{plan_name}"
+                check_response = requests.get(
+                    query_url,
+                    headers=self.supabase_headers,
                     timeout=10
                 )
                 
-                if response.status_code in [200, 201]:
-                    success_count += 1
-                    self.stats["upsert_success"] += 1
+                if check_response.status_code == 200:
+                    existing = check_response.json()
+                    
+                    if existing and len(existing) > 0:
+                        # 2a. 存在 -> 使用 PATCH 更新
+                        update_url = f"{SUPABASE_URL}/rest/v1/esim_packages?provider=eq.{provider}&country=eq.{country}&plan_name=eq.{plan_name}"
+                        response = requests.patch(
+                            update_url,
+                            headers=self.supabase_headers,
+                            json=pkg,
+                            timeout=10
+                        )
+                    else:
+                        # 2b. 不存在 -> 使用 POST 插入
+                        insert_url = f"{SUPABASE_URL}/rest/v1/esim_packages"
+                        response = requests.post(
+                            insert_url,
+                            headers=self.supabase_headers,
+                            json=pkg,
+                            timeout=10
+                        )
+                    
+                    if response.status_code in [200, 201]:
+                        success_count += 1
+                        self.stats["upsert_success"] += 1
+                    else:
+                        logger.error(f"❌ {provider} - {country} - {plan_name}: 入库失败 ({response.status_code})")
+                        self.stats["upsert_error"] += 1
                 else:
-                    logger.error(f"❌ {pkg['provider']} - {pkg['country']} - {pkg['plan_name']}: 入库失败 ({response.status_code})")
+                    logger.error(f"❌ {provider} - {country} - {plan_name}: 查询失败 ({check_response.status_code})")
                     self.stats["upsert_error"] += 1
                     
             except Exception as e:
-                logger.error(f"❌ {pkg['provider']} - {pkg['country']} - {pkg['plan_name']}: {str(e)[:100]}")
+                logger.error(f"❌ {pkg.get('provider', 'Unknown')} - {pkg.get('country', 'Unknown')} - {pkg.get('plan_name', 'Unknown')}: {str(e)[:100]}")
                 self.stats["upsert_error"] += 1
         
         return success_count
