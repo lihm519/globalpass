@@ -493,7 +493,129 @@ jq '.packages.Japan[0]' public/data/esim-packages.json
 
 ---
 
+## 🤖 AI 对话功能
+
+### 架构设计
+
+**前后端分离架构**：
+```
+用户浏览器 → /api/chat (Next.js API Route) → Google Generative AI
+```
+
+**为什么使用后端 API Route？**
+- ✅ 避免 CORS 跨域问题
+- ✅ 保护 API Key 安全（不暴露在前端）
+- ✅ 统一错误处理和日志记录
+
+### 技术实现
+
+**后端 API**：`app/api/chat/route.ts`
+```typescript
+import { GoogleGenerativeAI } from '@google/generative-ai';
+
+// 使用 gemini-2.0-flash 模型（稳定版本）
+const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+```
+
+**前端组件**：`components/AIChatDialog.tsx`
+```typescript
+// 调用后端 API
+const response = await fetch('/api/chat', {
+  method: 'POST',
+  body: JSON.stringify({ message, packages })
+});
+```
+
+### 功能特性
+
+1. **智能套餐推荐**
+   - 根据用户需求（国家、天数、流量）推荐最合适的套餐
+   - 自动筛选并按价格排序
+   - 显示前 3 个最便宜的选项
+
+2. **多语言支持**
+   - 自动检测用户输入语言
+   - 用相同语言回复（中文、英文、日文等）
+   - 无需手动切换语言
+
+3. **可视化套餐卡片**
+   - 显示提供商、价格、流量、有效期
+   - 点击卡片直接跳转到购买链接
+   - 区分 Airalo 和 Nomad 提供商
+
+### 环境配置
+
+**Vercel 环境变量**：
+- `NEXT_PUBLIC_GEMINI_API_KEY`：Google Generative AI API Key
+- 配置路径：Vercel Dashboard → Settings → Environment Variables
+
+**模型版本历史**：
+- ❌ `gemini-2.0-flash-exp`：实验版本已被 Google 移除
+- ✅ `gemini-2.0-flash`：当前使用的稳定版本
+
+### 故障排查
+
+**问题：AI 返回 404 错误**
+
+**诊断步骤**：
+```bash
+# 1. 测试 API Key 是否有效
+node scripts/diagnose_google_key.js
+
+# 2. 测试模型是否可用
+node -e "
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+const genAI = new GoogleGenerativeAI('YOUR_API_KEY');
+const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+model.generateContent('Hello').then(r => console.log(r.response.text()));
+"
+```
+
+**常见原因**：
+1. API Key 未配置或失效
+2. 模型名称错误（使用了已废弃的版本）
+3. Google API 权限未开通
+
+---
+
 ## 📝 维护日志
+
+### 2026-02-02：AI 对话功能修复与优化
+
+**问题描述**：
+- AI 对话功能报 404 错误
+- 错误信息：`models/gemini-2.0-flash-exp is not found for API version v1beta`
+
+**问题根源**：
+1. **前端直接调用 Google API**：遇到 CORS 跨域限制
+2. **模型版本过期**：`gemini-2.0-flash-exp` 实验版本已被 Google 移除
+
+**解决方案**：
+1. **创建后端 API Route**：
+   - 新建 `app/api/chat/route.ts`
+   - 在服务端调用 Google Generative AI
+   - 避免 CORS 问题
+
+2. **更新模型版本**：
+   - 从 `gemini-2.0-flash-exp` 更新为 `gemini-2.0-flash`
+   - 使用稳定版本确保长期可用
+
+3. **添加多语言支持**：
+   - 更新 AI prompt，要求用相同语言回复
+   - 支持中文、英文、日文等所有语言
+
+**诊断过程**：
+- 创建诊断脚本 `scripts/diagnose_google_key.js`
+- 测试 47 个可用模型
+- 发现 `listModels` 成功但 `generateContent` 失败
+- 最终确认 `gemini-2.0-flash` 可用
+
+**相关 Commit**：
+- `4577fd7`: 创建后端 API Route
+- `b198583`: 更新为 gemini-2.0-flash
+- `2c6e01c`: 添加多语言支持
+
+---
 
 ### 2026-02-02：Airalo 数据采集完成
 
@@ -531,6 +653,6 @@ jq '.packages.Japan[0]' public/data/esim-packages.json
 
 ---
 
-**文档版本**：v2.0  
+**文档版本**：v2.1  
 **最后更新**：2026-02-02  
 **维护状态**：活跃维护中 ✅
