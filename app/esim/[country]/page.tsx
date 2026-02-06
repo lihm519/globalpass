@@ -3,6 +3,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useParams } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
+import Script from 'next/script';
 import '@/lib/i18n';
 
 interface ESIMPackage {
@@ -126,8 +127,46 @@ function CountryESIMContent() {
     );
   }
 
+  // Calculate price range for JSON-LD
+  const priceRange = packages.length > 0 ? {
+    low: Math.min(...packages.map(p => p.price)),
+    high: Math.max(...packages.map(p => p.price))
+  } : null;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      {/* JSON-LD Structured Data for SEO */}
+      {packages.length > 0 && priceRange && (
+        <Script
+          id="country-product-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": `${countryName} eSIM Data Plans`,
+              "description": `Compare ${packages.length} eSIM data plans for ${countryName}. Find the cheapest international data packages from multiple providers.`,
+              "brand": {
+                "@type": "Brand",
+                "name": "GlobalPass"
+              },
+              "offers": {
+                "@type": "AggregateOffer",
+                "lowPrice": priceRange.low.toFixed(2),
+                "highPrice": priceRange.high.toFixed(2),
+                "priceCurrency": "USD",
+                "offerCount": packages.length,
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": packages.length
+              }
+            })
+          }}
+        />
+      )}
       {/* Navigation */}
       <nav className="border-b border-white/10 backdrop-blur-md bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

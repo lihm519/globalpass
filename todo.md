@@ -179,7 +179,7 @@
 - [ ] 更新首页链接使用新格式
 - [ ] 更新导航链接使用新格式
 - [ ] 测试所有重定向和链接
-- [ ] 推送到生产环境
+- [x] 推送到生产环境
 - [x] 移除重定向逻辑，让 /esim?country=X 直接显示 Answer Block
 - [x] 在 /esim 页面添加 Answer Block 组件
 
@@ -187,4 +187,9 @@
 - [x] 找出所有使用 /esim?country=X 的链接
 - [x] 全部改成 /esim/country-slug 格式
 - [x] 移除 /esim 页面对 query 参数的支持
+- [x] 推送到生产环境
+
+## 添加 JSON-LD 结构化数据 (2026-02-07)
+- [x] 在 /esim/[country]/page.tsx 添加 Product + AggregateOffer schema
+- [x] 包含最低价、最高价、套餐数量
 - [ ] 推送到生产环境
