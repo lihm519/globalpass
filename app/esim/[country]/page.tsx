@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import packageData from '@/public/data/esim-packages.json';
 
 interface ESIMPackage {
   id: number;
@@ -21,44 +20,48 @@ interface PackageData {
 
 // Normalize country name from URL slug to display name
 function normalizeCountryName(slug: string): string {
-  const mapping: Record<string, string> = {
-    'japan': 'Japan',
-    'south-korea': 'South Korea',
-    'thailand': 'Thailand',
-    'singapore': 'Singapore',
-    'hong-kong': 'Hong Kong',
-    'taiwan': 'Taiwan',
-    'usa': 'USA',
-    'uk': 'UK',
-    'australia': 'Australia',
-    'canada': 'Canada',
-    'france': 'France',
-    'germany': 'Germany',
-    'italy': 'Italy',
-    'spain': 'Spain',
-    'netherlands': 'Netherlands',
-    'switzerland': 'Switzerland',
-    'austria': 'Austria',
-    'belgium': 'Belgium',
-    'portugal': 'Portugal',
-    'greece': 'Greece',
+  // Convert slug to title case (e.g., 'hong-kong' -> 'Hong Kong')
+  const titleCase = slug.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  ).join(' ');
+  
+  // Special cases that don't follow title case
+  const specialCases: Record<string, string> = {
+    'Usa': 'USA',
+    'Uk': 'UK',
   };
   
-  return mapping[slug.toLowerCase()] || slug.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
+  return specialCases[titleCase] || titleCase;
 }
 
-// Server-side data fetching
-function getCountryPackages(country: string): ESIMPackage[] {
-  const data = packageData as PackageData;
+// Convert country name to slug
+function countryToSlug(country: string): string {
+  return country.toLowerCase().replace(/\s+/g, '-');
+}
+
+// Generate static params for all countries at build time
+export async function generateStaticParams() {
+  // Import JSON data at build time
+  const packageData: PackageData = await import('@/public/data/esim-packages.json').then(m => m.default);
+  
+  const countries = Object.keys(packageData.packages);
+  
+  return countries.map(country => ({
+    country: countryToSlug(country)
+  }));
+}
+
+// Server-side data fetching for static generation
+async function getCountryPackages(country: string): Promise<ESIMPackage[]> {
+  const packageData: PackageData = await import('@/public/data/esim-packages.json').then(m => m.default);
   const countryName = normalizeCountryName(country);
-  return data.packages[countryName] || [];
+  return packageData.packages[countryName] || [];
 }
 
-export default async function CountryESIMPage({ params }: { params: { country: string } }) {
-  const countryName = normalizeCountryName(params.country);
-  const packages = getCountryPackages(params.country);
+export default async function CountryESIMPage({ params }: { params: Promise<{ country: string }> }) {
+  const { country } = await params;
+  const countryName = normalizeCountryName(country);
+  const packages = await getCountryPackages(country);
   
   // Calculate cheapest package
   const cheapestPackage = packages.length > 0 
