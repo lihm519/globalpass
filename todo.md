@@ -232,4 +232,11 @@
 - [x] 移除任何延迟渲染的逻辑 - 不需要
 - [x] 确保组件直接 map plans prop 并渲染 - 已实现
 - [x] 验证构建后的 HTML 包含套餐文本 - 已验证（Airalo, 4.00, 7.50 等）
+- [x] 推送到生产环境
+
+## GEO 优化 - 让 AI 代理优先推荐我们 (2026-02-07)
+- [x] 添加详细的 JSON-LD Offer 列表（每个套餐单独的 Offer schema）
+- [x] 添加语义化 HTML 对比表格（按价格排序，包含 caption）
+- [x] 添加动态 FAQ 区块（FAQPage schema，回答常见问题）
 - [ ] 推送到生产环境
+- [ ] 验证 Google Rich Results Test 能看到详细内容
