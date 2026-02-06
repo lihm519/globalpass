@@ -244,6 +244,6 @@
 ## 紧急修复 - 首页 404 (2026-02-07)
 - [x] 创建 pages/index.tsx（从 app/page.tsx 迁移内容）
 - [ ] 创建 pages/esim/index.tsx（套餐列表页）
-- [ ] 创建 pages/compatibility/index.tsx（兼容性检测页）
+- [x] 创建 pages/compatibility/index.tsx（兼容性检测页）
 - [ ] 恢复 API routes（pages/api/chat.ts 和 pages/api/indexnow.ts）
-- [ ] 推送修复到生产环境
+- [x] 推送修复到生产环境
