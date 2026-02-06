@@ -240,3 +240,10 @@
 - [x] 添加动态 FAQ 区块（FAQPage schema，回答常见问题）
 - [ ] 推送到生产环境
 - [ ] 验证 Google Rich Results Test 能看到详细内容
+
+## 紧急修复 - 首页 404 (2026-02-07)
+- [x] 创建 pages/index.tsx（从 app/page.tsx 迁移内容）
+- [ ] 创建 pages/esim/index.tsx（套餐列表页）
+- [ ] 创建 pages/compatibility/index.tsx（兼容性检测页）
+- [ ] 恢复 API routes（pages/api/chat.ts 和 pages/api/indexnow.ts）
+- [ ] 推送修复到生产环境
