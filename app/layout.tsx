@@ -89,7 +89,7 @@ export default function RootLayout({
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://globalpass.vercel.app/esim?country={search_term_string}"
+                  "urlTemplate": "https://www.globalpass.tech/esim/{search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               },

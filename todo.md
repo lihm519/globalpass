@@ -182,3 +182,9 @@
 - [ ] 推送到生产环境
 - [x] 移除重定向逻辑，让 /esim?country=X 直接显示 Answer Block
 - [x] 在 /esim 页面添加 Answer Block 组件
+
+## 完全移除旧 URL 格式 (2026-02-07 紧急)
+- [x] 找出所有使用 /esim?country=X 的链接
+- [x] 全部改成 /esim/country-slug 格式
+- [x] 移除 /esim 页面对 query 参数的支持
+- [ ] 推送到生产环境

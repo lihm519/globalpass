@@ -54,18 +54,7 @@ function ESIMContent() {
         setCountries(countryList.sort());
         setLoading(false);
         
-        // 读取 URL 参数并设置初始国家
-        const countryParam = searchParams.get('country');
-        if (countryParam) {
-          const normalizedParam = countryParam.toLowerCase();
-          // 尝试匹配国家名称（不区分大小写）
-          const matchedCountry = countryList.find(
-            country => country.toLowerCase() === normalizedParam
-          );
-          if (matchedCountry) {
-            setSelectedCountry(matchedCountry);
-          }
-        }
+        // No longer support query parameters - use /esim/[country] instead
       })
       .catch(err => {
         console.error('Failed to load data:', err);

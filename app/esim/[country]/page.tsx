@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useParams } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import '@/lib/i18n';
@@ -52,7 +52,7 @@ export function countryToSlug(country: string): string {
   return country.toLowerCase().replace(/\s+/g, '-');
 }
 
-export default function CountryESIMPage() {
+function CountryESIMContent() {
   const params = useParams();
   const { t } = useTranslation();
   const countrySlug = params.country as string;
@@ -255,5 +255,20 @@ export default function CountryESIMPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CountryESIMPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto"></div>
+          <p className="mt-4 text-slate-400">Loading...</p>
+        </div>
+      </div>
+    }>
+      <CountryESIMContent />
+    </Suspense>
   );
 }

@@ -4,3 +4,133 @@
 [2026-02-02T15:05:39.936Z] Starting dev server with command: NODE_ENV=development tsx watch server/_core/index.ts
 [2026-02-02T15:05:39.962Z] /bin/sh: 1: tsx: not found
 [2026-02-02T15:05:39.963Z] Dev server exited with code 127
+[2026-02-04T00:55:01.968Z] Starting dev server with command: NODE_ENV=development tsx watch server/_core/index.ts
+[2026-02-04T00:55:02.014Z] /bin/sh: 1: tsx: not found
+[2026-02-04T00:55:02.015Z] Dev server exited with code 127
+[2026-02-04T00:55:18.138Z] Starting dev server with command: NODE_ENV=development tsx watch server/_core/index.ts
+[2026-02-04T00:55:18.175Z] /bin/sh: 1: tsx: not found
+[2026-02-04T00:55:18.175Z] Dev server exited with code 127
+[2026-02-04T00:55:43.355Z] Starting dev server with command: NODE_ENV=development tsx watch server/_core/index.ts
+[2026-02-04T00:55:43.785Z] node:internal/fs/watchers:247
+[2026-02-04T00:55:43.786Z] const error = new UVException({
+[2026-02-04T00:55:43.786Z] ^
+[2026-02-04T00:55:43.786Z] 
+[2026-02-04T00:55:43.787Z] Error: EMFILE: too many open files, watch '/home/ubuntu/globalpass'
+[2026-02-04T00:55:43.787Z] at FSWatcher.<computed> (node:internal/fs/watchers:247:19)
+[2026-02-04T00:55:43.787Z] at Object.watch (node:fs:2550:36)
+[2026-02-04T00:55:43.788Z] at createFsWatchInstance (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:7811)
+[2026-02-04T00:55:43.788Z] at setFsWatchListener (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:8144)
+[2026-02-04T00:55:43.788Z] at ca._watchWithNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:9639)
+[2026-02-04T00:55:43.789Z] at ca._handleDir (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:12364)
+[2026-02-04T00:55:43.789Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13031)
+[2026-02-04T00:55:43.789Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-04T00:55:43.790Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-04T00:55:43.790Z] at async Promise.all (index 0)
+[2026-02-04T00:55:43.790Z] Emitted 'error' event on FSWatcher instance at:
+[2026-02-04T00:55:43.791Z] at pl._handleError (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:27555)
+[2026-02-04T00:55:43.791Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13553)
+[2026-02-04T00:55:43.791Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-04T00:55:43.792Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-04T00:55:43.792Z] at async Promise.all (index 0) {
+[2026-02-04T00:55:43.792Z] errno: -24,
+[2026-02-04T00:55:43.792Z] syscall: 'watch',
+[2026-02-04T00:55:43.793Z] code: 'EMFILE',
+[2026-02-04T00:55:43.793Z] path: '/home/ubuntu/globalpass',
+[2026-02-04T00:55:43.794Z] filename: '/home/ubuntu/globalpass'
+[2026-02-04T00:55:43.794Z] }
+[2026-02-04T00:55:43.794Z] 
+[2026-02-04T00:55:43.795Z] Node.js v22.13.0
+[2026-02-04T00:55:43.795Z] Dev server exited with code 1
+[2026-02-06T20:17:39.189Z] Starting dev server with command: NODE_ENV=development tsx watch server/_core/index.ts
+[2026-02-06T20:17:39.319Z] node:internal/fs/watchers:247
+[2026-02-06T20:17:39.320Z] const error = new UVException({
+[2026-02-06T20:17:39.320Z] ^
+[2026-02-06T20:17:39.321Z] 
+[2026-02-06T20:17:39.321Z] Error: EMFILE: too many open files, watch '/home/ubuntu/globalpass'
+[2026-02-06T20:17:39.321Z] at FSWatcher.<computed> (node:internal/fs/watchers:247:19)
+[2026-02-06T20:17:39.322Z] at Object.watch (node:fs:2550:36)
+[2026-02-06T20:17:39.322Z] at createFsWatchInstance (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:7811)
+[2026-02-06T20:17:39.322Z] at setFsWatchListener (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:8144)
+[2026-02-06T20:17:39.322Z] at ca._watchWithNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:9639)
+[2026-02-06T20:17:39.323Z] at ca._handleDir (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:12364)
+[2026-02-06T20:17:39.323Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13031)
+[2026-02-06T20:17:39.323Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-06T20:17:39.324Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-06T20:17:39.324Z] at async Promise.all (index 0)
+[2026-02-06T20:17:39.324Z] Emitted 'error' event on FSWatcher instance at:
+[2026-02-06T20:17:39.325Z] at pl._handleError (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:27555)
+[2026-02-06T20:17:39.325Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13553)
+[2026-02-06T20:17:39.326Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-06T20:17:39.326Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-06T20:17:39.326Z] at async Promise.all (index 0) {
+[2026-02-06T20:17:39.327Z] errno: -24,
+[2026-02-06T20:17:39.327Z] syscall: 'watch',
+[2026-02-06T20:17:39.327Z] code: 'EMFILE',
+[2026-02-06T20:17:39.328Z] path: '/home/ubuntu/globalpass',
+[2026-02-06T20:17:39.328Z] filename: '/home/ubuntu/globalpass'
+[2026-02-06T20:17:39.329Z] }
+[2026-02-06T20:17:39.329Z] 
+[2026-02-06T20:17:39.329Z] Node.js v22.13.0
+[2026-02-06T20:17:39.330Z] Dev server exited with code 1
+[2026-02-06T20:17:49.328Z] Starting dev server with command: NODE_ENV=development tsx watch server/_core/index.ts
+[2026-02-06T20:17:49.429Z] node:internal/fs/watchers:247
+[2026-02-06T20:17:49.430Z] const error = new UVException({
+[2026-02-06T20:17:49.430Z] ^
+[2026-02-06T20:17:49.431Z] 
+[2026-02-06T20:17:49.431Z] Error: EMFILE: too many open files, watch '/home/ubuntu/globalpass'
+[2026-02-06T20:17:49.431Z] at FSWatcher.<computed> (node:internal/fs/watchers:247:19)
+[2026-02-06T20:17:49.432Z] at Object.watch (node:fs:2550:36)
+[2026-02-06T20:17:49.432Z] at createFsWatchInstance (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:7811)
+[2026-02-06T20:17:49.432Z] at setFsWatchListener (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:8144)
+[2026-02-06T20:17:49.433Z] at ca._watchWithNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:9639)
+[2026-02-06T20:17:49.433Z] at ca._handleDir (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:12364)
+[2026-02-06T20:17:49.433Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13031)
+[2026-02-06T20:17:49.433Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-06T20:17:49.434Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-06T20:17:49.434Z] at async Promise.all (index 0)
+[2026-02-06T20:17:49.434Z] Emitted 'error' event on FSWatcher instance at:
+[2026-02-06T20:17:49.435Z] at pl._handleError (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:27555)
+[2026-02-06T20:17:49.435Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13553)
+[2026-02-06T20:17:49.435Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-06T20:17:49.435Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-06T20:17:49.436Z] at async Promise.all (index 0) {
+[2026-02-06T20:17:49.436Z] errno: -24,
+[2026-02-06T20:17:49.436Z] syscall: 'watch',
+[2026-02-06T20:17:49.436Z] code: 'EMFILE',
+[2026-02-06T20:17:49.437Z] path: '/home/ubuntu/globalpass',
+[2026-02-06T20:17:49.437Z] filename: '/home/ubuntu/globalpass'
+[2026-02-06T20:17:49.437Z] }
+[2026-02-06T20:17:49.438Z] 
+[2026-02-06T20:17:49.438Z] Node.js v22.13.0
+[2026-02-06T20:17:49.438Z] Dev server exited with code 1
+[2026-02-06T20:52:13.935Z] Starting dev server with command: NODE_ENV=development tsx watch server/_core/index.ts
+[2026-02-06T20:52:14.057Z] node:internal/fs/watchers:247
+[2026-02-06T20:52:14.058Z] const error = new UVException({
+[2026-02-06T20:52:14.059Z] ^
+[2026-02-06T20:52:14.059Z] 
+[2026-02-06T20:52:14.059Z] Error: EMFILE: too many open files, watch '/home/ubuntu/globalpass'
+[2026-02-06T20:52:14.060Z] at FSWatcher.<computed> (node:internal/fs/watchers:247:19)
+[2026-02-06T20:52:14.060Z] at Object.watch (node:fs:2550:36)
+[2026-02-06T20:52:14.060Z] at createFsWatchInstance (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:7811)
+[2026-02-06T20:52:14.061Z] at setFsWatchListener (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:8144)
+[2026-02-06T20:52:14.061Z] at ca._watchWithNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:9639)
+[2026-02-06T20:52:14.061Z] at ca._handleDir (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:12364)
+[2026-02-06T20:52:14.061Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13031)
+[2026-02-06T20:52:14.062Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-06T20:52:14.062Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-06T20:52:14.063Z] at async Promise.all (index 0)
+[2026-02-06T20:52:14.063Z] Emitted 'error' event on FSWatcher instance at:
+[2026-02-06T20:52:14.063Z] at pl._handleError (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:27555)
+[2026-02-06T20:52:14.064Z] at ca._addToNodeFs (file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:13553)
+[2026-02-06T20:52:14.064Z] at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2026-02-06T20:52:14.064Z] at async file:///home/ubuntu/globalpass/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:25103
+[2026-02-06T20:52:14.065Z] at async Promise.all (index 0) {
+[2026-02-06T20:52:14.065Z] errno: -24,
+[2026-02-06T20:52:14.065Z] syscall: 'watch',
+[2026-02-06T20:52:14.065Z] code: 'EMFILE',
+[2026-02-06T20:52:14.066Z] path: '/home/ubuntu/globalpass',
+[2026-02-06T20:52:14.066Z] filename: '/home/ubuntu/globalpass'
+[2026-02-06T20:52:14.066Z] }
+[2026-02-06T20:52:14.067Z] 
+[2026-02-06T20:52:14.067Z] Node.js v22.13.0
+[2026-02-06T20:52:14.067Z] Dev server exited with code 1

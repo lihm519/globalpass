@@ -25,14 +25,21 @@ export default function Home() {
     { name: 'Hong Kong', emoji: '🇭🇰', code: 'Hong Kong' },
   ];
 
+  // Convert country name to URL slug
+  const countryToSlug = (country: string): string => {
+    return country.toLowerCase().replace(/\s+/g, '-');
+  };
+
   const handleSearch = () => {
     if (searchQuery.trim()) {
-      router.push(`/esim?country=${encodeURIComponent(searchQuery.trim())}`);
+      const slug = countryToSlug(searchQuery.trim());
+      router.push(`/esim/${slug}`);
     }
   };
 
   const handleDestinationClick = (country: string) => {
-    router.push(`/esim?country=${encodeURIComponent(country)}`);
+    const slug = countryToSlug(country);
+    router.push(`/esim/${slug}`);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
