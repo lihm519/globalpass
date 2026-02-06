@@ -253,4 +253,12 @@
 - [x] 检查 LanguageSwitcher 组件
 - [x] 检查 i18n 配置是否兼容 Pages Router
 - [x] 修复语言切换功能（移除 'use client'，修复 i18n 初始化）
-- [ ] 推送修复到生产环境
+- [x] 推送修复到生产环境
+
+## 语言切换器改进 (2026-02-07)
+- [x] 添加 preventDefault 和 stopPropagation 防止事件冒泡
+- [x] 添加 console.log 调试
+- [x] 切换语言后强制页面刷新
+- [x] 添加点击外部关闭下拉菜单
+- [x] 提高 z-index 到 9999
+- [ ] 推送到生产环境
