@@ -204,3 +204,19 @@
 - [ ] 添加 export const dynamic = 'force-static' 强制静态导出
 - [ ] 验证 HTML 包含真实价格文本（不是 JSON）
 - [ ] 推送到生产环境
+
+## 紧急：改为静态 HTML 导出（非 RSC JSON）(2026-02-07)
+- [ ] 修改 next.config.mjs 添加 output: 'export'
+- [ ] 测试构建是否生成真实 HTML（包含套餐价格文本）
+- [ ] 推送到生产环境
+- [ ] 用 Google Rich Results Test 验证爬虫能看到套餐列表
+
+## 迁移到 Pages Router - 生成真正的静态 HTML (2026-02-07 紧急)
+- [x] 创建 pages/esim/[country].tsx
+- [x] 实现 getStaticPaths（生成所有国家路径）
+- [x] 实现 getStaticProps（服务端获取套餐数据）
+- [x] 保留 Answer Block（最便宜套餐摘要）
+- [x] 保留 JSON-LD Schema
+- [x] 保留联盟链接
+- [ ] 测试构建输出是否为真实 HTML
+- [ ] 推送到生产环境
