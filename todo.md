@@ -225,4 +225,11 @@
 - [x] 检查是否缺少 _app.tsx 或 _document.tsx - 已创建
 - [x] 检查 Tailwind CSS 配置是否支持 pages 目录 - 使用 Tailwind 4，自动支持
 - [ ] 检查浏览器控制台错误
-- [ ] 修复并推送到生产环境
+- [x] 修复并推送到生产环境
+
+## 修复 Pages Router SSR 渲染逻辑 (2026-02-07 紧急)
+- [x] 检查 pages/esim/[country].tsx 是否有 useEffect 或客户端逻辑 - 没有
+- [x] 移除任何延迟渲染的逻辑 - 不需要
+- [x] 确保组件直接 map plans prop 并渲染 - 已实现
+- [x] 验证构建后的 HTML 包含套餐文本 - 已验证（Airalo, 4.00, 7.50 等）
+- [ ] 推送到生产环境
