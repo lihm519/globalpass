@@ -248,3 +248,9 @@
 - [x] 恢复 API routes（pages/api/chat.ts 和 pages/api/indexnow.ts）
 - [x] 推送修复到生产环境
 - [x] 验证 Vercel 部署成功
+
+## 修复语言切换器 Bug (2026-02-07)
+- [x] 检查 LanguageSwitcher 组件
+- [x] 检查 i18n 配置是否兼容 Pages Router
+- [x] 修复语言切换功能（移除 'use client'，修复 i18n 初始化）
+- [ ] 推送修复到生产环境
