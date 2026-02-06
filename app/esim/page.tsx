@@ -54,7 +54,7 @@ function ESIMContent() {
         setCountries(countryList.sort());
         setLoading(false);
         
-        // 读取 URL 参数并重定向到 SEO 友好的 URL
+        // 读取 URL 参数并设置初始国家
         const countryParam = searchParams.get('country');
         if (countryParam) {
           const normalizedParam = countryParam.toLowerCase();
@@ -63,10 +63,7 @@ function ESIMContent() {
             country => country.toLowerCase() === normalizedParam
           );
           if (matchedCountry) {
-            // 重定向到新的 SEO 友好 URL
-            const slug = countryToSlug(matchedCountry);
-            router.replace(`/esim/${slug}`);
-            return; // 停止执行，等待重定向
+            setSelectedCountry(matchedCountry);
           }
         }
       })
@@ -76,11 +73,26 @@ function ESIMContent() {
       });
   }, [searchParams]);
 
+  // Calculate cheapest package for selected country
+  const [cheapestPackage, setCheapestPackage] = useState<ESIMPackage | null>(null);
+
   useEffect(() => {
     if (selectedCountry === 'all') {
       setFilteredPackages(packages);
+      setCheapestPackage(null);
     } else {
-      setFilteredPackages(packages.filter(pkg => pkg.country === selectedCountry));
+      const filtered = packages.filter(pkg => pkg.country === selectedCountry);
+      setFilteredPackages(filtered);
+      
+      // Find cheapest package for this country
+      if (filtered.length > 0) {
+        const cheapest = filtered.reduce((min, pkg) => 
+          pkg.price < min.price ? pkg : min
+        );
+        setCheapestPackage(cheapest);
+      } else {
+        setCheapestPackage(null);
+      }
     }
   }, [selectedCountry, packages]);
 
@@ -108,6 +120,37 @@ function ESIMContent() {
           <h1 className="text-4xl font-bold mb-4">{t('esimComparison')}</h1>
           <p className="text-slate-300 text-lg">{t('realtimeComparisonDesc')}</p>
         </div>
+
+        {/* Answer Block - Show when a specific country is selected */}
+        {selectedCountry !== 'all' && cheapestPackage && (
+          <div className="bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 border-2 border-emerald-500/50 rounded-2xl p-8 mb-8">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold mb-3">Best eSIM Deal for {selectedCountry}</h2>
+                <p className="text-lg text-slate-200 leading-relaxed">
+                  The cheapest eSIM for <span className="font-semibold text-emerald-400">{selectedCountry}</span> is{' '}
+                  <span className="font-semibold text-emerald-400">{cheapestPackage.provider}</span> at{' '}
+                  <span className="font-bold text-2xl text-white">${cheapestPackage.price.toFixed(2)}</span> for{' '}
+                  <span className="font-semibold">{cheapestPackage.data_amount}</span> valid for{' '}
+                  <span className="font-semibold">{cheapestPackage.validity}</span>.
+                </p>
+                <a
+                  href={cheapestPackage.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg"
+                >
+                  Get This Deal →
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* 筛选器 */}
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 mb-8">

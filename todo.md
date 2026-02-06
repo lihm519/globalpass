@@ -180,3 +180,5 @@
 - [ ] 更新导航链接使用新格式
 - [ ] 测试所有重定向和链接
 - [ ] 推送到生产环境
+- [x] 移除重定向逻辑，让 /esim?country=X 直接显示 Answer Block
+- [x] 在 /esim 页面添加 Answer Block 组件
