@@ -192,4 +192,10 @@
 ## 添加 JSON-LD 结构化数据 (2026-02-07)
 - [x] 在 /esim/[country]/page.tsx 添加 Product + AggregateOffer schema
 - [x] 包含最低价、最高价、套餐数量
+- [x] 推送到生产环境
+
+## 紧急：改为服务端渲染 SSR (2026-02-07)
+- [x] 移除 'use client'，改为 async 组件
+- [x] 在服务端读取 JSON 数据
+- [x] 直接渲染 HTML（爬虫可见）
 - [ ] 推送到生产环境
