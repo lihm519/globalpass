@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Script from 'next/script';
 import '@/lib/i18n';
 
@@ -20,9 +20,15 @@ interface ESIMPackage {
   last_checked: string;
 }
 
+// Convert country name to URL slug
+function countryToSlug(country: string): string {
+  return country.toLowerCase().replace(/\s+/g, '-');
+}
+
 function ESIMContent() {
   const { t } = useTranslation();
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [packages, setPackages] = useState<ESIMPackage[]>([]);
   const [filteredPackages, setFilteredPackages] = useState<ESIMPackage[]>([]);
   const [loading, setLoading] = useState(true);
@@ -48,7 +54,7 @@ function ESIMContent() {
         setCountries(countryList.sort());
         setLoading(false);
         
-        // 读取 URL 参数并设置初始国家
+        // 读取 URL 参数并重定向到 SEO 友好的 URL
         const countryParam = searchParams.get('country');
         if (countryParam) {
           const normalizedParam = countryParam.toLowerCase();
@@ -57,7 +63,10 @@ function ESIMContent() {
             country => country.toLowerCase() === normalizedParam
           );
           if (matchedCountry) {
-            setSelectedCountry(matchedCountry);
+            // 重定向到新的 SEO 友好 URL
+            const slug = countryToSlug(matchedCountry);
+            router.replace(`/esim/${slug}`);
+            return; // 停止执行，等待重定向
           }
         }
       })

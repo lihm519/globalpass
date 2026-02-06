@@ -147,9 +147,9 @@
 ## URL 架构升级 & Mede 集成 (2026-02-07)
 
 ### Phase 1: URL 重构（SEO 优化）
-- [ ] 创建动态路由 app/esim/[country]/page.tsx
-- [ ] 将现有 /esim 页面逻辑迁移到新路由
-- [ ] 实现 URL 规范化（Japan → japan，South Korea → south-korea）
+- [x] 创建动态路由 app/esim/[country]/page.tsx
+- [x] 将现有 /esim 页面逻辑迁移到新路由
+- [x] 实现 URL 规范化（Japan → japan，South Korea → south-korea）
 - [ ] 更新所有内部链接指向新 URL 格式
 - [ ] 添加旧 URL 重定向（/esim?country=Japan → /esim/japan）
 
@@ -164,12 +164,19 @@
 - [ ] 确保 Mede 购买按钮链接到联盟链接
 
 ### Phase 4: Answer Block（最便宜推荐）
-- [ ] 在页面顶部添加 Answer Block 组件
-- [ ] 自动计算并显示："The cheapest eSIM for [Country] is [Provider] at $[Price]..."
-- [ ] 添加 Schema.org 结构化数据支持
+- [x] 在页面顶部添加 Answer Block 组件
+- [x] 自动计算并显示："The cheapest eSIM for [Country] is [Provider] at $[Price]..."
+- [ ] 添加 Schema.org 结构化数据支持 (TODO)
 
 ### Phase 5: 测试和部署
 - [ ] 测试所有 20 个国家的动态路由
 - [ ] 验证 SEO meta 标签正确生成
 - [ ] 验证 Mede 联盟链接追踪参数
 - [ ] 推送到 GitHub 并部署
+
+## URL 重定向和链接更新 (2026-02-07 紧急)
+- [x] 在 /esim/page.tsx 添加重定向逻辑：/esim?country=X → /esim/x
+- [ ] 更新首页链接使用新格式
+- [ ] 更新导航链接使用新格式
+- [ ] 测试所有重定向和链接
+- [ ] 推送到生产环境
