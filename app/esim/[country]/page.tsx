@@ -1,6 +1,5 @@
-import { readFile } from 'fs/promises';
-import { join } from 'path';
 import Script from 'next/script';
+import packageData from '@/public/data/esim-packages.json';
 
 interface ESIMPackage {
   id: number;
@@ -51,23 +50,15 @@ function normalizeCountryName(slug: string): string {
 }
 
 // Server-side data fetching
-async function getCountryPackages(country: string): Promise<ESIMPackage[]> {
-  try {
-    const filePath = join(process.cwd(), 'public', 'data', 'esim-packages.json');
-    const fileContent = await readFile(filePath, 'utf-8');
-    const data: PackageData = JSON.parse(fileContent);
-    
-    const countryName = normalizeCountryName(country);
-    return data.packages[countryName] || [];
-  } catch (error) {
-    console.error('Failed to load package data:', error);
-    return [];
-  }
+function getCountryPackages(country: string): ESIMPackage[] {
+  const data = packageData as PackageData;
+  const countryName = normalizeCountryName(country);
+  return data.packages[countryName] || [];
 }
 
 export default async function CountryESIMPage({ params }: { params: { country: string } }) {
   const countryName = normalizeCountryName(params.country);
-  const packages = await getCountryPackages(params.country);
+  const packages = getCountryPackages(params.country);
   
   // Calculate cheapest package
   const cheapestPackage = packages.length > 0 
