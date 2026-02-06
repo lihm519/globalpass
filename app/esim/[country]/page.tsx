@@ -1,5 +1,9 @@
 import Script from 'next/script';
 
+// Force static export - generate real HTML instead of RSC JSON
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
 interface ESIMPackage {
   id: number;
   provider: string;

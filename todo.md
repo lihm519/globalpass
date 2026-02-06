@@ -199,3 +199,8 @@
 - [x] 在服务端读取 JSON 数据
 - [x] 直接渲染 HTML（爬虫可见）
 - [x] 推送到生产环境
+
+## 修复 RSC JSON 问题 - 确保真实 HTML (2026-02-07)
+- [ ] 添加 export const dynamic = 'force-static' 强制静态导出
+- [ ] 验证 HTML 包含真实价格文本（不是 JSON）
+- [ ] 推送到生产环境
