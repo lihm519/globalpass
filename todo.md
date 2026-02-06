@@ -143,3 +143,33 @@
 - [ ] 验证隐形表格正常渲染
 - [ ] 验证 IndexNow API 可用
 - [ ] 验证 robots.txt 配置正确
+
+## URL 架构升级 & Mede 集成 (2026-02-07)
+
+### Phase 1: URL 重构（SEO 优化）
+- [ ] 创建动态路由 app/esim/[country]/page.tsx
+- [ ] 将现有 /esim 页面逻辑迁移到新路由
+- [ ] 实现 URL 规范化（Japan → japan，South Korea → south-korea）
+- [ ] 更新所有内部链接指向新 URL 格式
+- [ ] 添加旧 URL 重定向（/esim?country=Japan → /esim/japan）
+
+### Phase 2: Mede 数据采集
+- [ ] 使用浏览器自动化采集 20 个国家的 Mede 套餐数据
+- [ ] 验证数据格式和价格准确性
+- [ ] 写入 Supabase 数据库（provider: "Mede"）
+
+### Phase 3: 三供应商展示
+- [ ] 在 [country] 页面展示 Nomad、Airalo、Mede 三家供应商
+- [ ] 添加供应商 Logo 和品牌标识
+- [ ] 确保 Mede 购买按钮链接到联盟链接
+
+### Phase 4: Answer Block（最便宜推荐）
+- [ ] 在页面顶部添加 Answer Block 组件
+- [ ] 自动计算并显示："The cheapest eSIM for [Country] is [Provider] at $[Price]..."
+- [ ] 添加 Schema.org 结构化数据支持
+
+### Phase 5: 测试和部署
+- [ ] 测试所有 20 个国家的动态路由
+- [ ] 验证 SEO meta 标签正确生成
+- [ ] 验证 Mede 联盟链接追踪参数
+- [ ] 推送到 GitHub 并部署
